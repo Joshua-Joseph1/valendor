@@ -90,17 +90,17 @@ const HomePage = () => {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
       >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: "url('https://images.pexels.com/photos/2471234/pexels-photo-2471234.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        ></div>
+        {/* Subtle geometric background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-valentor-red/10 to-transparent" />
         
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.div
@@ -108,21 +108,26 @@ const HomePage = () => {
             animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-white">Valentor</span>
-              <span className="text-valentor-red"> Group</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <div className="mb-8">
+              <div className="bg-valentor-red/20 backdrop-blur-sm rounded-2xl p-6 inline-block mb-6">
+                <Shield className="h-16 w-16 text-valentor-red mx-auto" />
+              </div>
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+                <span className="text-white">Valentor</span>
+                <span className="block text-valentor-red">Group</span>
+              </h1>
+            </div>
+            <p className="text-2xl md:text-3xl text-slate-300 mb-8 max-w-3xl mx-auto font-light">
               Discretion. Strength. Adaptability.
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
               Global risk management and protection consultancy providing comprehensive 
               security solutions for the world's most challenging environments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg"
+                className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 Explore Our Services
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -130,7 +135,7 @@ const HomePage = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg"
+                className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg rounded-xl"
               >
                 Get in Touch
               </Button>
@@ -187,7 +192,7 @@ const HomePage = () => {
                     <Link href={service.href}>
                       <Button 
                         variant="outline" 
-                        className="w-full group-hover:bg-valentor-red group-hover:text-white group-hover:border-valentor-red transition-all duration-300"
+                        className="w-full group-hover:bg-valentor-red group-hover:text-white group-hover:border-valentor-red transition-all duration-300 rounded-xl"
                       >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -313,7 +318,7 @@ const HomePage = () => {
             </p>
             <Button 
               size="lg" 
-              className="bg-white text-valentor-red hover:bg-gray-100 px-8 py-4 text-lg"
+              className="bg-white text-valentor-red hover:bg-gray-100 px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               Get in Touch Today
               <ArrowRight className="ml-2 h-5 w-5" />

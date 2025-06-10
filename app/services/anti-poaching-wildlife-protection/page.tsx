@@ -8,11 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
-export const metadata = {
-  title: 'Anti-Poaching & Wildlife Protection - Valentor Group',
-  description: 'Specialized wildlife protection services with advanced surveillance technology, ranger training, and intelligence networks.',
-};
-
 const WildlifeProtectionPage = () => {
   const heroRef = useRef(null);
   const servicesRef = useRef(null);
@@ -93,18 +88,17 @@ const WildlifeProtectionPage = () => {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="relative py-20 bg-gradient-to-br from-green-900 to-green-800 text-white overflow-hidden"
+        className="relative py-32 bg-gradient-to-br from-emerald-900 via-green-800 to-emerald-900 text-white overflow-hidden"
       >
-        <div className="absolute inset-0 opacity-30">
-          <div 
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          ></div>
+        {/* Subtle geometric background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
         </div>
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-transparent" />
         
         <div className="relative z-10 container mx-auto px-6">
           <motion.div
@@ -113,23 +107,28 @@ const WildlifeProtectionPage = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <div className="flex items-center mb-6">
-              <TreePine className="h-12 w-12 text-green-400 mr-4" />
-              <h1 className="text-4xl md:text-6xl font-bold">
-                Anti-Poaching & Wildlife Protection
-              </h1>
+            <div className="flex items-center mb-8">
+              <div className="bg-green-600/20 backdrop-blur-sm rounded-2xl p-4 mr-6">
+                <TreePine className="h-12 w-12 text-green-400" />
+              </div>
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                  Anti-Poaching &
+                  <span className="block text-green-400">Wildlife Protection</span>
+                </h1>
+              </div>
             </div>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed max-w-3xl">
               Specialized wildlife protection services combining advanced surveillance 
               technology, ranger training, and intelligence networks to combat poaching 
               and preserve endangered species.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 Protect Wildlife Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-900">
+              <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg rounded-xl">
                 Conservation Consultation
               </Button>
             </div>
@@ -229,7 +228,7 @@ const WildlifeProtectionPage = () => {
                 animate={isTechnologyInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <Card className="text-center h-full">
+                <Card className="text-center h-full hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-6">
                     <tech.icon className="h-10 w-10 text-green-600 mx-auto mb-4" />
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -328,11 +327,11 @@ const WildlifeProtectionPage = () => {
               habitats for future generations. Every action makes a difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 px-8 py-4 text-lg rounded-xl">
                 Get in Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white">
+              <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 text-lg rounded-xl">
                 Learn More
               </Button>
             </div>

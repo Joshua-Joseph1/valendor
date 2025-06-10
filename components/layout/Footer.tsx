@@ -10,6 +10,13 @@ const Footer = () => {
     { name: 'Security Systems', href: '/services/hardware-software-security' },
   ];
 
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+  ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-6 py-12">
@@ -69,26 +76,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="#about" className="text-gray-300 hover:text-valentor-red transition-colors duration-200">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="text-gray-300 hover:text-valentor-red transition-colors duration-200">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="text-gray-300 hover:text-valentor-red transition-colors duration-200">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-gray-300 hover:text-valentor-red transition-colors duration-200">
-                  Privacy Policy
-                </Link>
-              </li>
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href} 
+                    className="text-gray-300 hover:text-valentor-red transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
