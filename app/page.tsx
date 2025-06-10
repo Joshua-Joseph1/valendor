@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { 
   Shield, 
   Eye, 
@@ -12,7 +12,11 @@ import {
   CheckCircle,
   Target,
   Lock,
-  Zap
+  Zap,
+  Send,
+  Phone,
+  Mail,
+  User
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -28,6 +32,28 @@ const HomePage = () => {
   const isServicesInView = useInView(servicesRef, { once: true });
   const isAboutInView = useInView(aboutRef, { once: true });
   const isMissionInView = useInView(missionRef, { once: true });
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    service: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+  };
 
   const services = [
     {
@@ -90,7 +116,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
+        className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
       >
         {/* Subtle geometric background pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -102,45 +128,196 @@ const HomePage = () => {
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-valentor-red/10 to-transparent" />
         
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="mb-8">
-              <div className="bg-valentor-red/20 backdrop-blur-sm rounded-2xl p-6 inline-block mb-6">
-                <Shield className="h-16 w-16 text-valentor-red mx-auto" />
+        <div className="relative z-10 container mx-auto px-6 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Hero Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8 }}
+              className="text-left"
+            >
+              <div className="mb-8">
+                <div className="bg-valentor-red/20 backdrop-blur-sm rounded-2xl p-4 inline-block mb-6">
+                  <Shield className="h-12 w-12 text-valentor-red" />
+                </div>
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                  <span className="text-white">Valentor</span>
+                  <span className="block text-valentor-red">Group</span>
+                </h1>
               </div>
-              <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-                <span className="text-white">Valentor</span>
-                <span className="block text-valentor-red">Group</span>
-              </h1>
-            </div>
-            <p className="text-2xl md:text-3xl text-slate-300 mb-8 max-w-3xl mx-auto font-light">
-              Discretion. Strength. Adaptability.
-            </p>
-            <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Global risk management and protection consultancy providing comprehensive 
-              security solutions for the world's most challenging environments.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
-              >
-                Explore Our Services
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg rounded-xl"
-              >
-                Get in Touch
-              </Button>
-            </div>
-          </motion.div>
+              <p className="text-xl md:text-2xl text-slate-300 mb-6 font-light">
+                Discretion. Strength. Adaptability.
+              </p>
+              <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl">
+                Global risk management and protection consultancy providing comprehensive 
+                security solutions for the world's most challenging environments.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  Explore Our Services
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg rounded-xl"
+                >
+                  Learn More
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right Side - Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:pl-8"
+            >
+              <Card className="bg-white/95 backdrop-blur-xl border-0 shadow-2xl">
+                <CardContent className="p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Get a Security Consultation
+                    </h3>
+                    <p className="text-gray-600">
+                      Speak with our experts about your security requirements
+                    </p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          First Name *
+                        </label>
+                        <div className="relative">
+                          <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                          <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleInputChange}
+                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-transparent transition-all duration-200 bg-white"
+                            placeholder="John"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Last Name *
+                        </label>
+                        <input
+                          type="text"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-transparent transition-all duration-200 bg-white"
+                          placeholder="Doe"
+                          required
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address *
+                      </label>
+                      <div className="relative">
+                        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-transparent transition-all duration-200 bg-white"
+                          placeholder="john.doe@company.com"
+                          required
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Phone Number
+                      </label>
+                      <div className="relative">
+                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-transparent transition-all duration-200 bg-white"
+                          placeholder="+1 (555) 123-4567"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Company/Organization
+                      </label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-transparent transition-all duration-200 bg-white"
+                        placeholder="Your Company"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Service Interest
+                      </label>
+                      <select 
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-transparent transition-all duration-200 bg-white"
+                      >
+                        <option value="">Select a service...</option>
+                        <option value="risk-management">Risk Management & Intelligence</option>
+                        <option value="executive-protection">Executive Protection</option>
+                        <option value="secure-transfer">Secure Transfer & Asset Escort</option>
+                        <option value="wildlife-protection">Anti-Poaching & Wildlife Protection</option>
+                        <option value="hardware-software">Hardware & Software Security</option>
+                        <option value="consultation">General Consultation</option>
+                      </select>
+                    </div>
+                    
+                    <Button 
+                      type="submit"
+                      size="lg" 
+                      className="w-full bg-valentor-red hover:bg-red-700 text-white py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+                    >
+                      Request Consultation
+                      <Send className="ml-2 h-5 w-5" />
+                    </Button>
+                  </form>
+
+                  <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                    <p className="text-sm text-gray-600">
+                      <span className="font-semibold">Emergency Hotline:</span>{' '}
+                      <a href="tel:+15559115233" className="text-valentor-red hover:underline">
+                        +1 (555) 911-SAFE
+                      </a>
+                    </p>
+                    <p className="text-xs text-gray-500 mt-2">
+                      All consultations are confidential and secure
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -316,13 +493,15 @@ const HomePage = () => {
               Contact our team of experts to discuss your security requirements 
               and discover how Valentor Group can protect your interests.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-white text-valentor-red hover:bg-gray-100 px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
-              Get in Touch Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/contact">
+              <Button 
+                size="lg" 
+                className="bg-white text-valentor-red hover:bg-gray-100 px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                Get in Touch Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

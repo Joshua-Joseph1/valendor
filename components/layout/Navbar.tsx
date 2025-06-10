@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Menu, X, Shield, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,21 +48,9 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className={`p-2 rounded-xl transition-all duration-300 ${
-              scrolled 
-                ? 'bg-valentor-red/10 group-hover:bg-valentor-red/20' 
-                : 'bg-white/20 group-hover:bg-white/30'
-            }`}>
-              <Shield className="h-8 w-8 text-valentor-red" />
-            </div>
-            <div>
-              <span className={`text-2xl font-bold transition-colors duration-300 ${
-                scrolled ? 'text-gray-900' : 'text-white'
-              }`}>
-                Valentor
-              </span>
-              <span className="text-2xl font-bold text-valentor-red ml-1">Group</span>
+          <Link href="/" className="flex items-center group">
+            <div className="p-2 transition-all duration-300">
+              <Image src="/images/logo.png" alt="Valentor Logo" width={100} height={100} />
             </div>
           </Link>
 
