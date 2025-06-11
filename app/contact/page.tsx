@@ -11,7 +11,6 @@ const ContactPage = () => {
       <ContactHero />
       <ContactForm />
       <ContactMethods />
-     
       <ContactCTA />
     </div>
   );
