@@ -18,7 +18,7 @@ const ServicesSection = () => {
       icon: Shield,
       href: '/services/risk-management-intelligence',
       features: ['Threat Assessment', 'Strategic Consulting', 'Crisis Planning'],
-      image: '/images/risk-management.jpg'
+      image: '/images/risk-management.png'
     },
     {
       title: 'Executive Protection',
@@ -26,7 +26,7 @@ const ServicesSection = () => {
       icon: Users,
       href: '/services/executive-protection',
       features: ['Close Protection', 'Residential Security', 'Travel Security'],
-      image: '/images/executive-protection.jpg'
+      image: '/images/executive-protection.png'
     },
     {
       title: 'Secure Transfer & Asset Escort',
@@ -34,7 +34,7 @@ const ServicesSection = () => {
       icon: Lock,
       href: '/services/secure-transfer-asset-escort',
       features: ['Armored Convoy', 'Aviation Security', 'Route Planning'],
-      image: '/images/secure-transfer.jpg'
+      image: '/images/secure-transfer.png'
     },
     {
       title: 'Anti-Poaching & Wildlife Protection',
@@ -42,7 +42,7 @@ const ServicesSection = () => {
       icon: Eye,
       href: '/services/anti-poaching-wildlife-protection',
       features: ['Ranger Training', 'UAV Surveillance', 'Intelligence Networks'],
-      image: '/images/anti-poaching.jpg'
+      image: '/images/anti-poaching.png'
     },
     {
       title: 'Hardware & Software Security',
@@ -50,7 +50,7 @@ const ServicesSection = () => {
       icon: Zap,
       href: '/services/hardware-software-security',
       features: ['CCTV Systems', 'Access Control', 'Cyber Monitoring'],
-      image: '/images/hardware-software.jpg'
+      image: '/images/hardware-software.png'
     }
   ];
 
@@ -81,10 +81,10 @@ const ServicesSection = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden"
             >
-              <div className="md:w-1/2">
+              <div className="md:w-2/5">
                 <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
               </div>
-              <div className="p-8 md:w-1/2 flex flex-col justify-between">
+              <div className="p-8 md:w-3/5 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center mb-4">
                     <service.icon className="h-10 w-10 text-valentor-red mr-4" />
