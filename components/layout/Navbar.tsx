@@ -57,6 +57,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className="px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-valentor-red hover:bg-valentor-red/5"
+                onClick={() => setServicesOpen(false)}
               >
                 {item.name}
               </Link>
@@ -85,6 +86,8 @@ const Navbar = () => {
                 className={`absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden ${
                   servicesOpen ? 'pointer-events-auto' : 'pointer-events-none'
                 }`}
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
               >
                 <div className="p-2">
                   {serviceItems.map((service, index) => (
@@ -92,6 +95,7 @@ const Navbar = () => {
                       key={service.name}
                       href={service.href}
                       className="block px-4 py-3 text-gray-700 hover:text-valentor-red hover:bg-valentor-red/5 rounded-xl transition-all duration-200 text-sm font-medium"
+                      onClick={() => setServicesOpen(false)}
                     >
                       {service.name}
                     </Link>
