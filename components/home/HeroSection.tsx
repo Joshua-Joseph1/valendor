@@ -98,15 +98,6 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
 
             {/* Logo and Title */}
             <div className="space-y-6">
-              {/* <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isHeroInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-valentor-red/20 backdrop-blur-sm rounded-3xl p-6 inline-block border border-valentor-red/30"
-              >
-                <Shield className="h-16 w-16 text-valentor-red" />
-              </motion.div> */}
-              
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
@@ -311,33 +302,6 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                     <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </form>
-
-                {/* Form Footer */}
-                <div className="mt-6 pt-4 border-t border-gray-200">
-                  <div className="text-center space-y-2">
-                    <div className="flex items-center justify-center space-x-2">
-                      <Phone className="h-3 w-3 text-valentor-red" />
-                      <span className="text-xs font-semibold text-gray-700">Emergency Hotline:</span>
-                      <a href="tel:+15559115233" className="text-valentor-red hover:text-red-600 font-bold transition-colors duration-200">
-                        +1 (555) 911-SAFE
-                      </a>
-                    </div>
-                    <div className="flex items-center justify-center space-x-3 text-xs text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <CheckCircle2 className="h-2 w-2 text-green-500" />
-                        <span>Confidential</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Shield className="h-2 w-2 text-blue-500" />
-                        <span>Secure</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Award className="h-2 w-2 text-amber-500" />
-                        <span>ISO 27001 Certified</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </motion.div>
