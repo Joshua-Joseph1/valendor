@@ -36,11 +36,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-200/50' 
-          : 'bg-white/10 backdrop-blur-md'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-2xl border-b border-gray-200 transition-all duration-500"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -60,11 +56,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
-                  scrolled 
-                    ? 'text-gray-700 hover:text-valentor-red hover:bg-valentor-red/5' 
-                    : 'text-white/90 hover:text-white hover:bg-white/10'
-                }`}
+                className="px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-valentor-red hover:bg-valentor-red/5"
               >
                 {item.name}
               </Link>
@@ -77,11 +69,7 @@ const Navbar = () => {
               onMouseLeave={() => setServicesOpen(false)}
             >
               <button
-                className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
-                  scrolled 
-                    ? 'text-gray-700 hover:text-valentor-red hover:bg-valentor-red/5' 
-                    : 'text-white/90 hover:text-white hover:bg-white/10'
-                }`}
+                className="flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-valentor-red hover:bg-valentor-red/5"
               >
                 Services
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
@@ -115,11 +103,7 @@ const Navbar = () => {
             {/* CTA Button */}
             <div className="ml-6">
               <Link href="/contact">
-                <Button className={`px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl ${
-                  scrolled 
-                    ? 'bg-valentor-red hover:bg-red-700 text-white' 
-                    : 'bg-white text-valentor-red hover:bg-gray-100'
-                }`}>
+                <Button className="px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl bg-valentor-red hover:bg-red-700 text-white">
                   Get in Touch
                 </Button>
               </Link>
@@ -128,11 +112,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden p-2 rounded-xl transition-all duration-300 ${
-              scrolled 
-                ? 'text-gray-900 hover:bg-gray-100' 
-                : 'text-white hover:bg-white/10'
-            }`}
+            className="lg:hidden p-2 rounded-xl transition-all duration-300 text-gray-900 hover:bg-gray-100"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -146,7 +126,7 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className="lg:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-2 bg-white/95 backdrop-blur-xl rounded-2xl mt-4 mb-4 border border-gray-200/50 shadow-xl">
+          <div className="py-4 space-y-2 bg-white rounded-2xl mt-4 mb-4 border border-gray-200/50 shadow-xl">
             {navItems.map((item) => (
               <Link
                 key={item.name}

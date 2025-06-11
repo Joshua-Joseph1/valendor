@@ -14,7 +14,7 @@ const Footer = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '#services' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
   ];
 
   return (
@@ -24,8 +24,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Shield className="h-8 w-8 text-valentor-red" />
-              <span className="text-xl font-bold">Valentor Group</span>
+              <img src="/images/logo.png" alt="Valentor Group Logo" className="h-20 w-30" />
+              
             </div>
             <p className="text-gray-300 mb-4">
               Global risk management and protection consultancy providing discrete, 
