@@ -50,13 +50,13 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
       ref={heroRef}
       className="relative min-h-screen flex items-center text-white overflow-hidden pt-24 sm:pt-12"
       style={{
-        backgroundImage: `url('https://images.pexels.com/photos/259447/pexels-photo-259447.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`,
+        backgroundImage: `url('/images/hero-image.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Cape Town Background with Lighter Overlays */}
+      {/* Background with Lighter Overlays */}
       <div className="absolute inset-0">
         {/* Reduced primary overlay for better image visibility */}
         <div className="absolute inset-0 bg-slate-900/40"></div>
