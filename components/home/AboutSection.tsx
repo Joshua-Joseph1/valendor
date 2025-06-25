@@ -71,7 +71,7 @@ const AboutSection = () => {
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
             Why Choose
             <span className="block bg-gradient-to-r from-valentor-red to-red-600 bg-clip-text text-transparent">
-              Valentor Group
+              Valiant Risk Group
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">

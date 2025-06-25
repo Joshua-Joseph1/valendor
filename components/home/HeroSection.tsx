@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { 
-  Shield, 
   ArrowRight, 
   Send, 
   Phone, 
@@ -12,9 +11,7 @@ import {
   User, 
   MessageSquare,
   Star,
-  Globe,
-  Award,
-  CheckCircle2
+  Award
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -51,29 +48,33 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
   return (
     <section 
       ref={heroRef}
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden pt-24 sm:pt-12"
+      className="relative min-h-screen flex items-center text-white overflow-hidden pt-24 sm:pt-12"
+      style={{
+        backgroundImage: `url('https://images.pexels.com/photos/259447/pexels-photo-259447.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundAttachment: 'fixed'
+      }}
     >
-      {/* Enhanced Background Elements */}
+      {/* Cape Town Background with Lighter Overlays */}
       <div className="absolute inset-0">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-valentor-red/5 to-transparent rounded-full blur-3xl"></div>
+        {/* Reduced primary overlay for better image visibility */}
+        <div className="absolute inset-0 bg-slate-900/40"></div>
         
-        {/* Geometric pattern overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M40 40l20-20v40l-20-20zm0 0l-20 20h40l-20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
+        {/* Lighter gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-800/30 to-slate-900/50"></div>
         
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-valentor-red/10 via-transparent to-slate-800/20" />
+        {/* Subtle animated gradient orbs */}
+        <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        {/* Final light gradient overlay for brand integration */}
+        <div className="absolute inset-0 bg-gradient-to-r from-valentor-red/5 via-transparent to-slate-800/10" />
       </div>
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
-          {/* Left Side - Enhanced Hero Content */}
+          {/* Left Side - Simplified Hero Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
@@ -85,7 +86,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-6 py-3 border border-white/20"
+              className="inline-flex items-center bg-white/15 backdrop-blur-xl rounded-full px-6 py-3 border border-white/30"
             >
               <Award className="h-5 w-5 text-valentor-red mr-2" />
               <span className="text-white font-semibold text-sm uppercase tracking-wider">Elite Security Consultancy</span>
@@ -102,65 +103,33 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
               >
-                <span className="text-white">Valentor</span>
-                <span className="block bg-gradient-to-r from-valentor-red via-red-500 to-red-600 bg-clip-text text-transparent">
+                <span className="text-white drop-shadow-2xl">Valiant Risk</span>
+                <span className="block bg-gradient-to-r from-valentor-red via-red-500 to-red-600 bg-clip-text text-transparent drop-shadow-2xl">
                   Group
                 </span>
               </motion.h1>
             </div>
 
-            {/* Tagline */}
+            {/* Simplified Tagline */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="space-y-4"
             >
-              <p className="text-2xl sm:text-3xl lg:text-4xl text-slate-300 font-light tracking-wide">
+              <p className="text-2xl sm:text-3xl lg:text-4xl text-white font-light tracking-wide drop-shadow-lg">
                 Discretion. Strength. Adaptability.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full"></div>
-            </motion.div>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl"
-            >
-              Global risk management and protection consultancy providing comprehensive 
-              security solutions for the world's most challenging environments.
-            </motion.p>
-
-            {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-wrap items-center gap-6 text-sm text-slate-400"
-            >
-              <div className="flex items-center space-x-2">
-                <Globe className="h-4 w-4 text-valentor-red" />
-                <span>50+ Countries</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle2 className="h-4 w-4 text-green-400" />
-                <span>500+ Clients Protected</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="h-4 w-4 text-amber-400" />
-                <span>15+ Years Excellence</span>
-              </div>
             </motion.div>
 
             {/* Action Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
               <Button 
@@ -181,7 +150,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="xl:pl-8"
           >
-            <Card className="bg-white/90 backdrop-blur-xl border-0 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl overflow-hidden max-w-md mx-auto mt-8">
+            <Card className="bg-white/95 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl overflow-hidden max-w-md mx-auto mt-8">
               {/* Form Header */}
               <div className="bg-gradient-to-r from-valentor-red to-red-500 p-4 text-white">
                 <div className="text-center">
