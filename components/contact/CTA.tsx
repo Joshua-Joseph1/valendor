@@ -72,13 +72,7 @@ const ContactCTA = () => {
               <Phone className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:scale-110 transition-transform duration-300" />
             </Button>
             
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white/10 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl rounded-2xl transition-all duration-300"
-            >
-              Book A Consultation
-            </Button>
+
           </motion.div>
 
           {/* Trust indicators */}

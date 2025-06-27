@@ -36,7 +36,7 @@ const AboutCTA = () => {
                 Valentor Difference?
               </span>
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -44,8 +44,9 @@ const AboutCTA = () => {
               viewport={{ once: true }}
               className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed text-gray-600 px-4"
             >
-              Join the ranks of satisfied clients who trust Valentor Group with their 
-              most critical security needs. Contact us today for a confidential consultation.
+              Join the ranks of satisfied clients who trust Valiant Risk Group
+              with their most critical security needs. Contact us today for a
+              confidential consultation.
             </motion.p>
           </div>
 
@@ -58,19 +59,19 @@ const AboutCTA = () => {
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4"
           >
             <Link href="/contact">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="w-full sm:w-auto bg-valentor-red hover:bg-red-700 text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
               >
                 Book A Consultation
                 <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
-            
+
             <Link href="#services">
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="w-full sm:w-auto border-2 border-valentor-red text-valentor-red hover:bg-valentor-red hover:text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl rounded-2xl transition-all duration-300"
               >
                 View Our Services
@@ -87,40 +88,27 @@ const AboutCTA = () => {
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto"
           >
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-gray-200/50 text-center shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">24/7</div>
-              <div className="text-gray-600 text-xs sm:text-sm">Expert Support</div>
+              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">
+                24/7
+              </div>
+              <div className="text-gray-600 text-xs sm:text-sm">
+                Expert Support
+              </div>
             </div>
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-gray-200/50 text-center shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">Global</div>
+              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">
+                Global
+              </div>
               <div className="text-gray-600 text-xs sm:text-sm">Coverage</div>
             </div>
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-gray-200/50 text-center shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">100%</div>
-              <div className="text-gray-600 text-xs sm:text-sm">Confidential</div>
+              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">
+                100%
+              </div>
+              <div className="text-gray-600 text-xs sm:text-sm">
+                Confidential
+              </div>
             </div>
-          </motion.div>
-
-          {/* Emergency contact */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mt-8 sm:mt-12"
-          >
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4">
-              <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-valentor-red" />
-              <span className="text-gray-600 text-sm font-medium">Emergency Hotline:</span>
-              <a 
-                href="tel:+15559115233" 
-                className="text-valentor-red font-bold text-base sm:text-lg hover:text-red-700 transition-colors duration-200"
-              >
-                +1 (555) 911-SAFE
-              </a>
-            </div>
-            <p className="text-gray-500 text-xs sm:text-sm px-4">
-              All consultations are confidential and secure • ISO 27001 Certified • Trusted Worldwide
-            </p>
           </motion.div>
         </motion.div>
       </div>

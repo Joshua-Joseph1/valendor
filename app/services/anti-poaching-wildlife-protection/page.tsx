@@ -12,7 +12,7 @@ const WildlifeProtectionPage = () => {
       <WildlifeProtectionHero />
       <WildlifeProtectionOfferings />
       <WildlifeProtectionTechnology />
-      <WildlifeProtectionImpact />
+      
       <WildlifeProtectionCTA />
     </div>
   );

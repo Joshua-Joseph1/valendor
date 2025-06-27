@@ -11,10 +11,10 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/" },
+    { name: "Contact", href: "/contact" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
   ];
 
   return (
@@ -24,12 +24,15 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/images/logo.png" alt="Valentor Group Logo" className="h-20 w-30" />
-              
+              <img
+                src="/images/logo.png"
+                alt="Valiant Risk Group Logo"
+                className="h-20 w-30"
+              />
             </div>
             <p className="text-gray-300 mb-4">
-              Global risk management and protection consultancy providing discrete, 
-              professional security services worldwide.
+              Global risk management and protection consultancy providing
+              discrete, professional security services worldwide.
             </p>
             <p className="text-sm text-valentor-red font-semibold">
               Discretion. Strength. Adaptability.
@@ -42,7 +45,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-gray-300 hover:text-valentor-red transition-colors duration-200"
                   >
@@ -59,7 +62,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-valentor-red" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300"></span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-valentor-red" />
@@ -78,8 +81,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-gray-300 hover:text-valentor-red transition-colors duration-200"
                   >
                     {link.name}
@@ -92,7 +95,8 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 Valentor Group. All rights reserved. Professional security services worldwide.
+            © 2024 Valiant Risk Group. All rights reserved. Professional
+            security services worldwide.
           </p>
         </div>
       </div>

@@ -13,8 +13,7 @@ const AboutPage = () => {
       <AboutHero />
       <AboutStory />
       <AboutValues />
-      <AboutLeadership />
-      <AboutStatistics />
+
       <AboutCTA />
     </div>
   );

@@ -7,7 +7,10 @@ import Link from 'next/link';
 
 const CTASection = () => {
   return (
-    <section id="contact" className="relative py-32 bg-gradient-to-br from-valentor-red via-red-600 to-red-800 text-white overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-32 bg-gradient-to-br from-valentor-red via-red-600 to-red-800 text-white overflow-hidden"
+    >
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
@@ -20,9 +23,12 @@ const CTASection = () => {
 
       {/* Geometric pattern overlay */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l25-25v50l-25-25zm0 0l-25 25h50l-25-25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l25-25v50l-25-25zm0 0l-25 25h50l-25-25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -47,7 +53,7 @@ const CTASection = () => {
                 Your Future?
               </span>
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -55,8 +61,9 @@ const CTASection = () => {
               viewport={{ once: true }}
               className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-white/90"
             >
-              Join the ranks of Fortune 500 companies and high-profile individuals who trust 
-              Valentor Group with their most critical security needs.
+              Join the ranks of Fortune 500 companies and high-profile
+              individuals who trust Valiant Risk Group with their most critical
+              security needs.
             </motion.p>
           </div>
 
@@ -69,27 +76,14 @@ const CTASection = () => {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
             <Link href="/contact">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-valentor-red hover:bg-gray-100 px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
               >
                 Book A Consultation
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
-            
-            <div className="flex items-center space-x-4">
-              <div className="w-px h-12 bg-white/30"></div>
-              <div className="text-center">
-                <p className="text-white/80 text-sm font-medium">Emergency Hotline</p>
-                <a 
-                  href="tel:+15559115233" 
-                  className="text-white font-bold text-lg hover:text-gray-200 transition-colors duration-200"
-                >
-                  +1 (555) 911-SAFE
-                </a>
-              </div>
-            </div>
           </motion.div>
 
           {/* Trust indicators */}
@@ -123,7 +117,8 @@ const CTASection = () => {
             className="text-center mt-12"
           >
             <p className="text-white/60 text-sm">
-              All consultations are confidential and secure • ISO 27001 Certified • Trusted Worldwide
+              All consultations are confidential and secure • ISO 27001
+              Certified • Trusted Worldwide
             </p>
           </motion.div>
         </motion.div>

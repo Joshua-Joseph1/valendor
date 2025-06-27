@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Send, MapPin, Clock, User, Mail, Phone, Building2, MessageSquare } from 'lucide-react';
+import { Send, Clock, User, Mail, Phone, Building2, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -32,37 +32,6 @@ const ContactForm = () => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
-
-  const offices = [
-    {
-      region: 'North America',
-      city: 'New York, USA',
-      address: '432 Park Avenue, Suite 1500\nNew York, NY 10016',
-      phone: '+1 (555) 123-4567',
-      gradient: 'from-blue-900 to-blue-700'
-    },
-    {
-      region: 'Europe',
-      city: 'London, UK',
-      address: '25 Grosvenor Street\nMayfair, London W1K 4QN',
-      phone: '+44 20 7123 4567',
-      gradient: 'from-green-500 to-green-700'
-    },
-    {
-      region: 'Middle East',
-      city: 'Dubai, UAE',
-      address: 'Emirates Towers\nSheikh Zayed Road, Dubai',
-      phone: '+971 4 123 4567',
-      gradient: 'from-purple-500 to-purple-700'
-    },
-    {
-      region: 'Asia Pacific',
-      city: 'Singapore',
-      address: '1 Raffles Place\n#40-61 One Raffles Place',
-      phone: '+65 6123 4567',
-      gradient: 'from-orange-500 to-orange-700'
-    }
-  ];
 
   return (
     <section ref={formRef} className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-slate-50 to-white relative overflow-hidden">
@@ -255,45 +224,13 @@ const ContactForm = () => {
             </Card>
           </motion.div>
 
-          {/* Right Side - Global Offices & Response Times */}
+          {/* Right Side - Response Times */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isFormInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6 sm:space-y-8"
           >
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
-                Global Offices
-              </h3>
-              <div className="space-y-4 sm:space-y-6">
-                {offices.map((office, index) => (
-                  <motion.div
-                    key={office.region}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isFormInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.3 + (index * 0.1) }}
-                  >
-                    <Card className="bg-white/90 backdrop-blur-xl border-2 border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden group">
-                      <CardContent className="p-4 sm:p-6">
-                        <div className="flex items-start space-x-4">
-                          <div className={`bg-gradient-to-br ${office.gradient} rounded-xl p-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                            <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">{office.region}</h4>
-                            <p className="text-xs sm:text-sm text-gray-600 mb-2">{office.city}</p>
-                            <p className="text-xs sm:text-sm text-gray-500 whitespace-pre-line mb-2 leading-relaxed">{office.address}</p>
-                            <p className="text-xs sm:text-sm font-semibold text-valentor-red">{office.phone}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
             {/* Response Times Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}

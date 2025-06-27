@@ -7,8 +7,9 @@ import Footer from '@/components/layout/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Valentor Group - Global Risk Management & Protection Consultancy',
-  description: 'Professional risk management, executive protection, and security consulting services worldwide. Discretion. Strength. Adaptability.',
+  title: "Valiant Risk Group - Global Risk Management & Protection Consultancy",
+  description:
+    "Professional risk management, executive protection, and security consulting services worldwide. Discretion. Strength. Adaptability.",
 };
 
 export default function RootLayout({

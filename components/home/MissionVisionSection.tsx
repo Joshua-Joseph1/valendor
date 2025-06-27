@@ -47,7 +47,7 @@ const MissionVisionSection = () => {
                 what matters most.
               </p>
               
-              <div className="bg-valentor-red/10 backdrop-blur-sm rounded-2xl p-6 border border-valentor-red/20">
+              {/* <div className="bg-valentor-red/10 backdrop-blur-sm rounded-2xl p-6 border border-valentor-red/20">
                 <div className="flex items-center space-x-4">
                   <div className="bg-valentor-red/20 rounded-xl p-3">
                     <Globe className="h-8 w-8 text-valentor-red" />
@@ -57,7 +57,7 @@ const MissionVisionSection = () => {
                     <p className="text-gray-300">Operating across 6 continents with local expertise</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
@@ -86,7 +86,7 @@ const MissionVisionSection = () => {
                 goals without compromise to their security.
               </p>
               
-              <div className="grid grid-cols-2 gap-6">
+              {/* <div className="grid grid-cols-2 gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
@@ -108,7 +108,7 @@ const MissionVisionSection = () => {
                   <div className="text-gray-300 text-sm font-medium">Years Excellence</div>
                   <div className="w-8 h-1 bg-blue-400 rounded-full mx-auto mt-2"></div>
                 </motion.div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

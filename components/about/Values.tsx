@@ -50,13 +50,16 @@ const AboutValues = () => {
   ];
 
   return (
-    <section ref={valuesRef} className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-gray-50 relative overflow-hidden">
+    <section
+      ref={valuesRef}
+      className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-gray-50 relative overflow-hidden"
+    >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-64 sm:w-96 h-64 sm:h-96 bg-valentor-red rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-48 sm:w-96 h-48 sm:h-96 bg-blue-900 rounded-full blur-3xl"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -67,12 +70,12 @@ const AboutValues = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
             Why Choose
             <span className="block bg-gradient-to-r from-valentor-red to-red-600 bg-clip-text text-transparent">
-              Valentor Group
+              Valiant Risk Group
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-            Our foundational principles guide every operation, ensuring unparalleled 
-            service delivery in the most demanding circumstances.
+            Our foundational principles guide every operation, ensuring
+            unparalleled service delivery in the most demanding circumstances.
           </p>
         </motion.div>
 
@@ -86,11 +89,15 @@ const AboutValues = () => {
               className="group h-full"
             >
               <Card className="h-full bg-white/90 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 overflow-hidden rounded-3xl">
-                <div className={`h-2 bg-gradient-to-r ${principle.gradient}`}></div>
+                <div
+                  className={`h-2 bg-gradient-to-r ${principle.gradient}`}
+                ></div>
                 <CardContent className="p-6 sm:p-8 lg:p-10">
                   {/* Icon with luxury styling */}
                   <div className="relative mb-6 sm:mb-8">
-                    <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${principle.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:rotate-6`}>
+                    <div
+                      className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${principle.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:rotate-6`}
+                    >
                       <principle.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                     </div>
                   </div>
@@ -110,11 +117,18 @@ const AboutValues = () => {
                         key={detailIndex}
                         initial={{ opacity: 0, x: -20 }}
                         animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.6, delay: (index * 0.2) + (detailIndex * 0.1) + 0.5 }}
+                        transition={{
+                          duration: 0.6,
+                          delay: index * 0.2 + detailIndex * 0.1 + 0.5,
+                        }}
                         className="flex items-center group/item hover:bg-gray-50 rounded-xl p-2 transition-all duration-200"
                       >
-                        <div className={`w-2 h-2 bg-gradient-to-r ${principle.gradient} rounded-full mr-3 flex-shrink-0`}></div>
-                        <span className="text-xs sm:text-sm text-gray-700 font-medium group-hover/item:text-gray-900 transition-colors duration-200">{detail}</span>
+                        <div
+                          className={`w-2 h-2 bg-gradient-to-r ${principle.gradient} rounded-full mr-3 flex-shrink-0`}
+                        ></div>
+                        <span className="text-xs sm:text-sm text-gray-700 font-medium group-hover/item:text-gray-900 transition-colors duration-200">
+                          {detail}
+                        </span>
                       </motion.div>
                     ))}
                   </div>

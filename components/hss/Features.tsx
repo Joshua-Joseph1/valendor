@@ -71,9 +71,9 @@ const HardwareSoftwareFeatures = () => {
             <div className="space-y-8">
               {[
                 { name: 'CCTV Systems', progress: 100, color: 'valentor-red' },
-                { name: 'Access Control', progress: 85, color: 'red-600' },
-                { name: 'Intrusion Detection', progress: 90, color: 'red-500' },
-                { name: 'Cyber Monitoring', progress: 95, color: 'red-700' }
+                { name: 'Access Control', progress: 85, color: 'valentor-red' },
+                { name: 'Intrusion Detection', progress: 90, color: 'valentor-red' },
+                { name: 'Cyber Monitoring', progress: 95, color: 'valentor-red' }
               ].map((system, index) => (
                 <motion.div
                   key={system.name}

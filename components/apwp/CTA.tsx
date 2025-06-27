@@ -88,13 +88,7 @@ const WildlifeProtectionCTA = () => {
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
             
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-valentor-red text-valentor-red hover:bg-valentor-red hover:text-white px-10 py-5 text-xl rounded-2xl transition-all duration-300"
-            >
-              Learn More
-            </Button>
+
           </motion.div>
 
           {/* Trust indicators */}
@@ -119,28 +113,6 @@ const WildlifeProtectionCTA = () => {
             </div>
           </motion.div>
 
-          {/* Emergency contact */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              <Phone className="h-5 w-5 text-valentor-red" />
-              <span className="text-gray-600 text-sm font-medium">Emergency Hotline:</span>
-              <a 
-                href="tel:+15559115233" 
-                className="text-valentor-red font-bold text-lg hover:text-red-700 transition-colors duration-200"
-              >
-                +1 (555) 911-SAFE
-              </a>
-            </div>
-            <p className="text-gray-500 text-sm">
-              All consultations are confidential and secure • ISO 27001 Certified • Trusted Worldwide
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>

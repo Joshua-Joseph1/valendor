@@ -49,9 +49,7 @@ const ExecutiveProtectionHero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col items-center space-y-6"
             >
-              <div className="bg-valentor-red/20 backdrop-blur-sm rounded-3xl p-6 border border-valentor-red/30">
-                <Users className="h-16 w-16 text-valentor-red" />
-              </div>
+
               
               <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
                 <span className="text-white">Executive</span>
@@ -89,13 +87,7 @@ const ExecutiveProtectionHero = () => {
                 Book A Consultation
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg rounded-2xl hover:border-white/50 transition-all duration-300"
-              >
-                Security Assessment
-              </Button>
+
             </motion.div>
           </div>
         </motion.div>

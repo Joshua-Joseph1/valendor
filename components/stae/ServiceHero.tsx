@@ -47,15 +47,7 @@ const SecureTransferHero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center mb-8"
           >
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-6 py-3 border border-white/20 mb-8">
-              <Award className="h-5 w-5 text-valentor-red mr-2" />
-              <span className="text-white font-semibold text-sm uppercase tracking-wider">Professional Transport Services</span>
-              <div className="ml-3 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3 w-3 text-amber-300 fill-current" />
-                ))}
-              </div>
-            </div>
+
           </motion.div>
 
           {/* Main Content */}
@@ -67,9 +59,7 @@ const SecureTransferHero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col items-center space-y-6"
             >
-              <div className="bg-valentor-red/20 backdrop-blur-sm rounded-3xl p-6 border border-valentor-red/30">
-                <Truck className="h-16 w-16 text-valentor-red" />
-              </div>
+
               
               <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
                 <span className="text-white">Secure Transfer</span>
@@ -104,15 +94,8 @@ const SecureTransferHero = () => {
                 size="lg" 
                 className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
               >
-                Request Transport Service
+                Book A Consultation
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg rounded-2xl hover:border-white/50 transition-all duration-300"
-              >
-                Route Assessment
               </Button>
             </motion.div>
 

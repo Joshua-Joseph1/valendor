@@ -12,7 +12,7 @@ const SecureTransferPage = () => {
       <SecureTransferHero />
       <SecureTransferOfferings />
       <SecureTransferCapabilities />
-      <SecureTransferStatistics />
+    
       <SecureTransferCTA />
     </div>
   );
