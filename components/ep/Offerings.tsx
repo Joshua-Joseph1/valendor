@@ -35,7 +35,7 @@ const ExecutiveProtectionOfferings = () => {
     },
     {
       title: 'Protective Surveillance Operations',
-      description: 'Covert surveillance to identify and neutralize threats before they materialize.',
+      description: 'Covert surveillance to identify and mitigate threats before they materialize.',
       icon: Shield,
       details: [
         'Counter-surveillance detection and mitigation',
@@ -45,8 +45,8 @@ const ExecutiveProtectionOfferings = () => {
       ]
     },
     {
-      title: 'Travel & Diplomatic Security Coordination',
-      description: 'Comprehensive security planning and coordination for domestic and international travel.',
+      title: 'Travel & Diplomatic Security Management',
+      description: 'Comprehensive security planning and management for domestic and international travel.',
       icon: Plane,
       details: [
         'Pre-travel security assessments and route planning',

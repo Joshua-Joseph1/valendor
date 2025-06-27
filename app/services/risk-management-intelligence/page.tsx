@@ -76,7 +76,7 @@ const RiskManagementPage = () => {
     {
       step: '04',
       title: 'Monitoring',
-      description: 'Continuous oversight, adjustment, and optimization of security measures.',
+      description: 'Continuous oversight, alignment, and optimization of security measures.',
       icon: Clock
     }
   ];
