@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowRight, Award, Star, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ServiceHeroProps {
@@ -45,7 +45,7 @@ const ServiceHero = ({
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
         <div className={`absolute top-20 left-20 w-96 h-96 bg-${accentColor}/20 rounded-full blur-3xl animate-pulse`}></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-900/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-${accentColor}/5 to-transparent rounded-full blur-3xl`}></div>
         
         {/* Geometric pattern overlay */}
@@ -66,24 +66,6 @@ const ServiceHero = ({
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto"
         >
-          {/* Premium Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center mb-8"
-          >
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-6 py-3 border border-white/20 mb-8">
-              <Award className="h-5 w-5 text-valentor-red mr-2" />
-              <span className="text-white font-semibold text-sm uppercase tracking-wider">Professional Security Services</span>
-              <div className="ml-3 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3 w-3 text-amber-300 fill-current" />
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
           {/* Main Content */}
           <div className="text-center space-y-8">
             {/* Icon and Title */}
@@ -141,27 +123,6 @@ const ServiceHero = ({
               >
                 {secondaryButtonText}
               </Button>
-            </motion.div>
-
-            {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400 pt-8"
-            >
-              <div className="flex items-center space-x-2">
-                <Shield className="h-4 w-4 text-valentor-red" />
-                <span>ISO 27001 Certified</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="h-4 w-4 text-amber-400" />
-                <span>Industry Leading</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Star className="h-4 w-4 text-green-400" />
-                <span>99.9% Success Rate</span>
-              </div>
             </motion.div>
           </div>
         </motion.div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Star, Phone } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ExecutiveProtectionCTA = () => {
@@ -32,25 +32,6 @@ const ExecutiveProtectionCTA = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          {/* Premium badge */}
-          <div className="text-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-8 py-4 border border-white/20 mb-8"
-            >
-              <Shield className="h-6 w-6 text-white mr-3" />
-              <span className="text-white font-semibold text-lg">Elite Executive Protection</span>
-              <div className="ml-4 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-amber-300 fill-current" />
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
           {/* Main content */}
           <div className="text-center mb-16">
             <motion.h2
@@ -71,7 +52,7 @@ const ExecutiveProtectionCTA = () => {
               className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-white/90"
             >
               Experience the confidence that comes with elite executive protection. 
-              Contact us for a confidential security consultation tailored to your unique needs and lifestyle.
+              Contact us for a confidential security consultation tailored to your unique needs.
             </motion.p>
           </div>
 
@@ -87,7 +68,7 @@ const ExecutiveProtectionCTA = () => {
               size="lg" 
               className="bg-white text-valentor-red hover:bg-gray-100 px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
             >
-              Get in Touch
+              Book A Consultation
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
             

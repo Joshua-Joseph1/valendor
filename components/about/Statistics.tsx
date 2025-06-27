@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Users, Clock, Globe, TrendingUp, Award, Star } from 'lucide-react';
+import { Users, Clock, Globe, TrendingUp } from 'lucide-react';
 
 const AboutStatistics = () => {
   const statsRef = useRef(null);
@@ -62,10 +62,6 @@ const AboutStatistics = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-4 sm:px-6 py-3 border border-white/20 mb-6 sm:mb-8">
-            <Award className="h-4 w-4 sm:h-5 sm:w-5 text-white mr-2" />
-            <span className="text-white font-semibold text-xs sm:text-sm uppercase tracking-wider">Performance Metrics</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 leading-tight">
             By the Numbers
           </h2>
@@ -111,19 +107,6 @@ const AboutStatistics = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Bottom accent */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isStatsInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-12 sm:mt-16"
-        >
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-6 sm:px-8 py-3 sm:py-4 border border-white/20">
-            <Award className="h-5 w-5 sm:h-6 sm:w-6 text-white mr-3" />
-            <span className="text-white font-semibold text-sm sm:text-base">Trusted by Global Leaders • Proven Excellence</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

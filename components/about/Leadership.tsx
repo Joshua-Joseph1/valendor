@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Users, Award, Star, Shield } from 'lucide-react';
+import { Users, Shield } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const AboutLeadership = () => {
@@ -30,14 +30,14 @@ const AboutLeadership = () => {
       position: 'Head of Technology',
       background: 'Cybersecurity expert and former military technology specialist.',
       expertise: 'Cyber Security, Surveillance Systems, Technology Integration',
-      icon: Award
+      icon: Shield
     },
     {
       name: 'Elena Volkov',
       position: 'Director of Operations',
       background: 'International security consultant with diplomatic protection experience.',
       expertise: 'Executive Protection, Diplomatic Security, Training & Development',
-      icon: Star
+      icon: Users
     }
   ];
 
@@ -46,7 +46,7 @@ const AboutLeadership = () => {
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-20 w-64 sm:w-96 h-64 sm:h-96 bg-valentor-red rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-48 sm:w-80 h-48 sm:h-80 bg-blue-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-48 sm:w-80 h-48 sm:h-80 bg-blue-900 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -56,10 +56,6 @@ const AboutLeadership = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <div className="inline-flex items-center bg-valentor-red/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-3 mb-6 sm:mb-8">
-            <Award className="h-4 w-4 sm:h-5 sm:w-5 text-valentor-red mr-2" />
-            <span className="text-valentor-red font-semibold text-xs sm:text-sm uppercase tracking-wider">Expert Leadership</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
             Leadership Team
           </h2>
@@ -103,18 +99,6 @@ const AboutLeadership = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
-
-                  {/* Decorative element */}
-                  <div className="mt-6 pt-6 border-t border-gray-100">
-                    <div className="flex items-center justify-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-3 w-3 text-amber-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-xs text-gray-500 text-center mt-2 font-medium">
-                      Industry Expert
-                    </p>
                   </div>
                 </CardContent>
               </Card>

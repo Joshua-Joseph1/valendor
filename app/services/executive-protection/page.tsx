@@ -3,7 +3,6 @@
 import ExecutiveProtectionHero from '@/components/ep/Hero';
 import ExecutiveProtectionOfferings from '@/components/ep/Offerings';
 import ExecutiveProtectionFeatures from '@/components/ep/Features';
-import ExecutiveProtectionTestimonial from '@/components/ep/Testimonial';
 import ExecutiveProtectionCTA from '@/components/ep/CTA';
 
 const ExecutiveProtectionPage = () => {
@@ -12,7 +11,6 @@ const ExecutiveProtectionPage = () => {
       <ExecutiveProtectionHero />
       <ExecutiveProtectionOfferings />
       <ExecutiveProtectionFeatures />
-      <ExecutiveProtectionTestimonial />
       <ExecutiveProtectionCTA />
     </div>
   );

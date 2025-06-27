@@ -88,7 +88,7 @@ const RiskManagementPage = () => {
         title="Risk Management"
         subtitle="& Intelligence"
         description="Comprehensive threat assessment and strategic risk consulting to protect your business interests and operations in an ever-changing security landscape."
-        primaryButtonText="Schedule Consultation"
+        primaryButtonText="Book A Consultation"
         secondaryButtonText="Download Capability Brief"
         accentColor="valentor-red"
       />
@@ -110,7 +110,7 @@ const RiskManagementPage = () => {
       <ServiceCTA
         title="Protect Your Organization Today"
         description="Don't wait for threats to materialize. Let our risk management experts assess your security posture and develop a comprehensive protection strategy tailored to your unique requirements."
-        primaryButtonText="Get in Touch"
+        primaryButtonText="Book A Consultation"
         secondaryButtonText="Request Assessment"
         accentColor="valentor-red"
       />

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Phone, Mail, Globe, MessageSquare, Award, Star } from 'lucide-react';
+import { Phone, Mail, Globe, MessageSquare } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ContactMethods = () => {
@@ -25,7 +25,7 @@ const ContactMethods = () => {
       icon: Mail,
       contact: 'info@valentorgroup.com',
       available: 'Response within 2 hours',
-      gradient: 'from-blue-500 to-blue-700'
+      gradient: 'from-blue-900 to-blue-700'
     },
     {
       title: 'Global Operations',
@@ -50,7 +50,7 @@ const ContactMethods = () => {
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-20 w-64 sm:w-96 h-64 sm:h-96 bg-valentor-red rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-48 sm:w-80 h-48 sm:h-80 bg-blue-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-48 sm:w-80 h-48 sm:h-80 bg-blue-900 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -60,10 +60,6 @@ const ContactMethods = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <div className="inline-flex items-center bg-valentor-red/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-3 mb-6 sm:mb-8">
-            <Award className="h-4 w-4 sm:h-5 sm:w-5 text-valentor-red mr-2" />
-            <span className="text-valentor-red font-semibold text-xs sm:text-sm uppercase tracking-wider">Multiple Contact Channels</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
             How to Reach Us
           </h2>
@@ -89,9 +85,6 @@ const ContactMethods = () => {
                     <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${method.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-6`}>
                       <method.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-5 h-5 sm:w-6 sm:h-6 bg-valentor-red rounded-full flex items-center justify-center">
-                      <Star className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-white" />
-                    </div>
                   </div>
 
                   {/* Content */}
@@ -107,18 +100,6 @@ const ContactMethods = () => {
                       <p className="font-bold text-gray-900 text-sm sm:text-base break-all">{method.contact}</p>
                     </div>
                     <p className="text-xs sm:text-sm text-valentor-red font-semibold">{method.available}</p>
-                  </div>
-
-                  {/* Decorative element */}
-                  <div className="mt-6 pt-6 border-t border-gray-100">
-                    <div className="flex items-center justify-center space-x-1">
-                      {[...Array(3)].map((_, i) => (
-                        <div key={i} className={`w-2 h-2 bg-gradient-to-r ${method.gradient} rounded-full opacity-${(i + 1) * 30}`}></div>
-                      ))}
-                    </div>
-                    <p className="text-xs text-gray-500 text-center mt-2 font-medium">
-                      Professional Service
-                    </p>
                   </div>
                 </CardContent>
               </Card>

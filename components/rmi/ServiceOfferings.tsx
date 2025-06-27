@@ -1,10 +1,9 @@
-
 'use client';
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, Award, Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface ServiceOfferingsProps {
@@ -33,7 +32,7 @@ const ServiceOfferings = ({
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className={`absolute top-20 right-20 w-96 h-96 bg-${accentColor} rounded-full blur-3xl`}></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-900 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -44,11 +43,6 @@ const ServiceOfferings = ({
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className={`inline-flex items-center bg-${accentColor}/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8`}>
-            <Award className={`h-5 w-5 text-${accentColor} mr-2`} />
-            <span className={`text-${accentColor} font-semibold text-sm uppercase tracking-wider`}>Premium Services</span>
-          </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
             {title}
           </h2>
@@ -77,7 +71,7 @@ const ServiceOfferings = ({
                         {offering.icon ? (
                           <offering.icon className={`h-8 w-8 text-${accentColor}`} />
                         ) : (
-                          <Star className={`h-8 w-8 text-${accentColor}`} />
+                          <div className={`h-8 w-8 bg-${accentColor} rounded`}></div>
                         )}
                       </div>
                       <div className="flex-1">
@@ -107,18 +101,6 @@ const ServiceOfferings = ({
                             </span>
                           </motion.div>
                         ))}
-                      </div>
-                      
-                      {/* Decorative element */}
-                      <div className="mt-6 pt-6 border-t border-gray-200">
-                        <div className="flex items-center justify-center space-x-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 text-amber-400 fill-current" />
-                          ))}
-                        </div>
-                        <p className="text-xs text-gray-500 text-center mt-2 font-medium">
-                          Premium Service Excellence
-                        </p>
                       </div>
                     </div>
                   </AccordionContent>
