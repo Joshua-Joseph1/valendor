@@ -9,9 +9,7 @@ import {
   Phone, 
   Mail, 
   User, 
-  MessageSquare,
-  Star,
-  Award
+  MessageSquare
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -41,7 +39,6 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
   };
 
@@ -58,17 +55,10 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
     >
       {/* Background with Lighter Overlays */}
       <div className="absolute inset-0">
-        {/* Reduced primary overlay for better image visibility */}
         <div className="absolute inset-0 bg-slate-900/40"></div>
-        
-        {/* Lighter gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-800/30 to-slate-900/50"></div>
-        
-        {/* Subtle animated gradient orbs */}
         <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        
-        {/* Final light gradient overlay for brand integration */}
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-900/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-valentor-red/5 via-transparent to-slate-800/10" />
       </div>
       
@@ -81,22 +71,6 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
             transition={{ duration: 0.8 }}
             className="text-left space-y-8"
           >
-            {/* Premium Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center bg-white/15 backdrop-blur-xl rounded-full px-6 py-3 border border-white/30"
-            >
-              <Award className="h-5 w-5 text-valentor-red mr-2" />
-              <span className="text-white font-semibold text-sm uppercase tracking-wider">Elite Security Consultancy</span>
-              <div className="ml-3 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3 w-3 text-amber-300 fill-current" />
-                ))}
-              </div>
-            </motion.div>
-
             {/* Logo and Title */}
             <div className="space-y-6">
               <motion.h1
@@ -267,7 +241,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                     size="sm" 
                     className="w-full bg-gradient-to-r from-valentor-red to-red-500 hover:from-red-600 hover:to-red-700 text-white py-3 text-md rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
                   >
-                    Request Consultation
+                    Book A Consultation
                     <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </form>

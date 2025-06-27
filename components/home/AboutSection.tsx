@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Eye, Shield, Target, Award, Star } from 'lucide-react';
+import { Eye, Shield, Target } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const AboutSection = () => {
@@ -16,7 +16,6 @@ const AboutSection = () => {
       description: 'Operating with the highest levels of confidentiality and professionalism, ensuring our clients\' privacy and security are never compromised.',
       icon: Eye,
       gradient: 'from-slate-600 to-slate-800',
-      accentColor: 'text-slate-300',
       details: [
         'Confidential operations and reporting',
         'Non-disclosure protocols',
@@ -28,7 +27,6 @@ const AboutSection = () => {
       description: 'Robust capabilities backed by extensive experience, proven methodologies, and cutting-edge technology to handle any security challenge.',
       icon: Shield,
       gradient: 'from-valentor-red to-red-700',
-      accentColor: 'text-red-200',
       details: [
         'Elite security professionals',
         'Advanced technology integration',
@@ -39,8 +37,7 @@ const AboutSection = () => {
       title: 'Adaptability',
       description: 'Flexible solutions tailored to unique challenges and changing environments, ensuring effective security in any situation.',
       icon: Target,
-      gradient: 'from-amber-600 to-orange-700',
-      accentColor: 'text-amber-200',
+      gradient: 'from-blue-900 to-blue-700',
       details: [
         'Customized security solutions',
         'Rapid response capabilities',
@@ -54,7 +51,7 @@ const AboutSection = () => {
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-slate-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-900 rounded-full blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -64,10 +61,6 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center bg-valentor-red/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-            <Award className="h-5 w-5 text-valentor-red mr-2" />
-            <span className="text-valentor-red font-semibold text-sm uppercase tracking-wider">Excellence in Security</span>
-          </div>
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
             Why Choose
             <span className="block bg-gradient-to-r from-valentor-red to-red-600 bg-clip-text text-transparent">
@@ -76,8 +69,7 @@ const AboutSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Our foundational principles guide every operation, ensuring unparalleled 
-            service delivery in the most demanding circumstances. Experience the difference 
-            that true expertise makes.
+            service delivery in the most demanding circumstances.
           </p>
         </motion.div>
 
@@ -97,9 +89,6 @@ const AboutSection = () => {
                   <div className="relative mb-8">
                     <div className={`w-20 h-20 bg-gradient-to-br ${principle.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:rotate-6`}>
                       <principle.icon className="h-10 w-10 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-valentor-red rounded-full flex items-center justify-center">
-                      <Star className="h-3 w-3 text-white" />
                     </div>
                   </div>
 
@@ -125,18 +114,6 @@ const AboutSection = () => {
                         <span className="text-sm text-gray-700 font-medium">{detail}</span>
                       </motion.div>
                     ))}
-                  </div>
-
-                  {/* Decorative element */}
-                  <div className="mt-8 pt-6 border-t border-gray-100">
-                    <div className="flex items-center justify-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-amber-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-xs text-gray-500 text-center mt-2 font-medium">
-                      Industry Leading Excellence
-                    </p>
                   </div>
                 </CardContent>
               </Card>

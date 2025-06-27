@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Star, Phone } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -22,25 +22,6 @@ const AboutCTA = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          {/* Premium badge */}
-          <div className="text-center mb-8 sm:mb-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center bg-valentor-red/10 backdrop-blur-sm rounded-full px-6 sm:px-8 py-3 sm:py-4 border border-valentor-red/20 mb-6 sm:mb-8"
-            >
-              <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-valentor-red mr-3" />
-              <span className="text-valentor-red font-semibold text-sm sm:text-lg">Elite Security Consultancy</span>
-              <div className="ml-3 sm:ml-4 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 text-amber-400 fill-current" />
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
           {/* Main content */}
           <div className="text-center mb-12 sm:mb-16">
             <motion.h2
@@ -81,7 +62,7 @@ const AboutCTA = () => {
                 size="lg" 
                 className="w-full sm:w-auto bg-valentor-red hover:bg-red-700 text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
               >
-                Get in Touch
+                Book A Consultation
                 <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>

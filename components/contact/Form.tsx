@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Send, MapPin, Clock, Award, Star, User, Mail, Phone, Building2, MessageSquare } from 'lucide-react';
+import { Send, MapPin, Clock, User, Mail, Phone, Building2, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -39,7 +39,7 @@ const ContactForm = () => {
       city: 'New York, USA',
       address: '432 Park Avenue, Suite 1500\nNew York, NY 10016',
       phone: '+1 (555) 123-4567',
-      gradient: 'from-blue-500 to-blue-700'
+      gradient: 'from-blue-900 to-blue-700'
     },
     {
       region: 'Europe',
@@ -69,7 +69,7 @@ const ContactForm = () => {
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-64 sm:w-96 h-64 sm:h-96 bg-valentor-red rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-48 sm:w-80 h-48 sm:h-80 bg-blue-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-48 sm:w-80 h-48 sm:h-80 bg-blue-900 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -231,7 +231,7 @@ const ContactForm = () => {
                     size="lg" 
                     className="w-full bg-gradient-to-r from-valentor-red to-red-600 hover:from-red-700 hover:to-red-800 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
                   >
-                    Send Message
+                    Book A Consultation
                     <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </form>
@@ -246,19 +246,8 @@ const ContactForm = () => {
                         +1 (555) 911-SAFE
                       </a>
                     </div>
-                    <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <Award className="h-3 w-3 text-green-500" />
-                        <span>Confidential</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Star className="h-3 w-3 text-blue-500" />
-                        <span>Secure</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Award className="h-3 w-3 text-amber-500" />
-                        <span>ISO 27001 Certified</span>
-                      </div>
+                    <div className="text-xs text-gray-500">
+                      All consultations are confidential and secure • ISO 27001 Certified
                     </div>
                   </div>
                 </div>
@@ -330,18 +319,6 @@ const ContactForm = () => {
                         <span className="font-bold text-white">{item.time}</span>
                       </div>
                     ))}
-                  </div>
-                  
-                  {/* Decorative element */}
-                  <div className="mt-6 pt-6 border-t border-white/20">
-                    <div className="flex items-center justify-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-amber-300 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-xs text-white/80 text-center mt-2 font-medium">
-                      Professional Excellence
-                    </p>
                   </div>
                 </CardContent>
               </Card>

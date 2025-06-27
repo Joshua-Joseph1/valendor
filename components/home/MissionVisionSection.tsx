@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Target, TrendingUp, Globe, Award } from 'lucide-react';
+import { Target, TrendingUp, Globe } from 'lucide-react';
 
 const MissionVisionSection = () => {
   const missionRef = useRef(null);
@@ -70,12 +70,12 @@ const MissionVisionSection = () => {
           >
             <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 shadow-2xl">
               <div className="flex items-center mb-8">
-                <div className="bg-amber-500/20 backdrop-blur-sm rounded-2xl p-4 mr-6">
-                  <TrendingUp className="h-10 w-10 text-amber-400" />
+                <div className="bg-blue-900/20 backdrop-blur-sm rounded-2xl p-4 mr-6">
+                  <TrendingUp className="h-10 w-10 text-blue-400" />
                 </div>
                 <div>
                   <h2 className="text-4xl font-bold mb-2">Our Vision</h2>
-                  <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full"></div>
+                  <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
                 </div>
               </div>
               
@@ -102,29 +102,16 @@ const MissionVisionSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.7 }}
-                  className="bg-gradient-to-br from-amber-500/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-6 border border-amber-400/20 text-center"
+                  className="bg-gradient-to-br from-blue-900/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center"
                 >
-                  <div className="text-4xl font-bold text-amber-400 mb-2">15+</div>
+                  <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
                   <div className="text-gray-300 text-sm font-medium">Years Excellence</div>
-                  <div className="w-8 h-1 bg-amber-400 rounded-full mx-auto mt-2"></div>
+                  <div className="w-8 h-1 bg-blue-400 rounded-full mx-auto mt-2"></div>
                 </motion.div>
               </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom accent */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <div className="inline-flex items-center bg-white/5 backdrop-blur-xl rounded-full px-8 py-4 border border-white/10">
-            <Award className="h-6 w-6 text-valentor-red mr-3" />
-            <span className="text-white font-semibold">Trusted by Fortune 500 Companies Worldwide</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

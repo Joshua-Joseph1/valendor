@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Star, Phone } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ContactCTA = () => {
@@ -32,25 +32,6 @@ const ContactCTA = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          {/* Premium badge */}
-          <div className="text-center mb-8 sm:mb-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-6 sm:px-8 py-3 sm:py-4 border border-white/20 mb-6 sm:mb-8"
-            >
-              <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-white mr-3" />
-              <span className="text-white font-semibold text-sm sm:text-lg">Elite Security Consultancy</span>
-              <div className="ml-3 sm:ml-4 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 text-amber-300 fill-current" />
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
           {/* Main content */}
           <div className="text-center mb-12 sm:mb-16">
             <motion.h2
@@ -96,7 +77,7 @@ const ContactCTA = () => {
               variant="outline" 
               className="w-full sm:w-auto border-2 border-white text-white hover:bg-white/10 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl rounded-2xl transition-all duration-300"
             >
-              Schedule Consultation
+              Book A Consultation
             </Button>
           </motion.div>
 
