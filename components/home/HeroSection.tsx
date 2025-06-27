@@ -132,10 +132,10 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                     <MessageSquare className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-1">
-                    Get a Security Consultation
+                    Book A Consultation
                   </h3>
                   <p className="text-white/80">
-                    Speak with our experts about your security requirements
+                    Speak with our experts about your security needs
                   </p>
                 </div>
               </div>
