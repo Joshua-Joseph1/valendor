@@ -79,10 +79,16 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden"
+              className={`flex flex-col md:flex-row ${
+                index % 2 === 1 ? 'md:flex-row-reverse' : ''
+              } bg-white shadow-lg rounded-lg overflow-hidden`}
             >
               <div className="md:w-2/5">
-                <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-8 md:w-3/5 flex flex-col justify-between">
                 <div>
@@ -92,9 +98,7 @@ const ServicesSection = () => {
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 mb-6">
-                    {service.description}
-                  </p>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center text-sm text-gray-600">
@@ -105,8 +109,8 @@ const ServicesSection = () => {
                   </ul>
                 </div>
                 <Link href={service.href}>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="w-full group-hover:bg-valentor-red group-hover:text-white group-hover:border-valentor-red transition-all duration-300 rounded-xl"
                   >
                     Learn More

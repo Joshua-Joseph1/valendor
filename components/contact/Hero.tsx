@@ -108,21 +108,7 @@ const ContactHero = () => {
               <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mx-auto"></div>
             </motion.div>
 
-            {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center pt-4 px-4"
-            >
-              <Button
-                size="lg"
-                className="w-full sm:w-auto bg-valentor-red hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
-              >
-                Book A Consultation
-                <Phone className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform duration-300" />
-              </Button>
-            </motion.div>
+
 
             {/* Contact Form */}
             <motion.div

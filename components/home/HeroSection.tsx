@@ -30,6 +30,8 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
     service: ''
   });
 
+  const [formStatus, setFormStatus] = useState<string | null>(null);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -37,9 +39,27 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    try {
+      const response = await fetch('https://services.leadconnectorhq.com/hooks/alxZNaCEizQAvDhmth5a/webhook-trigger/725695a6-e696-4f4f-89e5-4e2e65b95943', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setFormStatus('Form submitted successfully!');
+        console.log('Form submitted successfully:', formData);
+      } else {
+        setFormStatus('Form submission failed. Please try again.');
+        console.error('Form submission failed:', response.statusText);
+      }
+    } catch (error) {
+      setFormStatus('Error submitting form. Please try again.');
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
@@ -209,7 +229,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="072 123 4567"
                       />
                     </div>
                   </div>
@@ -245,6 +265,11 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                     <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </form>
+                {formStatus && (
+                  <div className="mt-4 text-center text-sm text-gray-700">
+                    {formStatus}
+                  </div>
+                )}
               </CardContent>
             </Card>
           </motion.div>
