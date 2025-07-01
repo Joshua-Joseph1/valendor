@@ -45,7 +45,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <div className="p-2 transition-all duration-300">
-              <Image src="/images/valentor-logo.png" alt="Valentor Logo" width={60} height={60} />
+              <Image src="/images/logo-nav.png" alt="Valentor Logo" width={120} height={120} />
             </div>
           </Link>
 
