@@ -42,8 +42,7 @@ const MissionVisionSection = () => {
               
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 To provide world-class risk management and protection services that enable 
-                our clients to operate confidently in challenging environments. We combine 
-                cutting-edge technology with human expertise to deliver solutions that protect 
+                our clients to operate confidently in challenging environments, cutting-edge technology with human expertise to deliver solutions that protect 
                 what matters most.
               </p>
               

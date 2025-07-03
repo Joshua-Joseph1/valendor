@@ -42,7 +42,7 @@ const RiskManagementPage = () => {
       ]
     },
     {
-      title: 'Crisis Planning & Contingency Management',
+      title: 'Crisis & Contingency Management',
       description: 'Comprehensive crisis response planning and emergency management protocols.',
       icon: Shield,
       details: [
@@ -86,8 +86,8 @@ const RiskManagementPage = () => {
       <ServiceHero
         icon={Shield}
         title="Risk Management"
-        subtitle="& Intelligence"
-        description="Comprehensive threat assessment and strategic risk consulting to protect your business interests and operations in an ever-changing security landscape."
+        subtitle="& Due Diligence"
+        description="Protect your business interests and ensure business continuity."
         primaryButtonText="Book A Consultation"
         secondaryButtonText="Download Capability Brief"
         accentColor="valentor-red"

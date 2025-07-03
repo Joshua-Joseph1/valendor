@@ -13,45 +13,62 @@ const ServicesSection = () => {
 
   const services = [
     {
-      title: 'Risk Management & Intelligence',
-      description: 'Comprehensive threat assessment and strategic risk consulting to protect your interests.',
+      title: "Risk Management & Intelligence",
+      description:
+        "Comprehensive threat assessment and strategic risk consulting to protect your interests.",
       icon: Shield,
-      href: '/services/risk-management-intelligence',
-      features: ['Threat Assessment', 'Strategic Consulting', 'Crisis Planning'],
-      image: '/images/risk-management.png'
+      href: "/services/risk-management-intelligence",
+      features: [
+        "Threat Assessment",
+        "Strategic Consulting",
+        "Crisis Planning",
+      ],
+      image: "/images/risk-management.png",
     },
     {
-      title: 'Executive Protection',
-      description: 'Discrete close protection services for high-profile individuals and executives.',
+      title: "Executive Protection",
+      description:
+        "Discrete Executive Protection services for high-profile individuals and executives.",
       icon: Users,
-      href: '/services/executive-protection',
-      features: ['Close Protection', 'Residential Security', 'Travel Security'],
-      image: '/images/executive-protection.png'
+      href: "/services/executive-protection",
+      features: [
+        "Executive Protection",
+        "Residential Security",
+        "Travel Security",
+      ],
+      image: "/images/executive-protection.png",
     },
     {
-      title: 'Secure Transfer & Asset Escort',
-      description: 'Professional secure transport and convoy services with real-time monitoring.',
+      title: "Secure Transfer & Asset Escort",
+      description:
+        "Professional secure transport and convoy services with real-time monitoring.",
       icon: Lock,
-      href: '/services/secure-transfer-asset-escort',
-      features: ['Armored Convoy', 'Aviation Security', 'Route Planning'],
-      image: '/images/secure-transfer.png'
+      href: "/services/secure-transfer-asset-escort",
+      features: ["Armored Convoy", "Aviation Security", "Route Planning"],
+      image: "/images/secure-transfer.png",
     },
     {
-      title: 'Anti-Poaching & Wildlife Protection',
-      description: 'Specialized wildlife protection with advanced surveillance and ranger training.',
+      title: "Anti-Poaching & Wildlife Protection",
+      description:
+        "Specialized wildlife protection with advanced surveillance and ranger training.",
       icon: Eye,
-      href: '/services/anti-poaching-wildlife-protection',
-      features: ['Ranger Training', 'UAV Surveillance', 'Intelligence Networks'],
-      image: '/images/anti-poaching.png'
+      href: "/services/anti-poaching-wildlife-protection",
+      features: [
+        "Ranger Training",
+        "UAV Surveillance",
+        "Intelligence Networks",
+      ],
+      image: "/images/anti-poaching.png",
     },
     {
-      title: 'Hardware & Software Security',
-      description: 'Cutting-edge security technology and cyber-physical threat monitoring.',
+      title: "Hardware & Software Security",
+      description:
+        "Cutting-edge security technology and cyber-physical threat monitoring.",
       icon: Zap,
-      href: '/services/hardware-software-security',
-      features: ['CCTV Systems', 'Access Control', 'Cyber Monitoring'],
-      image: '/images/hardware-software.png'
-    }
+      href: "/services/hardware-software-security",
+      features: ["CCTV Systems", "Access Control", "Cyber Monitoring"],
+      image: "/images/hardware-software.png",
+    },
   ];
 
   return (

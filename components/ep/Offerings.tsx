@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, Users, Home, Plane } from 'lucide-react';
+import { CheckCircle, Users, Home, Plane, Calendar } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const ExecutiveProtectionOfferings = () => {
@@ -12,38 +12,41 @@ const ExecutiveProtectionOfferings = () => {
 
   const offerings = [
     {
-      title: 'Tiered Close Protection Details',
-      description: 'Scalable protection services from discrete accompaniment to full security details.',
+      title: "Tiered Executive Protection Details",
+      description:
+        "Scalable protection services from discrete accompaniment to full security details.",
       icon: Users,
       details: [
-        'Level 1: Discrete personal protection for low-risk environments',
-        'Level 2: Enhanced protection with advance reconnaissance',
-        'Level 3: Full security detail with counter-surveillance',
-        'Level 4: High-threat environment protection with tactical support'
-      ]
+        "Level 1: Discrete personal protection for low-risk environments",
+        "Level 2: Enhanced protection with advance reconnaissance",
+        "Level 3: Full security detail with counter-surveillance",
+        "Level 4: High-threat environment protection with tactical support",
+      ],
     },
     {
-      title: 'Secure Residential Coverage',
-      description: 'Comprehensive home and property security for principals and their families.',
+      title: "Secure Residential Coverage",
+      description:
+        "Comprehensive home and property security for principals and their families.",
       icon: Home,
       details: [
-        'Residential security assessments and hardening',
-        '24/7 security personnel and monitoring',
-        'Family protection and safe room protocols',
-        'Domestic staff vetting and security training'
-      ]
+        "Residential security assessments and hardening",
+        "24/7 security personnel and monitoring",
+        "Family protection and safe room protocols",
+        "Domestic staff vetting and security training",
+      ],
     },
     {
-      title: 'Travel & Diplomatic Security Management',
-      description: 'Comprehensive security planning and management for domestic and international travel.',
-      icon: Plane,
+      title: "Event Security Management",
+      description:
+        "End-to-end security solutions for events, gatherings, and high-profile functions.",
+      icon: Calendar, 
       details: [
-        'Pre-travel security assessments and route planning',
-        'Airport and transportation security coordination',
-        'Hotel and venue security arrangements',
-        'Emergency evacuation planning and support'
-      ]
-    }
+        "Crowd management and access control",
+        "Venue security assessments and planning",
+        "VIP escort and protective services",
+        "Emergency response and evacuation planning",
+      ],
+    },
   ];
 
   return (

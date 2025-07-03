@@ -24,7 +24,7 @@ const AboutSection = () => {
     },
     {
       title: 'Strength',
-      description: 'Robust capabilities backed by extensive experience, proven methodologies, and cutting-edge technology to handle any security challenge.',
+      description: 'Robust capabilities enhanced by extensive experience, proven methodologies, and cutting-edge technology to handle any security challenge.',
       icon: Shield,
       gradient: 'from-valentor-red to-red-700',
       details: [

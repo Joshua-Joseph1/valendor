@@ -102,10 +102,7 @@ const AboutStory = () => {
                 </div>
 
                 <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                  To provide world-class risk management and protection services
-                  that enable our clients to operate confidently in challenging
-                  environments, combining cutting-edge technology with human
-                  expertise.
+                To provide world-class risk management and protection services that enable our clients to operate confidently in challenging environments, ultimately enhancing enhancing work performance efficiency and peace of mind.
                 </p>
 
                 <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
