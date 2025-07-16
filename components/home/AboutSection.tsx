@@ -63,7 +63,7 @@ const AboutSection = () => {
         >
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
             Why Choose
-            <span className="block bg-gradient-to-r from-valentor-red to-red-600 bg-clip-text text-transparent">
+            <span className="block text-gray-900">
               Valiant Risk Group
             </span>
           </h2>

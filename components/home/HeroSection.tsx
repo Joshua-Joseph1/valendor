@@ -100,7 +100,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
               >
                 <span className="text-white drop-shadow-2xl">Valiant Risk</span>
-                <span className="block bg-gradient-to-r from-valentor-red via-red-500 to-red-600 bg-clip-text text-transparent drop-shadow-2xl">
+                <span className="block text-white drop-shadow-2xl">
                   Group
                 </span>
               </motion.h1>
