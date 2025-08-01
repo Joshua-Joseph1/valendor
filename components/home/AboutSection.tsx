@@ -37,7 +37,7 @@ const AboutSection = () => {
       title: 'Adaptability',
       description: 'Flexible solutions tailored to unique challenges and changing environments, ensuring effective security in any situation.',
       icon: Target,
-      gradient: 'from-blue-900 to-blue-700',
+      gradient: 'from-slate-600 to-slate-800',
       details: [
         'Customized security solutions',
         'Rapid response capabilities',

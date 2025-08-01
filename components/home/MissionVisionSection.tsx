@@ -69,12 +69,12 @@ const MissionVisionSection = () => {
           >
             <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 shadow-2xl">
               <div className="flex items-center mb-8">
-                <div className="bg-blue-900/20 backdrop-blur-sm rounded-2xl p-4 mr-6">
-                  <TrendingUp className="h-10 w-10 text-blue-400" />
+                <div className="bg-gray-900/20 backdrop-blur-sm rounded-2xl p-4 mr-6">
+                  <TrendingUp className="h-10 w-10 text-gray-400" />
                 </div>
                 <div>
                   <h2 className="text-4xl font-bold mb-2">Our Vision</h2>
-                  <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
+                  <div className="w-16 h-1 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
                 </div>
               </div>
               
@@ -101,11 +101,11 @@ const MissionVisionSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.7 }}
-                  className="bg-gradient-to-br from-blue-900/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center"
+                  className="bg-gradient-to-br from-gray-900/20 to-gray-600/20 backdrop-blur-sm rounded-2xl p-6 border border-gray-400/20 text-center"
                 >
-                  <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
+                  <div className="text-4xl font-bold text-gray-400 mb-2">15+</div>
                   <div className="text-gray-300 text-sm font-medium">Years Excellence</div>
-                  <div className="w-8 h-1 bg-blue-400 rounded-full mx-auto mt-2"></div>
+                  <div className="w-8 h-1 bg-gray-400 rounded-full mx-auto mt-2"></div>
                 </motion.div>
               </div> */}
             </div>

@@ -127,7 +127,7 @@ const WildlifeProtectionOfferings = () => {
                             transition={{ duration: 0.4, delay: (index * 0.1) + (detailIndex * 0.05) + 0.3 }}
                             className="flex items-start group/item hover:bg-white/50 rounded-xl p-3 transition-all duration-200"
                           >
-                            <CheckCircle className="h-6 w-6 text-green-500 mr-4 mt-0.5 flex-shrink-0 group-hover/item:text-green-600 transition-colors duration-200" />
+                            <CheckCircle className="h-6 w-6 text-gray-500 mr-4 mt-0.5 flex-shrink-0 group-hover/item:text-gray-600 transition-colors duration-200" />
                             <span className="text-gray-700 font-medium leading-relaxed group-hover/item:text-gray-900 transition-colors duration-200">
                               {detail}
                             </span>
