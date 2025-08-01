@@ -119,7 +119,7 @@ const ServicesSection = () => {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        <CheckCircle className="h-4 w-4 text-gray-500 mr-2" />
                         {feature}
                       </li>
                     ))}
