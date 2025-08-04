@@ -31,33 +31,30 @@ const AboutStory = () => {
           >
             <div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                Our Story
+                Our Story – Valiant Risk Group
               </h2>
               <div className="w-16 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mb-6 sm:mb-8"></div>
             </div>
 
             <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-600 leading-relaxed">
               <p>
-                Valiant Risk Group was founded in 2009 by Marcus Valentor, a
-                former Special Forces Colonel who recognized the growing need
-                for sophisticated, discrete security solutions in an
-                increasingly complex global landscape.
+                Valiant Risk Group was founded on the unwavering principles of integrity, discipline, discretion, and trust earned, not assumed.
               </p>
               <p>
-                What began as a small team of elite security professionals has
-                evolved into a global consultancy, serving Fortune 500
-                companies, high-net-worth individuals, governments, and
-                international organizations across six continents.
+                Born from a shared mission to redefine the landscape of modern risk management, Valiant is the culmination of decades spent operating at the sharpest edge of global security. Our founders have protected heads of state, high-net-worth individuals, and corporate leaders in some of the world’s most volatile environments, across Africa, Asia, South America, and the Middle East.
               </p>
               <p>
-                Our approach combines traditional security expertise with
-                cutting-edge technology and intelligence gathering, ensuring our
-                clients receive the most comprehensive protection available in
-                today's world.
+                Forged in high-threat zones and refined through years of disciplined service, our team brings an unmatched depth of operational precision, intelligence expertise, and an instinctive comprehension of the realities faced by those in positions of influence and exposure.
+              </p>
+              <p>
+                Valiant Risk Group exists to serve those who cannot afford uncertainty. We deliver intelligence-led, full-spectrum protection, engineered for continuity, control, and absolute peace of mind.
+              </p>
+              <p>
+                This is not traditional security. This is strategic protection, engineered through experience, anchored in trust.
               </p>
             </div>
 
-            <div className="space-y-3 sm:space-y-4">
+            {/* <div className="space-y-3 sm:space-y-4">
               {[
                 "Founded by former Special Forces leadership",
                 "15+ years of proven excellence",
@@ -76,7 +73,7 @@ const AboutStory = () => {
                   </span>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Side - Mission Card */}
@@ -90,9 +87,9 @@ const AboutStory = () => {
               <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl">
                 {/* Header */}
                 <div className="flex items-center mb-6">
-                  <div className="bg-valentor-red/10 rounded-2xl p-3 mr-4">
+                  {/* <div className="bg-valentor-red/10 rounded-2xl p-3 mr-4">
                     <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-valentor-red" />
-                  </div>
+                  </div> */}
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                       Our Mission
@@ -102,7 +99,7 @@ const AboutStory = () => {
                 </div>
 
                 <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                To provide world-class risk management and protection services that enable our clients to operate confidently in challenging environments, ultimately enhancing enhancing work performance efficiency and peace of mind.
+                  To provide world-class risk management and protection services that enable our clients to operate confidently in challenging environments, ultimately enhancing work performance efficiency and peace of mind.
                 </p>
 
                 <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
@@ -118,7 +115,7 @@ const AboutStory = () => {
                 </div>
 
                 {/* Decorative elements */}
-                <div className="mt-6 pt-6 border-t border-gray-100">
+                {/* <div className="mt-6 pt-6 border-t border-gray-100">
                   <div className="flex items-center justify-center space-x-1">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -130,7 +127,7 @@ const AboutStory = () => {
                   <p className="text-xs text-gray-500 text-center mt-2 font-medium">
                     Trusted Excellence Since 2009
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </motion.div>
