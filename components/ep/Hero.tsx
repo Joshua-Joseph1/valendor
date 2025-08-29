@@ -68,7 +68,7 @@ const ExecutiveProtectionHero = () => {
               className="space-y-4"
             >
               <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto">
-                Discrete, professional Executive Protection services for
+                Discreet, professional Executive Protection services for
                 high-profile individuals, executives, and their families,
                 ensuring security without compromising lifestyle.
               </p>

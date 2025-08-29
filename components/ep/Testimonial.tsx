@@ -63,7 +63,7 @@ const ExecutiveProtectionTestimonial = () => {
                 className="text-2xl md:text-3xl lg:text-4xl text-gray-900 mb-8 leading-relaxed font-light italic"
               >
                 "Valiant Risk Group's executive protection team provided
-                seamless, discrete security that allowed me to focus on business
+                seamless, Discreet security that allowed me to focus on business
                 without worrying about my safety. Their professionalism is
                 unmatched."
               </motion.blockquote>

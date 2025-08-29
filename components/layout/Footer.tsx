@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-300 mb-4">
               Global risk management and protection consultancy providing
-              discrete, professional security services worldwide.
+              discreet, professional security services worldwide.
             </p>
             <p className="text-sm text-valentor-red font-semibold">
               Discretion. Strength. Adaptability.

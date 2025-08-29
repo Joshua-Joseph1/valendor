@@ -28,7 +28,7 @@ const ServicesSection = () => {
     {
       title: "Executive Protection",
       description:
-        "Discrete Executive Protection services for high-profile individuals and executives.",
+        "Discreet Executive Protection services for high-profile individuals and executives.",
       icon: Users,
       href: "/services/executive-protection",
       features: [

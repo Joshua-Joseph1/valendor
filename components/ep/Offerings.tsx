@@ -14,10 +14,10 @@ const ExecutiveProtectionOfferings = () => {
     {
       title: "Tiered Executive Protection Details",
       description:
-        "Scalable protection services from discrete accompaniment to full security details.",
+        "Scalable protection services from Discreet accompaniment to full security details.",
       icon: Users,
       details: [
-        "Level 1: Discrete personal protection for low-risk environments",
+        "Level 1: Discreet personal protection for low-risk environments",
         "Level 2: Enhanced protection with advance reconnaissance",
         "Level 3: Full security detail with counter-surveillance",
         "Level 4: High-threat environment protection with tactical support",
@@ -39,7 +39,7 @@ const ExecutiveProtectionOfferings = () => {
       title: "Event Security Management",
       description:
         "End-to-end security solutions for events, gatherings, and high-profile functions.",
-      icon: Calendar, 
+      icon: Calendar,
       details: [
         "Crowd management and access control",
         "Venue security assessments and planning",
