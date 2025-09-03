@@ -28,6 +28,8 @@ const ContactHero = () => {
     message: "",
   });
 
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleInputChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -39,9 +41,27 @@ const ContactHero = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    try {
+      const response = await fetch('https://services.leadconnectorhq.com/hooks/4MUTVCAFzb7OJyfS81GR/webhook-trigger/15a35017-dc74-4f04-8e89-9264248c4c54', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        console.log('Form submitted successfully:', formData);
+        setFormSubmitted(true);
+      } else {
+        console.error('Form submission failed. Please try again.');
+        console.error('Form submission failed:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error submitting form. Please try again.');
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
@@ -108,8 +128,6 @@ const ContactHero = () => {
               <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mx-auto"></div>
             </motion.div>
 
-
-
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -119,162 +137,168 @@ const ContactHero = () => {
             >
               <Card className="bg-white/90 backdrop-blur-xl border-2 border-gray-200/50 shadow-2xl rounded-3xl overflow-hidden">
                 <CardContent className="p-6 sm:p-8">
-                  <form
-                    onSubmit={handleSubmit}
-                    className="space-y-4 sm:space-y-6"
-                  >
-                    {/* Name Fields */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                      <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
-                          First Name *
-                        </label>
-                        <div className="relative group">
-                          <User className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
+                  {formSubmitted ? (
+                    <div className="text-center text-green-600 font-semibold">
+                      Thank you! Your form has been submitted successfully.
+                    </div>
+                  ) : (
+                    <form
+                      onSubmit={handleSubmit}
+                      className="space-y-4 sm:space-y-6"
+                    >
+                      {/* Name Fields */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        <div className="space-y-2">
+                          <label className="block text-sm font-semibold text-gray-700">
+                            First Name *
+                          </label>
+                          <div className="relative group">
+                            <User className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
+                            <input
+                              type="text"
+                              name="firstName"
+                              value={formData.firstName}
+                              onChange={handleInputChange}
+                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              placeholder="John"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <label className="block text-sm font-semibold text-gray-700">
+                            Last Name *
+                          </label>
                           <input
                             type="text"
-                            name="firstName"
-                            value={formData.firstName}
+                            name="lastName"
+                            value={formData.lastName}
                             onChange={handleInputChange}
-                            className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                            placeholder="John"
+                            className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                            placeholder="Doe"
                             required
                           />
                         </div>
                       </div>
+
+                      {/* Email */}
                       <div className="space-y-2">
                         <label className="block text-sm font-semibold text-gray-700">
-                          Last Name *
-                        </label>
-                        <input
-                          type="text"
-                          name="lastName"
-                          value={formData.lastName}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                          placeholder="Doe"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    {/* Email */}
-                    <div className="space-y-2">
-                      <label className="block text-sm font-semibold text-gray-700">
-                        Email Address *
-                      </label>
-                      <div className="relative group">
-                        <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                          placeholder="john.doe@company.com"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    {/* Phone and Company */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                      <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
-                          Phone Number
+                          Email Address *
                         </label>
                         <div className="relative group">
-                          <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
+                          <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                           <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
+                            type="email"
+                            name="email"
+                            value={formData.email}
                             onChange={handleInputChange}
                             className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                            placeholder="+1 (555) 123-4567"
+                            placeholder="john.doe@company.com"
+                            required
                           />
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
-                          Company
-                        </label>
-                        <div className="relative group">
-                          <Building2 className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
-                          <input
-                            type="text"
-                            name="company"
-                            value={formData.company}
-                            onChange={handleInputChange}
-                            className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                            placeholder="Your Company"
-                          />
+
+                      {/* Phone and Company */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        <div className="space-y-2">
+                          <label className="block text-sm font-semibold text-gray-700">
+                            Phone Number
+                          </label>
+                          <div className="relative group">
+                            <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
+                            <input
+                              type="tel"
+                              name="phone"
+                              value={formData.phone}
+                              onChange={handleInputChange}
+                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              placeholder="+1 (555) 123-4567"
+                            />
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <label className="block text-sm font-semibold text-gray-700">
+                            Company
+                          </label>
+                          <div className="relative group">
+                            <Building2 className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
+                            <input
+                              type="text"
+                              name="company"
+                              value={formData.company}
+                              onChange={handleInputChange}
+                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              placeholder="Your Company"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Service Interest */}
-                    <div className="space-y-2">
-                      <label className="block text-sm font-semibold text-gray-700">
-                        Service Interest
-                      </label>
-                      <select
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900"
+                      {/* Service Interest */}
+                      <div className="space-y-2">
+                        <label className="block text-sm font-semibold text-gray-700">
+                          Service Interest
+                        </label>
+                        <select
+                          name="service"
+                          value={formData.service}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900"
+                        >
+                          <option value="">Select a service...</option>
+                          <option value="risk-management">
+                            Risk Management & Intelligence
+                          </option>
+                          <option value="executive-protection">
+                            Executive Protection
+                          </option>
+                          <option value="secure-transfer">
+                            Secure Transfer & Asset Escort
+                          </option>
+                          <option value="wildlife-protection">
+                            Anti-Poaching & Wildlife Protection
+                          </option>
+                          <option value="hardware-software">
+                            Hardware & Software Security
+                          </option>
+                          <option value="consultation">
+                            General Consultation
+                          </option>
+                        </select>
+                      </div>
+
+                      {/* Message */}
+                      <div className="space-y-2">
+                        <label className="block text-sm font-semibold text-gray-700">
+                          Message *
+                        </label>
+                        <div className="relative group">
+                          <MessageSquare className="absolute left-4 top-4 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
+                          <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
+                            rows={5}
+                            className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 resize-none text-gray-900 placeholder-gray-500"
+                            placeholder="Please describe your security requirements and any specific concerns..."
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      {/* Submit Button */}
+                      <Button
+                        type="submit"
+                        size="lg"
+                        className="w-full bg-gradient-to-r from-valentor-red to-red-600 hover:from-red-700 hover:to-red-800 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
                       >
-                        <option value="">Select a service...</option>
-                        <option value="risk-management">
-                          Risk Management & Intelligence
-                        </option>
-                        <option value="executive-protection">
-                          Executive Protection
-                        </option>
-                        <option value="secure-transfer">
-                          Secure Transfer & Asset Escort
-                        </option>
-                        <option value="wildlife-protection">
-                          Anti-Poaching & Wildlife Protection
-                        </option>
-                        <option value="hardware-software">
-                          Hardware & Software Security
-                        </option>
-                        <option value="consultation">
-                          General Consultation
-                        </option>
-                      </select>
-                    </div>
-
-                    {/* Message */}
-                    <div className="space-y-2">
-                      <label className="block text-sm font-semibold text-gray-700">
-                        Message *
-                      </label>
-                      <div className="relative group">
-                        <MessageSquare className="absolute left-4 top-4 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
-                        <textarea
-                          name="message"
-                          value={formData.message}
-                          onChange={handleInputChange}
-                          rows={5}
-                          className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 resize-none text-gray-900 placeholder-gray-500"
-                          placeholder="Please describe your security requirements and any specific concerns..."
-                          required
-                        ></textarea>
-                      </div>
-                    </div>
-
-                    {/* Submit Button */}
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-gradient-to-r from-valentor-red to-red-600 hover:from-red-700 hover:to-red-800 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
-                    >
-                      Book A Consultation
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Button>
-                  </form>
+                        Book A Consultation
+                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </form>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
