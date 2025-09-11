@@ -102,7 +102,7 @@ const ContactForm = () => {
                             value={formData.firstName}
                             onChange={handleInputChange}
                             className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                            placeholder="John"
+                            placeholder=""
                             required
                           />
                         </div>
@@ -117,7 +117,7 @@ const ContactForm = () => {
                           value={formData.lastName}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                          placeholder="Doe"
+                          placeholder=""
                           required
                         />
                       </div>
@@ -136,8 +136,7 @@ const ContactForm = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                          placeholder="john.doe@company.com"
-                          required
+                          placeholder=""
                         />
                       </div>
                     </div>
@@ -156,7 +155,7 @@ const ContactForm = () => {
                             value={formData.phone}
                             onChange={handleInputChange}
                             className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                            placeholder="+1 (555) 123-4567"
+                            placeholder=""
                           />
                         </div>
                       </div>
