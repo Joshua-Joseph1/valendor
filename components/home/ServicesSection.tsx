@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Shield, Users, Lock, Eye, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -15,8 +14,7 @@ const ServicesSection = () => {
     {
       title: "Risk Management & Intelligence",
       description:
-        "Comprehensive threat assessment and strategic risk consulting to protect your interests.",
-      icon: Shield,
+        "We provide prudent assessments and strategic counsel to safeguard your interests, combining foresight with actionable insight.",
       href: "/services/risk-management-intelligence",
       features: [
         "Threat Assessment",
@@ -28,8 +26,7 @@ const ServicesSection = () => {
     {
       title: "Executive Protection",
       description:
-        "Discreet Executive Protection services for high-profile individuals and executives.",
-      icon: Users,
+        "Our discreet and professional support extends to high-profile individuals and their families, ensuring unparalleled assurance without compromising lifestyle.",
       href: "/services/executive-protection",
       features: [
         "Executive Protection",
@@ -41,8 +38,7 @@ const ServicesSection = () => {
     {
       title: "Secure Transfer & Asset Escort",
       description:
-        "Professional secure transport and convoy services with real-time monitoring.",
-      icon: Lock,
+        "From armored convoys to aviation transfers, our escorts guarantee safe passage for your most valuable assets.",
       href: "/services/secure-transfer-asset-escort",
       features: ["Armored Convoy", "Aviation Security", "Route Planning"],
       image: "/images/secure-transfer.png",
@@ -50,8 +46,7 @@ const ServicesSection = () => {
     {
       title: "Anti-Poaching & Wildlife Protection",
       description:
-        "Specialized wildlife protection with advanced surveillance and ranger training.",
-      icon: Eye,
+        "We employ advanced surveillance and highly trained rangers to defend threatened species and preserve natural legacies.",
       href: "/services/anti-poaching-wildlife-protection",
       features: [
         "Ranger Training",
@@ -61,10 +56,9 @@ const ServicesSection = () => {
       image: "/images/anti-poaching.png",
     },
     {
-      title: "Hardware & Software Security",
+      title: "Hardware & Software Solutions",
       description:
-        "Cutting-edge security technology and cyber-physical threat monitoring.",
-      icon: Zap,
+        "Integrating state-of-the-art technology, our systems provide seamless protection across physical and digital realms.",
       href: "/services/hardware-software-security",
       features: ["CCTV Systems", "Access Control", "Cyber Monitoring"],
       image: "/images/hardware-software.png",
@@ -72,7 +66,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" ref={servicesRef} className="py-20 bg-gray-50">
+    <section id="services" ref={servicesRef} className="py-20 bg-[#1a1a1a]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -80,12 +74,11 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Core Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive security solutions tailored to meet the unique challenges 
-            of our global clientele across diverse industries and environments.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Distinguished security solutions, meticulously crafted to address the singular needs of the discerning global clientele. We offer a heritage of protection that resonates with the sophistication and stature of those accustomed to the finest standards across generations and industries.
           </p>
         </motion.div>
 
@@ -98,7 +91,7 @@ const ServicesSection = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className={`flex flex-col md:flex-row ${
                 index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              } bg-white shadow-lg rounded-lg overflow-hidden`}
+              } bg-[#252525] shadow-lg rounded-lg overflow-hidden border border-gray-800`}
             >
               <div className="md:w-2/5">
                 <img
@@ -109,17 +102,14 @@ const ServicesSection = () => {
               </div>
               <div className="p-8 md:w-3/5 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center mb-4">
-                    <service.icon className="h-10 w-10 text-valentor-red mr-4" />
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-semibold text-white mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-gray-500 mr-2" />
+                      <li key={feature} className="flex items-center text-sm text-gray-400">
+                        <span className="mr-2">•</span>
                         {feature}
                       </li>
                     ))}
@@ -128,10 +118,10 @@ const ServicesSection = () => {
                 <Link href={service.href}>
                   <Button
                     variant="outline"
-                    className="w-full group-hover:bg-valentor-red group-hover:text-white group-hover:border-valentor-red transition-all duration-300 rounded-xl"
+                    className="w-full hover:bg-valentor-blue hover:text-white hover:border-valentor-blue transition-all duration-300 rounded-xl border-gray-600 text-gray-300"
                   >
                     Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <span className="ml-2">→</span>
                   </Button>
                 </Link>
               </div>

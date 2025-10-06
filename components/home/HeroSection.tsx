@@ -3,14 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { 
-  ArrowRight, 
-  Send, 
-  Phone, 
-  Mail, 
-  User, 
-  MessageSquare
-} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -60,11 +52,11 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
       setFormStatus('Error submitting form. Please try again.');
       console.error('Error submitting form:', error);
     }
-  
+
   };
 
   return (
-    <section 
+    <section
       ref={heroRef}
       className="relative min-h-screen flex items-center text-white overflow-hidden pt-24 sm:pt-12"
       style={{
@@ -74,25 +66,21 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Background with Lighter Overlays */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-slate-900/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-800/30 to-slate-900/50"></div>
-        <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-900/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-valentor-red/5 via-transparent to-slate-800/10" />
+        <div className="absolute inset-0 bg-[#1a1a1a]/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/60 via-[#1a1a1a]/40 to-[#1a1a1a]/60"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-valentor-blue/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-      
+
       <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
-          {/* Left Side - Simplified Hero Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="text-left space-y-8"
           >
-            {/* Logo and Title */}
             <div className="space-y-6">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -107,38 +95,35 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
               </motion.h1>
             </div>
 
-            {/* Simplified Tagline */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="space-y-4"
             >
-              <p className="text-2xl sm:text-3xl lg:text-4xl text-white font-light tracking-wide drop-shadow-lg">
-                Discretion. Strength. Adaptability.
+              <p className="text-lg sm:text-xl lg:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg leading-relaxed">
+                Discretion. Strength. Adaptability. These pillars form the bedrock of our ethos. At Valiant, we deliver distinguished solutions crafted for the discerning few, addressing the unique challenges of a global clientele across varied industries and environments.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full"></div>
             </motion.div>
 
-            {/* Action Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
                 onClick={onScrollToServices}
               >
-                Explore Our Services
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                Explore Our Offerings
+                <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
               </Button>
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Enhanced Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
@@ -146,14 +131,10 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
             className="xl:pl-8"
           >
             <Card className="bg-white/95 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl overflow-hidden max-w-md mx-auto mt-8">
-              {/* Form Header */}
               <div className="bg-gradient-to-r from-valentor-red to-red-500 p-4 text-white">
                 <div className="text-center">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-2 inline-block mb-3">
-                    <MessageSquare className="h-6 w-6 text-white" />
-                  </div>
                   <h3 className="text-xl font-bold mb-1">
-                    Book A Consultation
+                    Secure Your Consultation
                   </h3>
                   <p className="text-white/80">
                     Speak with our experts about your security needs
@@ -163,21 +144,18 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
 
               <CardContent className="p-4 sm:p-6">
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Name Fields */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">
                       <label className="block text-xs font-semibold text-gray-700">
                         First Name *
                       </label>
                       <div className="relative group">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                         <input
                           type="text"
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                
+                          className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
                           required
                         />
                       </div>
@@ -192,55 +170,47 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-           
                         required
                       />
                     </div>
                   </div>
-                  
-                  {/* Email */}
+
                   <div className="space-y-1">
                     <label className="block text-xs font-semibold text-gray-700">
                       Email Address *
                     </label>
                     <div className="relative group">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full pl-10 pr-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                   
+                        className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
                         required
                       />
                     </div>
                   </div>
-                  
-                  {/* Phone */}
+
                   <div className="space-y-1">
                     <label className="block text-xs font-semibold text-gray-700">
                       Phone Number
                     </label>
                     <div className="relative group">
-                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full pl-10 pr-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                   
+                        className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
                       />
                     </div>
                   </div>
-                  
-                  {/* Service Interest */}
+
                   <div className="space-y-1">
                     <label className="block text-xs font-semibold text-gray-700">
                       Service Interest
                     </label>
-                    <select 
+                    <select
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
@@ -255,15 +225,14 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                       <option value="consultation">General Consultation</option>
                     </select>
                   </div>
-                  
-                  {/* Submit Button */}
-                  <Button 
+
+                  <Button
                     type="submit"
-                    size="sm" 
+                    size="sm"
                     className="w-full bg-gradient-to-r from-valentor-red to-red-500 hover:from-red-600 hover:to-red-700 text-white py-3 text-md rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
                   >
-                    Book A Consultation
-                    <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    Secure Your Consultation
+                    <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </Button>
                 </form>
                 {formStatus && (

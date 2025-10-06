@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
@@ -72,9 +71,9 @@ const Navbar = () => {
                 onMouseEnter={() => setServicesOpen(true)}
               >
                 Services
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
+                <span className={`ml-1 transition-transform duration-300 inline-block ${
                   servicesOpen ? 'rotate-180' : ''
-                }`} />
+                }`}>▾</span>
               </button>
               
               {/* Dropdown Menu */}
@@ -106,7 +105,7 @@ const Navbar = () => {
             <div className="ml-6">
               <Link href="/contact">
                 <Button className="px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-valentor-red hover:bg-red-700 text-white">
-                  Book A Consultation
+                  Secure Your Consultation
                 </Button>
               </Link>
             </div>
@@ -117,7 +116,7 @@ const Navbar = () => {
             className="lg:hidden p-2 rounded-xl transition-all duration-300 text-gray-900 hover:bg-gray-100"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? '✕' : '☰'}
           </button>
         </div>
 
@@ -160,11 +159,11 @@ const Navbar = () => {
             {/* Mobile CTA */}
             <div className="px-4 pt-4">
               <Link href="/contact">
-                <Button 
+                <Button
                   className="w-full bg-valentor-red hover:bg-red-700 text-white rounded-xl py-3 font-semibold shadow-lg"
                   onClick={() => setIsOpen(false)}
                 >
-                  Book A Consultation
+                  Secure Your Consultation
                 </Button>
               </Link>
             </div>

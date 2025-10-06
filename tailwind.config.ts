@@ -21,7 +21,8 @@ const config: Config = {
       },
       colors: {
         valentor: {
-          red: '#C90505',
+          red: '#c1272d',
+          blue: '#344154',
           grey: '#C4C4C4',
         },
         background: 'hsl(var(--background))',
