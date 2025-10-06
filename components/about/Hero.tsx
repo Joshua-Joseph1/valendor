@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { ArrowRight, Shield } from 'lucide-react';
+import { useRef } from "react";
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -14,7 +13,7 @@ const AboutHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
+      className="relative py-20 sm:py-32 lg:py-40 bg-[#1a1a1a] text-white overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
@@ -89,7 +88,6 @@ const AboutHero = () => {
                   className="w-full sm:w-auto bg-valentor-red hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
                 >
                   Our Services
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </Link>
             </motion.div>

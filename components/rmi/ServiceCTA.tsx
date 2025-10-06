@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Phone } from 'lucide-react';
+// Icons removed per brand guideline
 import { Button } from '@/components/ui/button';
 
 interface ServiceCTAProps {
@@ -28,7 +28,9 @@ const ServiceCTA = ({
   gradientTo = 'red-800'
 }: ServiceCTAProps) => {
   return (
-    <section className={`relative py-32 bg-gradient-to-br from-${gradientFrom} via-red-600 to-${gradientTo} text-white overflow-hidden`}>
+    <section
+      className={`relative py-32 bg-[#1a1a1a] text-white overflow-hidden`}
+    >
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
@@ -41,9 +43,12 @@ const ServiceCTA = ({
 
       {/* Geometric pattern overlay */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l25-25v50l-25-25zm0 0l-25 25h50l-25-25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l25-25v50l-25-25zm0 0l-25 25h50l-25-25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -65,7 +70,7 @@ const ServiceCTA = ({
             >
               {title}
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -85,16 +90,13 @@ const ServiceCTA = ({
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-            <Button 
-              size="lg" 
-              className="bg-white text-valentor-red hover:bg-gray-100 px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+            <Button
+              size="lg"
+              className="bg-valentor-red hover:bg-red-700 text-white px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
               onClick={onPrimaryClick}
             >
               {primaryButtonText}
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
-            
-
           </motion.div>
 
           {/* Trust indicators */}
@@ -118,7 +120,6 @@ const ServiceCTA = ({
               <div className="text-white/80 text-sm">Confidential</div>
             </div>
           </motion.div>
-
         </motion.div>
       </div>
     </section>

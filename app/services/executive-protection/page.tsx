@@ -7,7 +7,7 @@ import ExecutiveProtectionCTA from '@/components/ep/CTA';
 
 const ExecutiveProtectionPage = () => {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white">
       <ExecutiveProtectionHero />
       <ExecutiveProtectionOfferings />
       <ExecutiveProtectionFeatures />

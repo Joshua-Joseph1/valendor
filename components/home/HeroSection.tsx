@@ -61,9 +61,9 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
       className="relative min-h-screen flex items-center text-white overflow-hidden pt-24 sm:pt-12"
       style={{
         backgroundImage: `url('/images/hero-image.jpg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        backgroundAttachment: 'fixed'
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundAttachment: "fixed",
       }}
     >
       <div className="absolute inset-0">
@@ -89,9 +89,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
               >
                 <span className="text-white drop-shadow-2xl">Valiant Risk</span>
-                <span className="block text-white drop-shadow-2xl">
-                  Group
-                </span>
+                <span className="block text-white drop-shadow-2xl">Group</span>
               </motion.h1>
             </div>
 
@@ -102,7 +100,11 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
               className="space-y-4"
             >
               <p className="text-lg sm:text-xl lg:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg leading-relaxed">
-                Discretion. Strength. Adaptability. These pillars form the bedrock of our ethos. At Valiant, we deliver distinguished solutions crafted for the discerning few, addressing the unique challenges of a global clientele across varied industries and environments.
+                Discretion. Strength. Adaptability. These pillars form the
+                bedrock of our ethos. At Valiant, we deliver distinguished
+                solutions crafted for the discerning few, addressing the unique
+                challenges of a global clientele across varied industries and
+                environments.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full"></div>
             </motion.div>
@@ -119,7 +121,6 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                 onClick={onScrollToServices}
               >
                 Explore Our Offerings
-                <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
               </Button>
             </motion.div>
           </motion.div>
@@ -217,11 +218,21 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                       className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900"
                     >
                       <option value="">Select a service...</option>
-                      <option value="risk-management">Risk Management & Intelligence</option>
-                      <option value="executive-protection">Executive Protection</option>
-                      <option value="secure-transfer">Secure Transfer & Asset Escort</option>
-                      <option value="wildlife-protection">Anti-Poaching & Wildlife Protection</option>
-                      <option value="hardware-software">Hardware & Software Security</option>
+                      <option value="risk-management">
+                        Risk Management & Intelligence
+                      </option>
+                      <option value="executive-protection">
+                        Executive Protection
+                      </option>
+                      <option value="secure-transfer">
+                        Secure Transfer & Asset Escort
+                      </option>
+                      <option value="wildlife-protection">
+                        Anti-Poaching & Wildlife Protection
+                      </option>
+                      <option value="hardware-software">
+                        Hardware & Software Security
+                      </option>
                       <option value="consultation">General Consultation</option>
                     </select>
                   </div>
@@ -232,7 +243,6 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                     className="w-full bg-gradient-to-r from-valentor-red to-red-500 hover:from-red-600 hover:to-red-700 text-white py-3 text-md rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
                   >
                     Secure Your Consultation
-                    <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </Button>
                 </form>
                 {formStatus && (

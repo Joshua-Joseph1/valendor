@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { ArrowRight, Users } from 'lucide-react';
+import { useRef } from "react";
 import { Button } from '@/components/ui/button';
 
 const ExecutiveProtectionHero = () => {
@@ -13,7 +12,7 @@ const ExecutiveProtectionHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
+      className="relative py-32 bg-[#1a1a1a] text-white overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
@@ -87,7 +86,6 @@ const ExecutiveProtectionHero = () => {
                 className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
               >
                 Book A Consultation
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </motion.div>
           </div>

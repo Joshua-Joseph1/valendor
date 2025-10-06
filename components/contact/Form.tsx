@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Send, Clock, User, Mail, Phone, Building2, MessageSquare } from 'lucide-react';
+import { useRef, useState } from "react";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -53,7 +52,10 @@ const ContactForm = () => {
   };
 
   return (
-    <section ref={formRef} className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-slate-50 to-white relative overflow-hidden">
+    <section
+      ref={formRef}
+      className="py-16 sm:py-20 lg:py-32 bg-[#1a1a1a] relative overflow-hidden"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-64 sm:w-96 h-64 sm:h-96 bg-valentor-red rounded-full blur-3xl"></div>
@@ -70,24 +72,28 @@ const ContactForm = () => {
             className="space-y-6 sm:space-y-8"
           >
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                 Send Us a Message
               </h2>
               <div className="w-16 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mb-6 sm:mb-8"></div>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                For non-emergency inquiries, consultations, or detailed security assessments, 
-                please fill out the form below. Our team will respond within 2 hours.
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                For non-emergency inquiries, consultations, or detailed security
+                assessments, please fill out the form below. Our team will
+                respond within 2 hours.
               </p>
             </div>
-            
-            <Card className="bg-white/90 backdrop-blur-xl border-2 border-gray-200/50 shadow-2xl rounded-3xl overflow-hidden">
+
+            <Card className="bg-[#252525] backdrop-blur-xl border-2 border-gray-700 shadow-2xl rounded-3xl overflow-hidden">
               <CardContent className="p-6 sm:p-8">
                 {formSubmitted ? (
                   <div className="text-center text-green-600 font-semibold">
                     Thank you! Your message has been successfully submitted.
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-4 sm:space-y-6"
+                  >
                     {/* Name Fields */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-2">
@@ -95,7 +101,6 @@ const ContactForm = () => {
                           First Name *
                         </label>
                         <div className="relative group">
-                          <User className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                           <input
                             type="text"
                             name="firstName"
@@ -122,14 +127,13 @@ const ContactForm = () => {
                         />
                       </div>
                     </div>
-                    
+
                     {/* Email */}
                     <div className="space-y-2">
                       <label className="block text-sm font-semibold text-gray-700">
                         Email Address *
                       </label>
                       <div className="relative group">
-                        <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                         <input
                           type="email"
                           name="email"
@@ -140,7 +144,7 @@ const ContactForm = () => {
                         />
                       </div>
                     </div>
-                    
+
                     {/* Phone and Company */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-2">
@@ -148,7 +152,6 @@ const ContactForm = () => {
                           Phone Number
                         </label>
                         <div className="relative group">
-                          <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                           <input
                             type="tel"
                             name="phone"
@@ -164,7 +167,6 @@ const ContactForm = () => {
                           Company
                         </label>
                         <div className="relative group">
-                          <Building2 className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                           <input
                             type="text"
                             name="company"
@@ -176,35 +178,46 @@ const ContactForm = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Service Interest */}
                     <div className="space-y-2">
                       <label className="block text-sm font-semibold text-gray-700">
                         Service Interest
                       </label>
-                      <select 
+                      <select
                         name="service"
                         value={formData.service}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900"
                       >
                         <option value="">Select a service...</option>
-                        <option value="risk-management">Risk Management & Intelligence</option>
-                        <option value="executive-protection">Executive Protection</option>
-                        <option value="secure-transfer">Secure Transfer & Asset Escort</option>
-                        <option value="wildlife-protection">Anti-Poaching & Wildlife Protection</option>
-                        <option value="hardware-software">Hardware & Software Security</option>
-                        <option value="consultation">General Consultation</option>
+                        <option value="risk-management">
+                          Risk Management & Intelligence
+                        </option>
+                        <option value="executive-protection">
+                          Executive Protection
+                        </option>
+                        <option value="secure-transfer">
+                          Secure Transfer & Asset Escort
+                        </option>
+                        <option value="wildlife-protection">
+                          Anti-Poaching & Wildlife Protection
+                        </option>
+                        <option value="hardware-software">
+                          Hardware & Software Security
+                        </option>
+                        <option value="consultation">
+                          General Consultation
+                        </option>
                       </select>
                     </div>
-                    
+
                     {/* Message */}
                     <div className="space-y-2">
                       <label className="block text-sm font-semibold text-gray-700">
                         Message *
                       </label>
                       <div className="relative group">
-                        <MessageSquare className="absolute left-4 top-4 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                         <textarea
                           name="message"
                           value={formData.message}
@@ -216,15 +229,14 @@ const ContactForm = () => {
                         ></textarea>
                       </div>
                     </div>
-                    
+
                     {/* Submit Button */}
-                    <Button 
+                    <Button
                       type="submit"
-                      size="lg" 
+                      size="lg"
                       className="w-full bg-gradient-to-r from-valentor-red to-red-600 hover:from-red-700 hover:to-red-800 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
                     >
                       Book A Consultation
-                      <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </Button>
                   </form>
                 )}
@@ -233,14 +245,19 @@ const ContactForm = () => {
                 <div className="mt-6 sm:mt-8 pt-6 border-t border-gray-200">
                   <div className="text-center space-y-3">
                     <div className="flex items-center justify-center space-x-2">
-                      <Phone className="h-4 w-4 text-valentor-red" />
-                      <span className="text-sm font-semibold text-gray-700">Emergency Hotline:</span>
-                      <a href="tel:+15559115233" className="text-valentor-red hover:text-red-700 font-bold transition-colors duration-200">
+                      <span className="text-sm font-semibold text-gray-700">
+                        Emergency Hotline:
+                      </span>
+                      <a
+                        href="tel:+15559115233"
+                        className="text-valentor-red hover:text-red-700 font-bold transition-colors duration-200"
+                      >
                         +1 (555) 911-SAFE
                       </a>
                     </div>
                     <div className="text-xs text-gray-500">
-                      All consultations are confidential and secure • ISO 27001 Certified
+                      All consultations are confidential and secure • ISO 27001
+                      Certified
                     </div>
                   </div>
                 </div>
@@ -264,20 +281,28 @@ const ContactForm = () => {
               <Card className="bg-gradient-to-br from-valentor-red to-red-700 text-white shadow-2xl rounded-3xl overflow-hidden">
                 <CardContent className="p-6 sm:p-8">
                   <div className="flex items-center mb-6">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-3 mr-4">
-                      <Clock className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="text-xl sm:text-2xl font-bold">Response Times</h4>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-3 mr-4"></div>
+                    <h4 className="text-xl sm:text-2xl font-bold">
+                      Response Times
+                    </h4>
                   </div>
                   <div className="space-y-3 sm:space-y-4">
                     {[
-                      { label: 'Emergency Response:', time: 'Immediate' },
-                      { label: 'General Inquiries:', time: 'Within 2 hours' },
-                      { label: 'Detailed Assessments:', time: 'Within 24 hours' }
+                      { label: "Emergency Response:", time: "Immediate" },
+                      { label: "General Inquiries:", time: "Within 2 hours" },
+                      {
+                        label: "Detailed Assessments:",
+                        time: "Within 24 hours",
+                      },
                     ].map((item, index) => (
-                      <div key={index} className="flex justify-between items-center text-sm sm:text-base">
+                      <div
+                        key={index}
+                        className="flex justify-between items-center text-sm sm:text-base"
+                      >
                         <span className="text-white/90">{item.label}</span>
-                        <span className="font-bold text-white">{item.time}</span>
+                        <span className="font-bold text-white">
+                          {item.time}
+                        </span>
                       </div>
                     ))}
                   </div>

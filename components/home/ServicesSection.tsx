@@ -78,7 +78,11 @@ const ServicesSection = () => {
             Core Services
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Distinguished security solutions, meticulously crafted to address the singular needs of the discerning global clientele. We offer a heritage of protection that resonates with the sophistication and stature of those accustomed to the finest standards across generations and industries.
+            Distinguished security solutions, meticulously crafted to address
+            the singular needs of the discerning global clientele. We offer a
+            heritage of protection that resonates with the sophistication and
+            stature of those accustomed to the finest standards across
+            generations and industries.
           </p>
         </motion.div>
 
@@ -90,7 +94,7 @@ const ServicesSection = () => {
               animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className={`flex flex-col md:flex-row ${
-                index % 2 === 1 ? 'md:flex-row-reverse' : ''
+                index % 2 === 1 ? "md:flex-row-reverse" : ""
               } bg-[#252525] shadow-lg rounded-lg overflow-hidden border border-gray-800`}
             >
               <div className="md:w-2/5">
@@ -108,7 +112,10 @@ const ServicesSection = () => {
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-400">
+                      <li
+                        key={feature}
+                        className="flex items-center text-sm text-gray-400"
+                      >
                         <span className="mr-2">•</span>
                         {feature}
                       </li>
@@ -118,10 +125,9 @@ const ServicesSection = () => {
                 <Link href={service.href}>
                   <Button
                     variant="outline"
-                    className="w-full hover:bg-valentor-blue hover:text-white hover:border-valentor-blue transition-all duration-300 rounded-xl border-gray-600 text-gray-300"
+                    className="w-full hover:bg-[#344154] hover:text-white hover:border-[#344154] transition-all duration-300 rounded-xl border-gray-600 text-gray-300"
                   >
                     Learn More
-                    <span className="ml-2">→</span>
                   </Button>
                 </Link>
               </div>

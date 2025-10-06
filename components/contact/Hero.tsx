@@ -3,14 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from "react";
-import {
-  ArrowRight,
-  Phone,
-  User,
-  Mail,
-  Building2,
-  MessageSquare,
-} from "lucide-react";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -67,7 +59,7 @@ const ContactHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
+      className="relative py-20 sm:py-32 lg:py-40 bg-[#1a1a1a] text-white overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
@@ -153,14 +145,12 @@ const ContactHero = () => {
                             First Name *
                           </label>
                           <div className="relative group">
-                            <User className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                             <input
                               type="text"
                               name="firstName"
                               value={formData.firstName}
                               onChange={handleInputChange}
                               className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                              
                               required
                             />
                           </div>
@@ -175,7 +165,6 @@ const ContactHero = () => {
                             value={formData.lastName}
                             onChange={handleInputChange}
                             className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                            
                             required
                           />
                         </div>
@@ -187,14 +176,12 @@ const ContactHero = () => {
                           Email Address *
                         </label>
                         <div className="relative group">
-                          <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                           <input
                             type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
                             className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                           
                             required
                           />
                         </div>
@@ -207,14 +194,12 @@ const ContactHero = () => {
                             Phone Number
                           </label>
                           <div className="relative group">
-                            <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                             <input
                               type="tel"
                               name="phone"
                               value={formData.phone}
                               onChange={handleInputChange}
                               className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                              
                             />
                           </div>
                         </div>
@@ -223,14 +208,12 @@ const ContactHero = () => {
                             Company
                           </label>
                           <div className="relative group">
-                            <Building2 className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                             <input
                               type="text"
                               name="company"
                               value={formData.company}
                               onChange={handleInputChange}
                               className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
-                              
                             />
                           </div>
                         </div>
@@ -275,7 +258,6 @@ const ContactHero = () => {
                           Message *
                         </label>
                         <div className="relative group">
-                          <MessageSquare className="absolute left-4 top-4 h-5 w-5 text-gray-400 group-focus-within:text-valentor-red transition-colors duration-200" />
                           <textarea
                             name="message"
                             value={formData.message}
@@ -295,7 +277,6 @@ const ContactHero = () => {
                         className="w-full bg-gradient-to-r from-valentor-red to-red-600 hover:from-red-700 hover:to-red-800 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
                       >
                         Book A Consultation
-                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                       </Button>
                     </form>
                   )}

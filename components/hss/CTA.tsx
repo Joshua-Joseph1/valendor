@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Star, Phone } from 'lucide-react';
+import { motion } from "framer-motion";
 import { Button } from '@/components/ui/button';
 
 const HardwareSoftwareCTA = () => {
@@ -19,9 +18,12 @@ const HardwareSoftwareCTA = () => {
 
       {/* Geometric pattern overlay */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l25-25v50l-25-25zm0 0l-25 25h50l-25-25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l25-25v50l-25-25zm0 0l-25 25h50l-25-25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -41,13 +43,9 @@ const HardwareSoftwareCTA = () => {
               viewport={{ once: true }}
               className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-8 py-4 border border-white/20 mb-8"
             >
-              <Shield className="h-6 w-6 text-white mr-3" />
-              <span className="text-white font-semibold text-lg">Advanced Security Technology</span>
-              <div className="ml-4 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-amber-300 fill-current" />
-                ))}
-              </div>
+              <span className="text-white font-semibold text-lg">
+                Advanced Security Technology
+              </span>
             </motion.div>
           </div>
 
@@ -62,7 +60,7 @@ const HardwareSoftwareCTA = () => {
             >
               Secure Your Digital Future
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -70,8 +68,9 @@ const HardwareSoftwareCTA = () => {
               viewport={{ once: true }}
               className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-white/90"
             >
-              Implement cutting-edge security technology that protects your 
-              organization from both physical and digital threats with enterprise-grade solutions.
+              Implement cutting-edge security technology that protects your
+              organization from both physical and digital threats with
+              enterprise-grade solutions.
             </motion.p>
           </div>
 
@@ -83,14 +82,12 @@ const HardwareSoftwareCTA = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-white text-valentor-red hover:bg-gray-100 px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
             >
-              Get in Touch
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
+              Book A Consultation
             </Button>
-
           </motion.div>
 
           {/* Trust indicators */}
@@ -114,7 +111,6 @@ const HardwareSoftwareCTA = () => {
               <div className="text-white/80 text-sm">Confidential</div>
             </div>
           </motion.div>
-
         </motion.div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Shield, AlertTriangle, Users, FileText, Eye, Brain, Target, Clock } from 'lucide-react';
+// Icons removed per brand guideline
 import ServiceHero from '@/components/rmi/ServiceHero';
 import ServiceOfferings from '@/components/rmi/ServiceOfferings';
 import ServiceProcess from '@/components/rmi/ServiceProcess';
@@ -9,82 +9,90 @@ import ServiceCTA from '@/components/rmi/ServiceCTA';
 const RiskManagementPage = () => {
   const offerings = [
     {
-      title: 'Threat & Vulnerability Assessments',
-      description: 'Comprehensive evaluation of potential risks to your organization, assets, and personnel.',
-      icon: AlertTriangle,
+      title: "Threat & Vulnerability Assessments",
+      description:
+        "Comprehensive evaluation of potential risks to your organization, assets, and personnel.",
+      // icon removed
       details: [
-        'Physical security assessments of facilities and operations',
-        'Personnel threat profiling and background verification',
-        'Operational vulnerability analysis and gap identification',
-        'Geopolitical risk evaluation for international operations'
-      ]
+        "Physical security assessments of facilities and operations",
+        "Personnel threat profiling and background verification",
+        "Operational vulnerability analysis and gap identification",
+        "Geopolitical risk evaluation for international operations",
+      ],
     },
     {
-      title: 'Strategic Risk Consulting',
-      description: 'Expert guidance on risk mitigation strategies and security planning.',
-      icon: FileText,
+      title: "Strategic Risk Consulting",
+      description:
+        "Expert guidance on risk mitigation strategies and security planning.",
+      // icon removed
       details: [
-        'Risk management framework development',
-        'Security policy creation and implementation',
-        'Threat landscape analysis and monitoring',
-        'Strategic security planning and budgeting'
-      ]
+        "Risk management framework development",
+        "Security policy creation and implementation",
+        "Threat landscape analysis and monitoring",
+        "Strategic security planning and budgeting",
+      ],
     },
     {
-      title: 'Embedded Risk Advisors',
-      description: 'Dedicated risk management professionals integrated into your operations.',
-      icon: Users,
+      title: "Embedded Risk Advisors",
+      description:
+        "Dedicated risk management professionals integrated into your operations.",
+      // icon removed
       details: [
-        'On-site risk management specialists',
-        'Real-time threat assessment and response',
-        'Security protocol development and training',
-        'Continuous risk monitoring and reporting'
-      ]
+        "On-site risk management specialists",
+        "Real-time threat assessment and response",
+        "Security protocol development and training",
+        "Continuous risk monitoring and reporting",
+      ],
     },
     {
-      title: 'Crisis & Contingency Management',
-      description: 'Comprehensive crisis response planning and emergency management protocols.',
-      icon: Shield,
+      title: "Crisis & Contingency Management",
+      description:
+        "Comprehensive crisis response planning and emergency management protocols.",
+      // icon removed
       details: [
-        'Crisis response plan development',
-        'Emergency evacuation procedures',
-        'Business continuity planning',
-        'Crisis communication strategies'
-      ]
-    }
+        "Crisis response plan development",
+        "Emergency evacuation procedures",
+        "Business continuity planning",
+        "Crisis communication strategies",
+      ],
+    },
   ];
 
   const process = [
     {
-      step: '01',
-      title: 'Assessment',
-      description: 'Comprehensive risk and threat analysis using advanced methodologies and intelligence gathering.',
-      icon: Eye
+      step: "01",
+      title: "Assessment",
+      description:
+        "Comprehensive risk and threat analysis using advanced methodologies and intelligence gathering.",
+      icon: undefined as any,
     },
     {
-      step: '02',
-      title: 'Analysis',
-      description: 'Strategic evaluation and planning based on identified vulnerabilities and threat landscape.',
-      icon: Brain
+      step: "02",
+      title: "Analysis",
+      description:
+        "Strategic evaluation and planning based on identified vulnerabilities and threat landscape.",
+      icon: undefined as any,
     },
     {
-      step: '03',
-      title: 'Implementation',
-      description: 'Deployment of tailored risk mitigation measures and security protocols.',
-      icon: Target
+      step: "03",
+      title: "Implementation",
+      description:
+        "Deployment of tailored risk mitigation measures and security protocols.",
+      icon: undefined as any,
     },
     {
-      step: '04',
-      title: 'Monitoring',
-      description: 'Continuous oversight, alignment, and optimization of security measures.',
-      icon: Clock
-    }
+      step: "04",
+      title: "Monitoring",
+      description:
+        "Continuous oversight, alignment, and optimization of security measures.",
+      icon: undefined as any,
+    },
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white">
       <ServiceHero
-        icon={Shield}
+        // icon removed
         title="Risk Management"
         subtitle="& Due Diligence"
         description="Protect your business interests and ensure business continuity."

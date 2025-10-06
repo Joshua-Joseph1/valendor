@@ -8,7 +8,7 @@ import HardwareSoftwareCTA from '@/components/hss/CTA';
 
 const HardwareSoftwareSecurityPage = () => {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white">
       <HardwareSoftwareHero />
       <HardwareSoftwareOfferings />
       <HardwareSoftwareSolutions />

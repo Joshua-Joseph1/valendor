@@ -9,7 +9,7 @@ import AboutCTA from '@/components/about/CTA';
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white">
       <AboutHero />
       <AboutStory />
       <AboutValues />

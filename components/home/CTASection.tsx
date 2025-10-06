@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowRight, Phone } from 'lucide-react';
+import { motion } from "framer-motion";
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -9,7 +8,7 @@ const CTASection = () => {
   return (
     <section
       id="contact"
-      className="relative py-32 bg-white text-navy overflow-hidden"
+      className="relative py-32 bg-[#1a1a1a] text-white overflow-hidden"
     >
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">
@@ -49,9 +48,7 @@ const CTASection = () => {
               className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
             >
               Ready to Secure
-              <span className="block bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
-                Your Future?
-              </span>
+              <span className="block text-white">Your Future?</span>
             </motion.h2>
 
             <motion.p
@@ -59,7 +56,7 @@ const CTASection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-navy/90"
+              className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-white/90"
             >
               Join the ranks of Fortune 500 companies and high-profile
               individuals who trust Valiant Risk Group with their most critical
@@ -78,10 +75,9 @@ const CTASection = () => {
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-black text-white hover:bg-gray-800 px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+                className="bg-valentor-red text-white hover:bg-red-700 px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
               >
                 Book A Consultation
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
           </motion.div>
@@ -96,15 +92,15 @@ const CTASection = () => {
           >
             <div className="bg-black/5 backdrop-blur-xl rounded-2xl p-6 border border-black/10 text-center">
               <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-navy/80 text-sm">Emergency Response</div>
+              <div className="text-white/80 text-sm">Emergency Response</div>
             </div>
             <div className="bg-black/5 backdrop-blur-xl rounded-2xl p-6 border border-black/10 text-center">
               <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-navy/80 text-sm">Countries Covered</div>
+              <div className="text-white/80 text-sm">Countries Covered</div>
             </div>
             <div className="bg-black/5 backdrop-blur-xl rounded-2xl p-6 border border-black/10 text-center">
               <div className="text-3xl font-bold mb-2">Global</div>
-              <div className="text-navy/80 text-sm">Operations</div>
+              <div className="text-white/80 text-sm">Operations</div>
             </div>
           </motion.div>
 
@@ -116,7 +112,7 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <p className="text-navy/60 text-sm">
+            <p className="text-white/60 text-sm">
               All consultations are confidential and secure • ISO 27001
               Certified • Trusted Worldwide
             </p>

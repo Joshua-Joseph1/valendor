@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowRight, Phone } from 'lucide-react';
+import { motion } from "framer-motion";
 import { Button } from '@/components/ui/button';
 
 const ExecutiveProtectionCTA = () => {
@@ -19,9 +18,12 @@ const ExecutiveProtectionCTA = () => {
 
       {/* Geometric pattern overlay */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l25-25v50l-25-25zm0 0l-25 25h50l-25-25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l25-25v50l-25-25zm0 0l-25 25h50l-25-25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -43,7 +45,7 @@ const ExecutiveProtectionCTA = () => {
             >
               Your Safety is Our Priority
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -51,8 +53,9 @@ const ExecutiveProtectionCTA = () => {
               viewport={{ once: true }}
               className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-white/90"
             >
-              Experience the confidence that comes with elite executive protection. 
-              Contact us for a confidential security consultation tailored to your unique needs.
+              Experience the confidence that comes with elite executive
+              protection. Contact us for a confidential security consultation
+              tailored to your unique needs.
             </motion.p>
           </div>
 
@@ -64,15 +67,12 @@ const ExecutiveProtectionCTA = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-white text-valentor-red hover:bg-gray-100 px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
             >
               Book A Consultation
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
-            
-
           </motion.div>
 
           {/* Trust indicators */}
@@ -96,8 +96,6 @@ const ExecutiveProtectionCTA = () => {
               <div className="text-white/80 text-sm">Confidential</div>
             </div>
           </motion.div>
-
-
         </motion.div>
       </div>
     </section>
