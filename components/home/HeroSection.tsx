@@ -131,7 +131,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="xl:pl-8"
           >
-            <Card className="bg-white/95 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl overflow-hidden max-w-md mx-auto mt-8">
+            <Card className="bg-[#1a1a1a]/95 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl overflow-hidden max-w-md mx-auto mt-8">
               <div className="bg-gradient-to-r from-valentor-red to-red-500 p-4 text-white">
                 <div className="text-center">
                   <h3 className="text-xl font-bold mb-1">
@@ -147,7 +147,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">
-                      <label className="block text-xs font-semibold text-gray-700">
+                      <label className="block text-xs font-semibold text-gray-300">
                         First Name *
                       </label>
                       <div className="relative group">
@@ -156,13 +156,13 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                          className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white placeholder-gray-500"
                           required
                         />
                       </div>
                     </div>
                     <div className="space-y-1">
-                      <label className="block text-xs font-semibold text-gray-700">
+                      <label className="block text-xs font-semibold text-gray-300">
                         Last Name *
                       </label>
                       <input
@@ -170,14 +170,14 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                        className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white placeholder-gray-500"
                         required
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="block text-xs font-semibold text-gray-700">
+                    <label className="block text-xs font-semibold text-gray-300">
                       Email Address *
                     </label>
                     <div className="relative group">
@@ -186,14 +186,14 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                        className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white placeholder-gray-500"
                         required
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="block text-xs font-semibold text-gray-700">
+                    <label className="block text-xs font-semibold text-gray-300">
                       Phone Number
                     </label>
                     <div className="relative group">
@@ -202,20 +202,20 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                        className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white placeholder-gray-500"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="block text-xs font-semibold text-gray-700">
+                    <label className="block text-xs font-semibold text-gray-300">
                       Service Interest
                     </label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900"
+                      className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white"
                     >
                       <option value="">Select a service...</option>
                       <option value="risk-management">
@@ -246,7 +246,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                   </Button>
                 </form>
                 {formStatus && (
-                  <div className="mt-4 text-center text-sm text-gray-700">
+                  <div className="mt-4 text-center text-sm text-gray-300">
                     {formStatus}
                   </div>
                 )}

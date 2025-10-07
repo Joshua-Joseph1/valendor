@@ -5,11 +5,11 @@ import { Quote, Star, Award } from 'lucide-react';
 
 const ExecutiveProtectionTestimonial = () => {
   return (
-    <section className="py-32 bg-white relative overflow-hidden">
-      {/* Background elements */}
+    <section className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden">
+      {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gray-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-900 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -45,7 +45,8 @@ const ExecutiveProtectionTestimonial = () => {
           </div>
 
           {/* Testimonial Card */}
-          <div className="bg-gradient-to-br from-gray-50 via-white to-slate-50 rounded-3xl p-12 shadow-2xl border border-gray-200/50 relative">
+          <div className="bg-[#252525] backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-gray-700 relative">
+            <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
             {/* Quote icon */}
             <div className="absolute -top-6 left-12">
               <div className="bg-valentor-red rounded-2xl p-4 shadow-xl">
@@ -60,7 +61,7 @@ const ExecutiveProtectionTestimonial = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-2xl md:text-3xl lg:text-4xl text-gray-900 mb-8 leading-relaxed font-light italic"
+                className="text-2xl md:text-3xl lg:text-4xl text-white mb-8 leading-relaxed font-light italic"
               >
                 "Valiant Risk Group's executive protection team provided
                 seamless, Discreet security that allowed me to focus on business
@@ -83,10 +84,8 @@ const ExecutiveProtectionTestimonial = () => {
                     />
                   ))}
                 </div>
-                <p className="text-xl font-bold text-gray-900">
-                  Fortune 500 CEO
-                </p>
-                <p className="text-gray-600 font-medium">Confidential Client</p>
+                <p className="text-xl font-bold text-white">Fortune 500 CEO</p>
+                <p className="text-gray-300 font-medium">Confidential Client</p>
                 <div className="w-16 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mx-auto mt-4"></div>
               </motion.div>
             </div>
@@ -112,9 +111,9 @@ const ExecutiveProtectionTestimonial = () => {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <div className="inline-flex items-center bg-white/80 backdrop-blur-xl rounded-full px-8 py-4 border border-gray-200 shadow-lg">
+            <div className="inline-flex items-center bg-[#252525] backdrop-blur-xl rounded-full px-8 py-4 border border-gray-700 shadow-lg">
               <Award className="h-6 w-6 text-valentor-red mr-3" />
-              <span className="text-gray-900 font-semibold">
+              <span className="text-white font-semibold">
                 Trusted by Global Leaders • Proven Excellence
               </span>
             </div>

@@ -20,18 +20,28 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
   ];
 
   const serviceItems = [
-    { name: 'Risk Management & Intelligence', href: '/services/risk-management-intelligence' },
-    { name: 'Executive Protection', href: '/services/executive-protection' },
-    { name: 'Secure Transfer & Asset Escort', href: '/services/secure-transfer-asset-escort' },
-    { name: 'Anti-Poaching & Wildlife Protection', href: '/services/anti-poaching-wildlife-protection' },
-    { name: 'Hardware & Software Security', href: '/services/hardware-software-security' },
+    {
+      name: "Risk Management & Intelligence",
+      href: "/services/risk-management-intelligence",
+    },
+    { name: "Executive Protection", href: "/services/executive-protection" },
+    {
+      name: "Secure Transfer & Asset Escort",
+      href: "/services/secure-transfer-asset-escort",
+    },
+    {
+      name: "Anti-Poaching & Wildlife Protection",
+      href: "/services/anti-poaching-wildlife-protection",
+    },
+    {
+      name: "Hardware & Software Security",
+      href: "/services/hardware-software-security",
+    },
   ];
 
   return (
@@ -115,10 +125,23 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-xl transition-all duration-300 text-white hover:bg-gray-700"
+            className="lg:hidden p-2 rounded-xl transition-all duration-300 text-gray-300 hover:bg-gray-700 hover:text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
-            Menu
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           </button>
         </div>
 

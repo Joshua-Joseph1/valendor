@@ -29,7 +29,10 @@ const ExecutiveProtectionFeatures = () => {
   ];
 
   return (
-    <section ref={featuresRef} className="py-32 bg-gradient-to-br from-gray-50 via-slate-50 to-white relative overflow-hidden">
+    <section
+      ref={featuresRef}
+      className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
+    >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl animate-pulse"></div>
@@ -45,12 +48,13 @@ const ExecutiveProtectionFeatures = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
             Service Features
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Our executive protection services are built on the foundation of excellence, 
-            discretion, and unwavering commitment to your safety and security.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Our executive protection services are built on the foundation of
+            excellence, discretion, and unwavering commitment to your safety and
+            security.
           </p>
         </motion.div>
 
@@ -64,20 +68,21 @@ const ExecutiveProtectionFeatures = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
-              <Card className="h-full bg-white/80 backdrop-blur-xl border-2 border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 rounded-2xl overflow-hidden">
+              <Card className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 rounded-2xl overflow-hidden">
+                <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
                 <CardContent className="p-8 text-center">
                   {/* Icon with luxury styling */}
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-valentor-red/20 to-valentor-red/10 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-6">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-valentor-red/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:rotate-6">
                       <feature.icon className="h-10 w-10 text-valentor-red" />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-gray-200 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                     {feature.description}
                   </p>
                 </CardContent>

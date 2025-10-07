@@ -5,7 +5,7 @@ import { CheckCircle } from 'lucide-react';
 
 const HardwareSoftwareFeatures = () => {
   return (
-    <section className="py-32 bg-white relative overflow-hidden">
+    <section className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl animate-pulse"></div>
@@ -23,22 +23,23 @@ const HardwareSoftwareFeatures = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Enterprise-Grade Security
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Our hardware and software security solutions are designed for 
-                enterprise environments where reliability, scalability, and 
-                integration are critical requirements for mission-critical operations.
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Our hardware and software security solutions are designed for
+                enterprise environments where reliability, scalability, and
+                integration are critical requirements for mission-critical
+                operations.
               </p>
             </div>
-            
+
             <div className="space-y-6">
               {[
-                '24/7 monitoring and expert support',
-                'Scalable architecture for business growth',
-                'Seamless integration with existing systems',
-                'Compliance with industry standards and regulations'
+                "24/7 monitoring and expert support",
+                "Scalable architecture for business growth",
+                "Seamless integration with existing systems",
+                "Compliance with industry standards and regulations",
               ].map((feature, index) => (
                 <motion.div
                   key={index}
@@ -46,10 +47,10 @@ const HardwareSoftwareFeatures = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center group hover:bg-gray-50 rounded-xl p-4 transition-all duration-200"
+                  className="flex items-center group hover:bg-gray-700/20 rounded-xl p-4 transition-all duration-200"
                 >
-                  <CheckCircle className="h-8 w-8 text-green-500 mr-4 flex-shrink-0 group-hover:text-green-600 transition-colors duration-200" />
-                  <span className="text-gray-700 text-lg font-medium group-hover:text-gray-900 transition-colors duration-200">
+                  <CheckCircle className="h-8 w-8 text-valentor-red mr-4 flex-shrink-0 group-hover:text-red-600 transition-colors duration-200" />
+                  <span className="text-gray-300 text-lg font-medium group-hover:text-white transition-colors duration-200">
                     {feature}
                   </span>
                 </motion.div>
@@ -63,17 +64,26 @@ const HardwareSoftwareFeatures = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-valentor-red/5 via-red-50 to-slate-50 p-10 rounded-3xl shadow-2xl border border-valentor-red/10"
+            className="bg-[#252525] p-10 rounded-3xl shadow-2xl border border-gray-700"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700 rounded-t-3xl -m-10 mb-8"></div>
+            <h3 className="text-3xl font-bold text-white mb-8 text-center">
               System Integration
             </h3>
             <div className="space-y-8">
               {[
-                { name: 'CCTV Systems', progress: 100, color: 'valentor-red' },
-                { name: 'Access Control', progress: 85, color: 'valentor-red' },
-                { name: 'Intrusion Detection', progress: 90, color: 'valentor-red' },
-                { name: 'Cyber Monitoring', progress: 95, color: 'valentor-red' }
+                { name: "CCTV Systems", progress: 100, color: "valentor-red" },
+                { name: "Access Control", progress: 85, color: "valentor-red" },
+                {
+                  name: "Intrusion Detection",
+                  progress: 90,
+                  color: "valentor-red",
+                },
+                {
+                  name: "Cyber Monitoring",
+                  progress: 95,
+                  color: "valentor-red",
+                },
               ].map((system, index) => (
                 <motion.div
                   key={system.name}
@@ -84,12 +94,16 @@ const HardwareSoftwareFeatures = () => {
                   className="space-y-3"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700 font-semibold text-lg">{system.name}</span>
-                    <span className="text-gray-600 font-medium">{system.progress}%</span>
+                    <span className="text-white font-semibold text-lg">
+                      {system.name}
+                    </span>
+                    <span className="text-gray-300 font-medium">
+                      {system.progress}%
+                    </span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                    <motion.div 
-                      className={`bg-${system.color} h-3 rounded-full shadow-lg`}
+                  <div className="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                    <motion.div
+                      className="bg-valentor-red h-3 rounded-full shadow-lg"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${system.progress}%` }}
                       transition={{ duration: 1, delay: index * 0.1 + 0.5 }}
@@ -99,10 +113,10 @@ const HardwareSoftwareFeatures = () => {
                 </motion.div>
               ))}
             </div>
-            
+
             {/* Bottom accent */}
-            <div className="mt-8 pt-6 border-t border-valentor-red/20">
-              <p className="text-center text-gray-600 font-medium">
+            <div className="mt-8 pt-6 border-t border-gray-600">
+              <p className="text-center text-gray-300 font-medium">
                 Integrated Security Ecosystem
               </p>
             </div>
