@@ -42,30 +42,34 @@ const AboutLeadership = () => {
   ];
 
   return (
-    <section ref={teamRef} className="py-16 sm:py-20 lg:py-32 bg-white relative overflow-hidden">
-      {/* Background elements */}
+    <section
+      ref={teamRef}
+      className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
+    >
+      {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-64 sm:w-96 h-64 sm:h-96 bg-valentor-red rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-48 sm:w-80 h-48 sm:h-80 bg-blue-900 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-900 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-16 lg:mb-20"
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
             Leadership Team
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-            Our leadership team brings together decades of experience from military, 
-            intelligence, and private security sectors to deliver unmatched expertise.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Our leadership team brings together decades of experience from
+            military, intelligence, and private security sectors to deliver
+            unmatched expertise.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {leadership.map((leader, index) => (
             <motion.div
               key={leader.name}
@@ -74,28 +78,32 @@ const AboutLeadership = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group"
             >
-              <Card className="h-full bg-white/90 backdrop-blur-xl border-2 border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 rounded-2xl overflow-hidden">
-                <CardContent className="p-6 sm:p-8">
-                  <div className="flex items-start space-x-4 sm:space-x-6">
+              <Card className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 rounded-2xl overflow-hidden">
+                <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
                     {/* Icon */}
-                    <div className="bg-gradient-to-br from-valentor-red/20 to-valentor-red/10 rounded-2xl p-3 sm:p-4 flex-shrink-0 group-hover:from-valentor-red/30 group-hover:to-valentor-red/20 transition-all duration-300">
-                      <leader.icon className="h-6 w-6 sm:h-8 sm:w-8 text-valentor-red" />
+                    <div className="bg-valentor-red/20 backdrop-blur-sm rounded-2xl p-4 flex-shrink-0 group-hover:bg-valentor-red/30 transition-all duration-300">
+                      <leader.icon className="h-8 w-8 text-valentor-red" />
                     </div>
-                    
+
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 group-hover:text-gray-800 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-gray-200 transition-colors duration-300">
                         {leader.name}
                       </h3>
-                      <p className="text-valentor-red font-semibold mb-3 text-sm sm:text-base">
+                      <p className="text-valentor-red font-semibold mb-4 text-base">
                         {leader.position}
                       </p>
-                      <p className="text-gray-600 mb-3 text-sm leading-relaxed">
+                      <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                         {leader.background}
                       </p>
-                      <div className="bg-gray-50 rounded-xl p-3 group-hover:bg-gray-100 transition-colors duration-300">
-                        <p className="text-xs sm:text-sm text-gray-700">
-                          <span className="font-semibold text-gray-900">Expertise:</span> {leader.expertise}
+                      <div className="bg-valentor-red/10 backdrop-blur-sm rounded-xl p-4 border border-valentor-red/20 group-hover:bg-valentor-red/15 transition-colors duration-300">
+                        <p className="text-sm text-gray-300">
+                          <span className="font-semibold text-white">
+                            Expertise:
+                          </span>{" "}
+                          {leader.expertise}
                         </p>
                       </div>
                     </div>

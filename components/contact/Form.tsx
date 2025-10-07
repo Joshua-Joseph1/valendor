@@ -97,7 +97,7 @@ const ContactForm = () => {
                     {/* Name Fields */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
+                        <label className="block text-sm font-semibold text-white">
                           First Name *
                         </label>
                         <div className="relative group">
@@ -113,7 +113,7 @@ const ContactForm = () => {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
+                        <label className="block text-sm font-semibold text-white">
                           Last Name *
                         </label>
                         <input
@@ -130,7 +130,7 @@ const ContactForm = () => {
 
                     {/* Email */}
                     <div className="space-y-2">
-                      <label className="block text-sm font-semibold text-gray-700">
+                      <label className="block text-sm font-semibold text-white">
                         Email Address *
                       </label>
                       <div className="relative group">
@@ -148,7 +148,7 @@ const ContactForm = () => {
                     {/* Phone and Company */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
+                        <label className="block text-sm font-semibold text-white">
                           Phone Number
                         </label>
                         <div className="relative group">
@@ -163,7 +163,7 @@ const ContactForm = () => {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
+                        <label className="block text-sm font-semibold text-white">
                           Company
                         </label>
                         <div className="relative group">
@@ -181,7 +181,7 @@ const ContactForm = () => {
 
                     {/* Service Interest */}
                     <div className="space-y-2">
-                      <label className="block text-sm font-semibold text-gray-700">
+                      <label className="block text-sm font-semibold text-white">
                         Service Interest
                       </label>
                       <select
@@ -214,7 +214,7 @@ const ContactForm = () => {
 
                     {/* Message */}
                     <div className="space-y-2">
-                      <label className="block text-sm font-semibold text-gray-700">
+                      <label className="block text-sm font-semibold text-white">
                         Message *
                       </label>
                       <div className="relative group">
@@ -242,10 +242,10 @@ const ContactForm = () => {
                 )}
 
                 {/* Form Footer */}
-                <div className="mt-6 sm:mt-8 pt-6 border-t border-gray-200">
+                <div className="mt-6 sm:mt-8 pt-6 border-t border-gray-600">
                   <div className="text-center space-y-3">
                     <div className="flex items-center justify-center space-x-2">
-                      <span className="text-sm font-semibold text-gray-700">
+                      <span className="text-sm font-semibold text-white">
                         Emergency Hotline:
                       </span>
                       <a
@@ -255,7 +255,7 @@ const ContactForm = () => {
                         +1 (555) 911-SAFE
                       </a>
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-300">
                       All consultations are confidential and secure • ISO 27001
                       Certified
                     </div>

@@ -21,7 +21,6 @@ const ServicesSection = () => {
         "Strategic Consulting",
         "Crisis Planning",
       ],
-      image: "/images/risk-management.png",
     },
     {
       title: "Executive Protection",
@@ -33,7 +32,6 @@ const ServicesSection = () => {
         "Residential Security",
         "Travel Security",
       ],
-      image: "/images/executive-protection.png",
     },
     {
       title: "Secure Transfer & Asset Escort",
@@ -41,7 +39,6 @@ const ServicesSection = () => {
         "From armored convoys to aviation transfers, our escorts guarantee safe passage for your most valuable assets.",
       href: "/services/secure-transfer-asset-escort",
       features: ["Armored Convoy", "Aviation Security", "Route Planning"],
-      image: "/images/secure-transfer.png",
     },
     {
       title: "Anti-Poaching & Wildlife Protection",
@@ -53,7 +50,6 @@ const ServicesSection = () => {
         "UAV Surveillance",
         "Intelligence Networks",
       ],
-      image: "/images/anti-poaching.png",
     },
     {
       title: "Hardware & Software Solutions",
@@ -61,7 +57,6 @@ const ServicesSection = () => {
         "Integrating state-of-the-art technology, our systems provide seamless protection across physical and digital realms.",
       href: "/services/hardware-software-security",
       features: ["CCTV Systems", "Access Control", "Cyber Monitoring"],
-      image: "/images/hardware-software.png",
     },
   ];
 
@@ -93,18 +88,9 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`flex flex-col md:flex-row ${
-                index % 2 === 1 ? "md:flex-row-reverse" : ""
-              } bg-[#252525] shadow-lg rounded-lg overflow-hidden border border-gray-800`}
+              className="bg-[#252525] shadow-lg rounded-lg overflow-hidden border border-gray-800"
             >
-              <div className="md:w-2/5">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-8 md:w-3/5 flex flex-col justify-between">
+              <div className="p-8 flex flex-col justify-between">
                 <div>
                   <h3 className="text-2xl font-semibold text-white mb-4">
                     {service.title}
