@@ -3,8 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, Star, Zap, Camera, Satellite, Binoculars, Bone as Drone } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Zap, Camera, Satellite, Binoculars, Bone as Drone } from 'lucide-react';
 
 const WildlifeProtectionTechnology = () => {
   const technologyRef = useRef(null);
@@ -60,68 +59,31 @@ const WildlifeProtectionTechnology = () => {
           </p>
         </motion.div>
 
-        {/* Technology Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {/* Technology - Inline list */}
+        <div className="max-w-6xl mx-auto divide-y divide-white/10">
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.title}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={isTechnologyInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="py-8"
             >
-              <Card className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 transition-colors duration-300 rounded-lg overflow-hidden">
-                <div className="h-2 bg-[#344154]"></div>
-                <CardContent className="p-8 text-center">
-                  {/* Icon with luxury styling */}
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-[#344154]/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto transition-colors duration-500">
-                      <tech.icon className="h-10 w-10 text-[#344154]" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-[ui-serif] tracking-tight text-white mb-4">
-                    {tech.title}
-                  </h3>
-                  <p className="text-white/80 leading-relaxed font-[ui-sans-serif]">
-                    {tech.description}
-                  </p>
-
-                  {/* Decorative element */}
-                  <div className="mt-6 pt-6 border-t border-white/10">
-                    <div className="flex items-center justify-center space-x-1">
-                      {[...Array(3)].map((_, i) => (
-                        <div
-                          key={i}
-                          className={`w-2 h-2 bg-[#344154] rounded-full`}
-                        ></div>
-                      ))}
-                    </div>
-                    <p className="text-xs text-white/70 text-center mt-2 font-[ui-sans-serif]">
-                      Advanced Technology
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-[#344154]/20 flex items-center justify-center flex-shrink-0">
+                  <tech.icon className="h-5 w-5 text-[#344154]" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-[ui-serif] tracking-tight text-white mb-1">{tech.title}</h3>
+                  <p className="text-white/80 font-[ui-sans-serif]">{tech.description}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Bottom accent */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isTechnologyInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-16"
-        >
-          <div className="inline-flex items-center bg-[#252525] backdrop-blur-xl rounded-full px-8 py-4 border border-gray-700 shadow-lg">
-            <Award className="h-6 w-6 text-valentor-red mr-3" />
-            <span className="text-white font-semibold">
-              Cutting-Edge Innovation • Wildlife Security Excellence
-            </span>
-          </div>
-        </motion.div>
+        {/* Bottom spacer for rhythm */}
+        <div className="mt-8" />
       </div>
     </section>
   );

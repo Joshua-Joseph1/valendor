@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Star, Phone } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const WildlifeProtectionCTA = () => {
@@ -32,29 +32,7 @@ const WildlifeProtectionCTA = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          {/* Premium badge */}
-          <div className="text-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center bg-[#344154]/10 backdrop-blur-xl rounded-full px-8 py-4 border border-[#344154]/20 mb-8"
-            >
-              <Shield className="h-6 w-6 text-[#344154] mr-3" />
-              <span className="text-white/90 font-[ui-sans-serif] text-lg">
-                Wildlife Security Excellence
-              </span>
-              <div className="ml-4 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 text-amber-400 fill-current"
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </div>
+          {/* Removed premium badge for cleaner blend */}
 
           {/* Main content */}
           <div className="text-center mb-16">
@@ -80,7 +58,7 @@ const WildlifeProtectionCTA = () => {
             </motion.p>
           </div>
 
-          {/* Action buttons */}
+          {/* Action button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,34 +76,24 @@ const WildlifeProtectionCTA = () => {
             </a>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Trust indicators simplified and inline */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto divide-y divide-white/10"
           >
-            <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-6 border border-white/10 text-center">
-              <div className="text-3xl font-bold mb-2 text-valentor-red">
-                24/7
+            {[
+              { label: 'Wildlife Security', value: '24/7' },
+              { label: 'Security Network', value: 'Global' },
+              { label: 'Commitment', value: '100% Dedicated' },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center justify-between py-4">
+                <div className="text-white/80 font-[ui-sans-serif]">{item.label}</div>
+                <div className="text-white font-[ui-serif] tracking-tight text-lg">{item.value}</div>
               </div>
-              <div className="text-gray-300 text-sm">Wildlife Security</div>
-            </div>
-            <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-6 border border-white/10 text-center">
-              <div className="text-3xl font-bold mb-2 text-valentor-red">
-                Global
-              </div>
-              <div className="text-gray-300 text-sm">Security Network</div>
-            </div>
-            <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-6 border border-white/10 text-center">
-              <div className="text-3xl font-bold mb-2 text-valentor-red">
-                100%
-              </div>
-              <div className="text-gray-300 text-sm">
-                Dedicated to Protection
-              </div>
-            </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>
