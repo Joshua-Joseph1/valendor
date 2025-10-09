@@ -7,7 +7,7 @@ import ContactCTA from '@/components/contact/CTA';
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white">
+    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white antialiased">
       {/* <ContactHero /> */}
       <ContactForm />
       {/* <ContactCTA /> */}

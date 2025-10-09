@@ -54,7 +54,7 @@ const ContactForm = () => {
   return (
     <section
       ref={formRef}
-      className="py-16 sm:py-20 lg:py-32 bg-[#1a1a1a] relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -73,19 +73,19 @@ const ContactForm = () => {
               className="space-y-6 sm:space-y-8"
             >
               <div className="text-center">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-                  Send Us a Message
+                <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4 leading-tight">
+                  Arrange a Private Consultation
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mb-6 sm:mb-8 mx-auto"></div>
-                <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+                <p className="text-base md:text-lg text-white/80 leading-relaxed font-[ui-sans-serif]">
                   For non-emergency inquiries, consultations, or detailed security
                   assessments, please fill out the form below. Our team will
                   respond within 2 hours.
                 </p>
               </div>
 
-              <Card className="bg-[#252525] backdrop-blur-xl border-2 border-gray-700 shadow-2xl rounded-3xl overflow-hidden">
-                <CardContent className="p-6 sm:p-8">
+              <Card className="bg-transparent border-0 shadow-none">
+                <CardContent className="p-0">
                   {formSubmitted ? (
                     <div className="text-center text-green-600 font-semibold">
                       Thank you! Your message has been successfully submitted.
@@ -98,7 +98,7 @@ const ContactForm = () => {
                       {/* Name Fields */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         <div className="space-y-2">
-                          <label className="block text-sm font-semibold text-white">
+                          <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                             First Name *
                           </label>
                           <div className="relative group">
@@ -107,14 +107,14 @@ const ContactForm = () => {
                               name="firstName"
                               value={formData.firstName}
                               onChange={handleInputChange}
-                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                               placeholder=""
                               required
                             />
                           </div>
                         </div>
                         <div className="space-y-2">
-                          <label className="block text-sm font-semibold text-white">
+                          <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                             Last Name *
                           </label>
                           <input
@@ -122,7 +122,7 @@ const ContactForm = () => {
                             name="lastName"
                             value={formData.lastName}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                            className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                             placeholder=""
                             required
                           />
@@ -131,7 +131,7 @@ const ContactForm = () => {
 
                       {/* Email */}
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-white">
+                        <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                           Email Address *
                         </label>
                         <div className="relative group">
@@ -140,7 +140,7 @@ const ContactForm = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                            className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                             placeholder=""
                           />
                         </div>
@@ -149,7 +149,7 @@ const ContactForm = () => {
                       {/* Phone and Company */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         <div className="space-y-2">
-                          <label className="block text-sm font-semibold text-white">
+                          <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                             Phone Number
                           </label>
                           <div className="relative group">
@@ -158,13 +158,13 @@ const ContactForm = () => {
                               name="phone"
                               value={formData.phone}
                               onChange={handleInputChange}
-                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                               placeholder=""
                             />
                           </div>
                         </div>
                         <div className="space-y-2">
-                          <label className="block text-sm font-semibold text-white">
+                          <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                             Company
                           </label>
                           <div className="relative group">
@@ -173,7 +173,7 @@ const ContactForm = () => {
                               name="company"
                               value={formData.company}
                               onChange={handleInputChange}
-                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                               
                             />
                           </div>
@@ -182,14 +182,14 @@ const ContactForm = () => {
 
                       {/* Service Interest */}
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-white">
+                        <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                           Service Interest
                         </label>
                         <select
                           name="service"
                           value={formData.service}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900"
+                          className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white"
                         >
                           <option value="">Select a service...</option>
                           <option value="risk-management">
@@ -215,7 +215,7 @@ const ContactForm = () => {
 
                       {/* Message */}
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-white">
+                        <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                           Message *
                         </label>
                         <div className="relative group">
@@ -224,7 +224,7 @@ const ContactForm = () => {
                             value={formData.message}
                             onChange={handleInputChange}
                             rows={5}
-                            className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 resize-none text-gray-900 placeholder-gray-500"
+                            className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent resize-none text-white placeholder-gray-500"
                       
                             required
                           ></textarea>
@@ -235,9 +235,10 @@ const ContactForm = () => {
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full bg-gradient-to-r from-valentor-red to-red-600 hover:from-red-700 hover:to-red-800 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
+                        className="w-full bg-[#C1272D] hover:bg-[#C1272D]/90 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                        aria-label="Arrange a Private Consultation with Valiant Risk Group"
                       >
-                        Book A Consultation
+                        Arrange a Private Consultation
                       </Button>
                     </form>
                   )}

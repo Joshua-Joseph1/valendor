@@ -48,7 +48,7 @@ const ContactMethods = () => {
   return (
     <section
       ref={contactRef}
-      className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -61,59 +61,49 @@ const ContactMethods = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isContactInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">
             How to Reach Us
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">
             Multiple channels available for immediate response and secure
             communication. Choose the method that best suits your security
             requirements.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto divide-y divide-white/10">
           {contactMethods.map((method, index) => (
             <motion.div
               key={method.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isContactInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="group"
+              className="py-6"
             >
-              <Card className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 rounded-2xl overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
-                <CardContent className="p-8 text-center">
-                  {/* Icon with luxury styling */}
-                  <div className="relative mb-8">
-                    <div
-                      className={`w-20 h-20 bg-gradient-to-br ${method.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:rotate-6`}
-                    >
-                      <method.icon className="h-10 w-10 text-white" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-gray-200 transition-colors duration-300">
+              <div className="flex items-start gap-4">
+                <div className={`w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center`}>
+                  <method.icon className="h-5 w-5 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-[ui-serif] tracking-tight text-white mb-1">
                     {method.title}
                   </h3>
-                  <p className="text-gray-300 mb-6 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                  <p className="text-white/80 mb-2 text-sm leading-relaxed font-[ui-sans-serif]">
                     {method.description}
                   </p>
-
-                  <div className="space-y-3">
-                    <div className="bg-valentor-red/10 backdrop-blur-sm rounded-xl p-4 border border-valentor-red/20 group-hover:bg-valentor-red/15 transition-colors duration-300">
-                      <p className="font-bold text-white text-sm break-all">
-                        {method.contact}
-                      </p>
-                    </div>
-                    <p className="text-xs text-valentor-red font-semibold">
+                  <div className="flex items-center justify-between">
+                    <p className="font-[ui-serif] text-white">
+                      {method.contact}
+                    </p>
+                    <p className="text-xs text-white/70 font-[ui-sans-serif]">
                       {method.available}
                     </p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

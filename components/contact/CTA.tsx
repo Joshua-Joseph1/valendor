@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const ContactCTA = () => {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-valentor-red via-red-600 to-red-800 text-white overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-[#1a1a1a] text-white overflow-hidden">
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
@@ -35,23 +35,24 @@ const ContactCTA = () => {
           className="max-w-5xl mx-auto"
         >
           {/* Main content */}
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight"
+              className="text-3xl md:text-5xl font-[ui-serif] tracking-tight mb-4 leading-tight"
             >
               Your Security Cannot Wait
             </motion.h2>
+            <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed text-white/90 px-4"
+              className="text-base md:text-lg mb-12 max-w-4xl mx-auto leading-relaxed text-white/80 font-[ui-sans-serif] px-4"
             >
               In security, timing is everything. Contact us now for immediate
               assistance or to schedule a comprehensive security consultation
@@ -65,40 +66,35 @@ const ContactCTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 px-4"
           >
-            <Button
-              size="lg"
-              className="w-full sm:w-auto bg-white text-valentor-red hover:bg-gray-100 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+            <a
+              href="/contact"
+              aria-label="Enlist Our Expertise at Valiant Risk Group"
+              className="inline-flex items-center bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-10 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
             >
-              Emergency Hotline
-            </Button>
+              Enlist Our Expertise
+            </a>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Trust indicators - inline list */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto divide-y divide-white/10"
           >
-            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10 text-center">
-              <div className="text-2xl sm:text-3xl font-bold mb-2">24/7</div>
-              <div className="text-white/80 text-xs sm:text-sm">
-                Emergency Response
+            {[
+              { label: 'Emergency Response', value: '24/7' },
+              { label: 'Coverage', value: 'Global' },
+              { label: 'Confidential', value: '100%' },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center justify-between py-4">
+                <div className="text-white/80 font-[ui-sans-serif]">{item.label}</div>
+                <div className="text-white font-[ui-serif] tracking-tight text-lg">{item.value}</div>
               </div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10 text-center">
-              <div className="text-2xl sm:text-3xl font-bold mb-2">Global</div>
-              <div className="text-white/80 text-xs sm:text-sm">Coverage</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10 text-center">
-              <div className="text-2xl sm:text-3xl font-bold mb-2">100%</div>
-              <div className="text-white/80 text-xs sm:text-sm">
-                Confidential
-              </div>
-            </div>
+            ))}
           </motion.div>
 
           {/* Emergency contact */}

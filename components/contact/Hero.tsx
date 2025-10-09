@@ -59,7 +59,7 @@ const ContactHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative py-20 sm:py-32 lg:py-40 bg-[#1a1a1a] text-white overflow-hidden"
+      className="relative py-24 md:py-32 bg-[#1a1a1a] text-white overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
@@ -98,11 +98,8 @@ const ContactHero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col items-center space-y-4 sm:space-y-6"
             >
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
-                <span className="text-white">Contact</span>
-                <span className="block bg-gradient-to-r from-valentor-red via-red-500 to-red-600 bg-clip-text text-transparent">
-                  Valiant Risk Group
-                </span>
+              <h1 className="text-4xl md:text-6xl font-[ui-serif] tracking-tight leading-tight">
+                Contact Valiant Risk Group
               </h1>
             </motion.div>
 
@@ -113,11 +110,9 @@ const ContactHero = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="space-y-4"
             >
-              <p className="text-lg sm:text-xl md:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto px-4">
-                Ready to secure your future? Our global team of security experts
-                is standing by to provide immediate assistance and consultation.
+              <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-4xl mx-auto px-4 font-[ui-sans-serif]">
+                Ready to secure your future? Our global team is standing by to provide immediate assistance and confidential consultation.
               </p>
-              <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mx-auto"></div>
             </motion.div>
 
             {/* Contact Form */}
@@ -127,8 +122,8 @@ const ContactHero = () => {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="mt-8"
             >
-              <Card className="bg-white/90 backdrop-blur-xl border-2 border-gray-200/50 shadow-2xl rounded-3xl overflow-hidden">
-                <CardContent className="p-6 sm:p-8">
+              <Card className="bg-transparent border-0 shadow-none">
+                <CardContent className="p-0">
                   {formSubmitted ? (
                     <div className="text-center text-green-600 font-semibold">
                       Thank you! Your form has been submitted successfully.
@@ -141,7 +136,7 @@ const ContactHero = () => {
                       {/* Name Fields */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         <div className="space-y-2">
-                          <label className="block text-sm font-semibold text-gray-700">
+                          <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                             First Name *
                           </label>
                           <div className="relative group">
@@ -150,13 +145,13 @@ const ContactHero = () => {
                               name="firstName"
                               value={formData.firstName}
                               onChange={handleInputChange}
-                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                               required
                             />
                           </div>
                         </div>
                         <div className="space-y-2">
-                          <label className="block text-sm font-semibold text-gray-700">
+                          <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                             Last Name *
                           </label>
                           <input
@@ -164,7 +159,7 @@ const ContactHero = () => {
                             name="lastName"
                             value={formData.lastName}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                            className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                             required
                           />
                         </div>
@@ -172,7 +167,7 @@ const ContactHero = () => {
 
                       {/* Email */}
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
+                        <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                           Email Address *
                         </label>
                         <div className="relative group">
@@ -181,7 +176,7 @@ const ContactHero = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                          className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                             required
                           />
                         </div>
@@ -190,7 +185,7 @@ const ContactHero = () => {
                       {/* Phone and Company */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         <div className="space-y-2">
-                          <label className="block text-sm font-semibold text-gray-700">
+                          <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                             Phone Number
                           </label>
                           <div className="relative group">
@@ -199,12 +194,12 @@ const ContactHero = () => {
                               name="phone"
                               value={formData.phone}
                               onChange={handleInputChange}
-                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                             />
                           </div>
                         </div>
                         <div className="space-y-2">
-                          <label className="block text-sm font-semibold text-gray-700">
+                          <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                             Company
                           </label>
                           <div className="relative group">
@@ -213,7 +208,7 @@ const ContactHero = () => {
                               name="company"
                               value={formData.company}
                               onChange={handleInputChange}
-                              className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900 placeholder-gray-500"
+                              className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                             />
                           </div>
                         </div>
@@ -221,14 +216,14 @@ const ContactHero = () => {
 
                       {/* Service Interest */}
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
+                        <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                           Service Interest
                         </label>
                         <select
                           name="service"
                           value={formData.service}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 text-gray-900"
+                          className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white"
                         >
                           <option value="">Select a service...</option>
                           <option value="risk-management">
@@ -254,7 +249,7 @@ const ContactHero = () => {
 
                       {/* Message */}
                       <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
+                        <label className="block text-sm font-semibold text-white/80 font-[ui-sans-serif]">
                           Message *
                         </label>
                         <div className="relative group">
@@ -263,7 +258,7 @@ const ContactHero = () => {
                             value={formData.message}
                             onChange={handleInputChange}
                             rows={5}
-                            className="w-full pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-white hover:border-gray-300 resize-none text-gray-900 placeholder-gray-500"
+                            className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent resize-none text-white placeholder-gray-500"
                             placeholder="Please describe your security requirements and any specific concerns..."
                             required
                           ></textarea>
@@ -274,9 +269,10 @@ const ContactHero = () => {
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full bg-gradient-to-r from-valentor-red to-red-600 hover:from-red-700 hover:to-red-800 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
+                        className="w-full bg-[#C1272D] hover:bg-[#C1272D]/90 text-white py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                        aria-label="Arrange a Private Consultation with Valiant Risk Group"
                       >
-                        Book A Consultation
+                        Arrange a Private Consultation
                       </Button>
                     </form>
                   )}
