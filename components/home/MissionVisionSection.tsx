@@ -43,9 +43,8 @@ const MissionVisionSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="group"
           >
-            <div className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 hover:border-white/20 transition-colors duration-300 overflow-hidden rounded-lg">
-              <div className="h-2 bg-[#C1272D]"></div>
-              <div className="p-10">
+            <div className="h-full transition-colors duration-300">
+              <div className="p-0">
                 <div className="flex items-center mb-8">
                   <div className="bg-[#C1272D]/15 backdrop-blur-sm rounded-xl p-4 mr-6">
                     <Target className="h-10 w-10 text-[#C1272D]" />
@@ -96,9 +95,8 @@ const MissionVisionSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="group"
           >
-            <div className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 hover:border-white/20 transition-colors duration-300 overflow-hidden rounded-lg">
-              <div className="h-2 bg-[#344154]"></div>
-              <div className="p-10">
+            <div className="h-full transition-colors duration-300">
+              <div className="p-0">
                 <div className="flex items-center mb-8">
                   <div className="bg-[#344154]/20 backdrop-blur-sm rounded-xl p-4 mr-6">
                     <TrendingUp className="h-10 w-10 text-[#344154]" />

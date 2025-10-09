@@ -89,26 +89,24 @@ const CTASection = () => {
             </Link>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Trust indicators - inline list */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto divide-y divide-white/10"
           >
-            <div className="bg-black/5 backdrop-blur-xl rounded-2xl p-6 border border-black/10 text-center">
-              <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-white/80 text-sm">Emergency Response</div>
-            </div>
-            <div className="bg-black/5 backdrop-blur-xl rounded-2xl p-6 border border-black/10 text-center">
-              <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-white/80 text-sm">Countries Covered</div>
-            </div>
-            <div className="bg-black/5 backdrop-blur-xl rounded-2xl p-6 border border-black/10 text-center">
-              <div className="text-3xl font-bold mb-2">Global</div>
-              <div className="text-white/80 text-sm">Operations</div>
-            </div>
+            {[
+              { label: 'Emergency Response', value: '24/7' },
+              { label: 'Countries Covered', value: '50+' },
+              { label: 'Operations', value: 'Global' },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center justify-between py-4">
+                <div className="text-white/80 font-[ui-sans-serif]">{item.label}</div>
+                <div className="text-white font-[ui-serif] tracking-tight text-lg">{item.value}</div>
+              </div>
+            ))}
           </motion.div>
 
           {/* Bottom accent */}

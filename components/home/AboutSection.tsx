@@ -71,7 +71,7 @@ const AboutSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
           {principles.map((principle, index) => (
             <motion.div
               key={principle.title}
@@ -80,11 +80,8 @@ const AboutSection = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
-              <Card className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 hover:border-white/20 transition-colors duration-300 overflow-hidden rounded-lg">
-                <div
-                  className={`h-2 bg-gradient-to-r ${principle.gradient}`}
-                ></div>
-                <CardContent className="p-8">
+              <div className="transition-colors duration-300">
+                <div className="p-0">
                   {/* Icon with luxury styling */}
 
                   {/* Content */}
@@ -115,8 +112,8 @@ const AboutSection = () => {
                       </motion.div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

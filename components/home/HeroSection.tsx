@@ -138,8 +138,8 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="xl:pl-8"
           >
-            <Card className="bg-[#1a1a1a]/90 backdrop-blur-xl border border-white/10 transition-colors duration-300 rounded-xl overflow-hidden max-w-md mx-auto mt-8">
-              <div className="bg-[#1a1a1a]/60 border-b border-white/10 p-4 text-white">
+            <Card className="bg-transparent border-0 shadow-none max-w-md mx-auto mt-8">
+              <div className="p-0 text-white">
                 <div className="text-center">
                   <h3 className="text-lg font-[ui-serif] tracking-tight mb-1">
                     Arrange a Private Consultation
@@ -150,7 +150,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                 </div>
               </div>
 
-              <CardContent className="p-4 sm:p-6">
+              <CardContent className="p-0 pt-4">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">
@@ -163,7 +163,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white placeholder-gray-500"
+                          className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                           required
                         />
                       </div>
@@ -177,7 +177,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white placeholder-gray-500"
+                        className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                         required
                       />
                     </div>
@@ -193,7 +193,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white placeholder-gray-500"
+                      className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                         required
                       />
                     </div>
@@ -209,7 +209,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white placeholder-gray-500"
+                        className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white placeholder-gray-500"
                       />
                     </div>
                   </div>
@@ -222,7 +222,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white"
+                      className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-transparent text-white"
                     >
                       <option value="">Select a service...</option>
                       <option value="risk-management">

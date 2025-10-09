@@ -76,16 +76,16 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-12">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-[#0f0f0f] rounded-lg overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-300"
+              className="transition-colors duration-300"
             >
-              <div className="p-8 flex flex-col justify-between">
+              <div className="p-0 flex flex-col justify-between">
                 <div>
                   <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                     {service.title}
