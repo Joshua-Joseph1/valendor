@@ -8,7 +8,7 @@ const CTASection = () => {
   return (
     <section
       id="contact"
-      className="relative py-24 md:py-32 bg-[#1a1a1a] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10 bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]"
+      className="relative py-24 md:py-32 bg-[#1a1a1a] text-white overflow-hidden bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]"
     >
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">

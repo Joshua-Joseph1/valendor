@@ -12,7 +12,7 @@ const MissionVisionSection = () => {
   return (
     <section
       ref={missionRef}
-      className="py-24 md:py-32 bg-[#1a1a1a] text-white relative overflow-hidden before:block before:h-px before:w-full before:bg-white/10"
+      className="py-24 md:py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
