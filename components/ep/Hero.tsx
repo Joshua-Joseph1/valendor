@@ -71,7 +71,7 @@ const ExecutiveProtectionHero = () => {
             </motion.div>
 
             {/* Action Buttons */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -85,7 +85,7 @@ const ExecutiveProtectionHero = () => {
                   Arrange a Private Consultation
                 </Button>
               </Link>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>

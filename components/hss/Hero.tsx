@@ -80,7 +80,7 @@ const HardwareSoftwareHero = () => {
             </motion.div>
 
             {/* Action Buttons */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -95,10 +95,10 @@ const HardwareSoftwareHero = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-            </motion.div>
+            </motion.div> */}
 
             {/* Trust Indicators */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -116,7 +116,7 @@ const HardwareSoftwareHero = () => {
                 <Star className="h-4 w-4 text-green-400" />
                 <span>24/7 Monitoring</span>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>

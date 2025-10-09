@@ -114,14 +114,14 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
-              <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
+              {/* <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
                 <Button
                   size="lg"
                   className="bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-8 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] will-change-transform"
                 >
                   Arrange a Private Consultation
                 </Button>
-              </Link>
+              </Link> */}
               <button
                 onClick={onScrollToServices}
                 className="text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-4 transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] text-base md:text-lg"

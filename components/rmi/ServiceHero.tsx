@@ -99,7 +99,7 @@ const ServiceHero = ({
             </motion.div>
 
             {/* Action Buttons */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -113,7 +113,7 @@ const ServiceHero = ({
               >
                 {primaryButtonText}
               </Button>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>

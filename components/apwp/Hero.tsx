@@ -79,7 +79,7 @@ const WildlifeProtectionHero = () => {
             </motion.div>
 
             {/* Action Buttons */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -93,10 +93,10 @@ const WildlifeProtectionHero = () => {
                 Arrange a Private Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-            </motion.div>
+            </motion.div> */}
 
             {/* Trust Indicators */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -114,7 +114,7 @@ const WildlifeProtectionHero = () => {
                 <Star className="h-4 w-4 text-green-400" />
                 <span>Species Protection</span>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>

@@ -118,8 +118,7 @@ const CTASection = () => {
             className="text-center mt-12"
           >
             <p className="text-white/60 text-sm font-[ui-sans-serif]">
-              All consultations are confidential and secure • ISO 27001
-              Certified • Trusted Worldwide
+              All consultations are confidential and secure 
             </p>
           </motion.div>
         </motion.div>
