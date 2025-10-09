@@ -5,7 +5,7 @@ import { Quote, Star, Award } from 'lucide-react';
 
 const ExecutiveProtectionTestimonial = () => {
   return (
-    <section className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#1a1a1a] text-white relative overflow-hidden">
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl animate-pulse"></div>
@@ -20,48 +20,25 @@ const ExecutiveProtectionTestimonial = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          {/* Premium badge */}
-          <div className="text-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center bg-valentor-red/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8"
-            >
-              <Award className="h-5 w-5 text-valentor-red mr-2" />
-              <span className="text-valentor-red font-semibold text-sm uppercase tracking-wider">
-                Client Testimonial
-              </span>
-              <div className="ml-3 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-3 w-3 text-amber-400 fill-current"
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </div>
+          {/* Removed premium badge for minimal style */}
 
-          {/* Testimonial Card */}
-          <div className="bg-[#252525] backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-gray-700 relative">
-            <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
+          {/* Testimonial content */}
+          <div className="relative">
             {/* Quote icon */}
-            <div className="absolute -top-6 left-12">
-              <div className="bg-valentor-red rounded-2xl p-4 shadow-xl">
-                <Quote className="h-8 w-8 text-white" />
+            <div className="absolute -top-6 left-12 hidden">
+              <div className="rounded-2xl p-4">
+                <Quote className="h-8 w-8" />
               </div>
             </div>
 
             {/* Content */}
-            <div className="text-center pt-8">
+            <div className="text-center">
               <motion.blockquote
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-2xl md:text-3xl lg:text-4xl text-white mb-8 leading-relaxed font-light italic"
+                className="text-2xl md:text-3xl lg:text-4xl text-white mb-6 leading-relaxed font-light italic"
               >
                 "Valiant Risk Group's executive protection team provided
                 seamless, Discreet security that allowed me to focus on business
@@ -86,20 +63,8 @@ const ExecutiveProtectionTestimonial = () => {
                 </div>
                 <p className="text-xl font-bold text-white">Fortune 500 CEO</p>
                 <p className="text-gray-300 font-medium">Confidential Client</p>
-                <div className="w-16 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mx-auto mt-4"></div>
+                <div className="w-16 h-px bg-[#344154] mx-auto mt-4"></div>
               </motion.div>
-            </div>
-
-            {/* Decorative elements */}
-            <div className="absolute bottom-6 right-6 opacity-10">
-              <div className="flex space-x-2">
-                {[...Array(3)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-3 h-3 bg-valentor-red rounded-full"
-                  ></div>
-                ))}
-              </div>
             </div>
           </div>
 

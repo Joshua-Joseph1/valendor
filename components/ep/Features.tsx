@@ -31,7 +31,7 @@ const ExecutiveProtectionFeatures = () => {
   return (
     <section
       ref={featuresRef}
-      className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -46,47 +46,32 @@ const ExecutiveProtectionFeatures = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            Service Features
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Our executive protection services are built on the foundation of
-            excellence, discretion, and unwavering commitment to your safety and
-            security.
-          </p>
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">Service Features</h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">Our executive protection services are built on the foundation of excellence, discretion, and unwavering commitment to your safety and security.</p>
         </motion.div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Features - Inline list */}
+        <div className="max-w-5xl mx-auto divide-y divide-white/10">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group"
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="py-6"
             >
-              <Card className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 rounded-2xl overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
-                <CardContent className="p-8 text-center">
-                  {/* Icon with luxury styling */}
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-valentor-red/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:rotate-6">
-                      <feature.icon className="h-10 w-10 text-valentor-red" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-gray-200 transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
+                  <feature.icon className="h-5 w-5 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-[ui-serif] tracking-tight text-white mb-1">{feature.title}</h3>
+                  <p className="text-white/80 leading-relaxed font-[ui-sans-serif]">{feature.description}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

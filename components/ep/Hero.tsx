@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from "react";
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const ExecutiveProtectionHero = () => {
   const heroRef = useRef(null);
@@ -12,7 +13,7 @@ const ExecutiveProtectionHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative py-32 bg-[#1a1a1a] text-white overflow-hidden"
+      className="relative py-24 md:py-32 bg-[#1a1a1a] text-white overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
@@ -51,11 +52,8 @@ const ExecutiveProtectionHero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col items-center space-y-6"
             >
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
-                <span className="text-white">Executive</span>
-                <span className="block bg-gradient-to-r from-valentor-red via-red-500 to-red-600 bg-clip-text text-transparent">
-                  Protection
-                </span>
+              <h1 className="text-4xl md:text-6xl font-[ui-serif] tracking-tight leading-tight">
+                Executive Protection
               </h1>
             </motion.div>
 
@@ -66,12 +64,10 @@ const ExecutiveProtectionHero = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="space-y-4"
             >
-              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto">
-                Discreet, professional Executive Protection services for
-                high-profile individuals, executives, and their families,
-                ensuring security without compromising lifestyle.
+              <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-4xl mx-auto font-[ui-sans-serif]">
+                Discreet assurance for high-profile principals and families—unparalleled protection without compromise to lifestyle.
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mx-auto"></div>
+              <div className="mx-auto h-px w-16 bg-[#344154]"></div>
             </motion.div>
 
             {/* Action Buttons */}
@@ -81,12 +77,14 @@ const ExecutiveProtectionHero = () => {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
             >
-              <Button
-                size="lg"
-                className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
-              >
-                Book A Consultation
-              </Button>
+              <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
+                <Button
+                  size="lg"
+                  className="bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-8 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                >
+                  Arrange a Private Consultation
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </motion.div>
