@@ -8,7 +8,7 @@ import SecureTransferCTA from '@/components/stae/ServiceCTA';
 
 const SecureTransferPage = () => {
   return (
-    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white">
+    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white antialiased">
       <SecureTransferHero />
       <SecureTransferOfferings />
       <SecureTransferCapabilities />
