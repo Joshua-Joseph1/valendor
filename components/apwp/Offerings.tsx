@@ -83,9 +83,9 @@ const WildlifeProtectionOfferings = () => {
           </p>
         </motion.div>
 
-        {/* Services Accordion */}
+        {/* Services - Expanded Inline */}
         <div className="max-w-5xl mx-auto">
-          <Accordion type="single" collapsible className="w-full space-y-6">
+          <Accordion type="multiple" defaultValue={offerings.map((_, i) => `item-${i}`)} className="w-full space-y-0">
             {offerings.map((offering, index) => (
               <motion.div
                 key={offering.title}
@@ -95,16 +95,13 @@ const WildlifeProtectionOfferings = () => {
               >
                 <AccordionItem
                   value={`item-${index}`}
-                  className="bg-[#0f0f0f] backdrop-blur-xl border border-white/10 rounded-lg mb-6 transition-colors duration-300 overflow-hidden group"
+                  className="mb-0 py-8 border-t border-white/10 group"
                 >
-                  <div className="h-2 bg-[#344154]"></div>
-                  <AccordionTrigger className="px-8 py-6 hover:no-underline group-hover:bg-white/5 transition-colors duration-300">
-                    <div className="flex items-center text-left w-full">
-                      <div className="bg-[#344154]/20 backdrop-blur-sm rounded-xl p-4 mr-6 transition-colors duration-300">
-                        <offering.icon className="h-8 w-8 text-[#344154]" />
-                      </div>
+                  <AccordionTrigger className="px-0 py-0 hover:no-underline focus:outline-none">
+                    <div className="flex items-start text-left w-full gap-4">
+                      <offering.icon className="h-6 w-6 text-[#344154] mt-1" />
                       <div className="flex-1">
-                        <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
+                        <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-1">
                           {offering.title}
                         </h3>
                         <p className="text-white/80 text-base leading-relaxed font-[ui-sans-serif]">
@@ -113,44 +110,27 @@ const WildlifeProtectionOfferings = () => {
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-8 pb-8">
-                    <div className="bg-[#344154]/10 backdrop-blur-sm rounded-xl p-8 ml-20 border border-[#344154]/20">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {offering.details.map((detail, detailIndex) => (
-                          <motion.div
-                            key={detailIndex}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={
-                              isServicesInView ? { opacity: 1, x: 0 } : {}
-                            }
-                            transition={{
-                              duration: 0.4,
-                              delay: index * 0.1 + detailIndex * 0.05 + 0.3,
-                            }}
-                            className="flex items-start group/item hover:bg-white/5 rounded-xl p-3 transition-colors duration-200"
-                          >
-                            <CheckCircle className="h-6 w-6 text-[#344154] mr-4 mt-0.5 flex-shrink-0 transition-colors duration-200" />
-                            <span className="text-white/80 font-medium leading-relaxed font-[ui-sans-serif]">
-                              {detail}
-                            </span>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      {/* Decorative element */}
-                      <div className="mt-6 pt-6 border-t border-white/10">
-                        <div className="flex items-center justify-center space-x-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className="h-4 w-4 text-[#344154]"
-                            />
-                          ))}
-                        </div>
-                        <p className="text-xs text-white/70 text-center mt-2 font-[ui-sans-serif]">
-                          Wildlife Security Excellence
-                        </p>
-                      </div>
+                  <AccordionContent className="px-0 pt-4 pb-0">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 pl-10">
+                      {offering.details.map((detail, detailIndex) => (
+                        <motion.div
+                          key={detailIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={
+                            isServicesInView ? { opacity: 1, x: 0 } : {}
+                          }
+                          transition={{
+                            duration: 0.4,
+                            delay: index * 0.1 + detailIndex * 0.05 + 0.2,
+                          }}
+                          className="flex items-start"
+                        >
+                          <span className="w-2 h-2 bg-[#344154] rounded-full mr-3 mt-2"></span>
+                          <span className="text-white/80 leading-relaxed font-[ui-sans-serif]">
+                            {detail}
+                          </span>
+                        </motion.div>
+                      ))}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
