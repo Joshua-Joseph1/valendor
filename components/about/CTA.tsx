@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const AboutCTA = () => {
   return (
-    <section className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10 bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]">
+    <section className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-64 sm:w-96 h-64 sm:h-96 bg-valentor-red rounded-full blur-3xl animate-pulse"></div>

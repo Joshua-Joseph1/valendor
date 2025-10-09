@@ -37,7 +37,7 @@ const AboutStatistics = () => {
   ];
 
   return (
-    <section ref={statsRef} className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10">
+    <section ref={statsRef} className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden">
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
