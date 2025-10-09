@@ -13,7 +13,7 @@ const AboutHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative py-20 sm:py-32 lg:py-40 bg-[#1a1a1a] text-white overflow-hidden"
+      className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
@@ -52,12 +52,10 @@ const AboutHero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col items-center space-y-4 sm:space-y-6"
             >
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
-                <span className="text-white">About</span>
-                <span className="block bg-gradient-to-r from-valentor-red via-red-500 to-red-600 bg-clip-text text-transparent">
-                  Valiant Risk Group
-                </span>
+              <h1 className="text-4xl md:text-6xl font-[ui-serif] tracking-tight leading-tight">
+                About Valiant Risk Group
               </h1>
+              <div className="h-px w-16 bg-[#344154]" />
             </motion.div>
 
             {/* Description */}
@@ -67,12 +65,9 @@ const AboutHero = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="space-y-4"
             >
-              <p className="text-lg sm:text-xl md:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto px-4">
-                Founded on the principles of discretion, strength, and
-                adaptability, we are the world's premier risk management and
-                protection consultancy.
+              <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-4xl mx-auto px-4 font-[ui-sans-serif]">
+                Forged in the principles of discretion, strength, and adaptability, we are the world’s pre‑eminent consultancy in risk management and protection.
               </p>
-              <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mx-auto"></div>
             </motion.div>
 
             {/* Action Buttons */}
@@ -82,13 +77,18 @@ const AboutHero = () => {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4 justify-center pt-4 px-4"
             >
-              <Link href="#services">
+              <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-valentor-red hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+                  className="w-full sm:w-auto bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-8 py-4 text-base sm:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
                 >
-                  Our Services
+                  Arrange a Private Consultation
                 </Button>
+              </Link>
+              <Link href="/#services" aria-label="Explore Our Offerings at Valiant Risk Group">
+                <span className="text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-4 transition-colors duration-300 text-base sm:text-lg">
+                  Explore Our Offerings
+                </span>
               </Link>
             </motion.div>
           </div>

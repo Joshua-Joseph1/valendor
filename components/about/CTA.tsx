@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const AboutCTA = () => {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-32 bg-[#1a1a1a] overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10 bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-64 sm:w-96 h-64 sm:h-96 bg-valentor-red rounded-full blur-3xl animate-pulse"></div>
@@ -22,30 +22,26 @@ const AboutCTA = () => {
           className="max-w-5xl mx-auto"
         >
           {/* Main content */}
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight text-white"
+              className="text-3xl md:text-5xl font-[ui-serif] tracking-tight mb-4 leading-tight"
             >
-              Ready to Experience the
-              <span className="block bg-gradient-to-r from-valentor-red to-red-600 bg-clip-text text-transparent">
-                Valentor Difference?
-              </span>
+              Ready to Secure Your Future?
             </motion.h2>
+            <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed text-gray-300 px-4"
+              className="text-base md:text-lg mb-12 max-w-4xl mx-auto leading-relaxed text-white/80 font-[ui-sans-serif] px-4"
             >
-              Join the ranks of satisfied clients who trust Valiant Risk Group
-              with their most critical security needs. Contact us today for a
-              confidential consultation.
+              Join the ranks of Fortune 500 companies and high-profile individuals who entrust us with their most critical needs. Your future deserves unparalleled stewardship.
             </motion.p>
           </div>
 
@@ -57,12 +53,12 @@ const AboutCTA = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4"
           >
-            <Link href="/contact">
+            <Link href="/contact" aria-label="Enlist Our Expertise at Valiant Risk Group">
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-valentor-red hover:bg-red-700 text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+                className="w-full sm:w-auto bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
               >
-                Book A Consultation
+                Enlist Our Expertise
               </Button>
             </Link>
 
@@ -70,9 +66,9 @@ const AboutCTA = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto border-2 border-[#344154] text-[#344154] hover:bg-[#344154] hover:text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl rounded-2xl transition-all duration-300"
+                className="w-full sm:w-auto bg-transparent text-white/90 hover:text-white border-white/20 hover:border-white/30 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
               >
-                View Our Services
+                Retain Valiant Risk Group
               </Button>
             </Link>
           </motion.div>

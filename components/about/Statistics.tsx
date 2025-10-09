@@ -37,7 +37,7 @@ const AboutStatistics = () => {
   ];
 
   return (
-    <section ref={statsRef} className="relative py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-valentor-red via-red-600 to-red-800 text-white overflow-hidden">
+    <section ref={statsRef} className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10">
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
@@ -60,14 +60,12 @@ const AboutStatistics = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isStatsInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 leading-tight">
-            By the Numbers
-          </h2>
-          <p className="text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed px-4">
-            Our track record speaks for itself. These numbers represent our commitment 
-            to excellence and the trust our clients place in us.
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">By the Numbers</h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif] px-4">
+            Our track record speaks for itself. These numbers represent our commitment to excellence and the trust our clients place in us.
           </p>
         </motion.div>
 
@@ -80,29 +78,29 @@ const AboutStatistics = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="text-center group"
             >
-              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:bg-white/15">
+              <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-6 sm:p-8 border border-white/10 transition-colors duration-300">
                 {/* Icon */}
                 <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-white/30 transition-all duration-300">
                   <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
                 
                 {/* Number */}
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-[ui-serif] tracking-tight mb-2 sm:mb-3 text-white">
                   {stat.number}
                 </div>
                 
                 {/* Label */}
-                <div className="text-base sm:text-lg lg:text-xl font-semibold mb-1 sm:mb-2 text-white">
+                <div className="text-base sm:text-lg lg:text-xl font-[ui-serif] tracking-tight mb-1 sm:mb-2 text-white">
                   {stat.label}
                 </div>
                 
                 {/* Description */}
-                <div className="text-white/80 text-xs sm:text-sm leading-relaxed">
+                <div className="text-white/80 text-xs sm:text-sm leading-relaxed font-[ui-sans-serif]">
                   {stat.description}
                 </div>
 
                 {/* Decorative line */}
-                <div className="w-8 sm:w-12 h-1 bg-gradient-to-r from-white/50 to-transparent rounded-full mx-auto mt-3 sm:mt-4"></div>
+                <div className="w-8 sm:w-12 h-px bg-[#344154] mx-auto mt-3 sm:mt-4"></div>
               </div>
             </motion.div>
           ))}

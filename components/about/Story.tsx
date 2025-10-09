@@ -12,7 +12,7 @@ const AboutStory = () => {
   return (
     <section
       ref={storyRef}
-      className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#1A1A1A] text-white relative overflow-hidden before:block before:h-px before:w-full before:bg-white/10"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -30,14 +30,13 @@ const AboutStory = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                Our Story –
-                <span className="block text-white">Valiant Risk Group</span>
+              <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4 leading-tight">
+                Our Story — Valiant Risk Group
               </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full mb-8"></div>
+              <div className="h-px w-16 bg-[#344154] mb-6"></div>
             </div>
 
-            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+            <div className="space-y-6 text-base md:text-lg text-white/80 leading-relaxed font-[ui-sans-serif]">
               <p>
                 Valiant Risk Group was founded on the unwavering principles of
                 integrity, discipline, discretion, and trust earned, not
@@ -100,39 +99,36 @@ const AboutStory = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden rounded-2xl">
-              <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
+            <div className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 transition-colors duration-300 overflow-hidden rounded-lg">
+              <div className="h-2 bg-[#C1272D]"></div>
               <div className="p-10">
                 {/* Header */}
                 <div className="flex items-center mb-8">
-                  <div className="bg-valentor-red/20 backdrop-blur-sm rounded-2xl p-4 mr-6">
-                    <Shield className="h-10 w-10 text-valentor-red" />
+                  <div className="bg-[#C1272D]/15 backdrop-blur-sm rounded-xl p-4 mr-6">
+                    <Shield className="h-10 w-10 text-[#C1272D]" />
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-white mb-2">
+                    <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                       Our Mission
                     </h3>
-                    <div className="w-16 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full"></div>
+                    <div className="w-16 h-px bg-[#344154]"></div>
                   </div>
                 </div>
 
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  To provide world-class risk management and protection services
-                  that enable our clients to operate confidently in challenging
-                  environments, ultimately enhancing work performance efficiency
-                  and peace of mind.
+                <p className="text-white/80 mb-8 leading-relaxed font-[ui-sans-serif]">
+                  To deliver world-class risk management and protection services that allow clients to pursue their ambitions confidently. We blend human expertise with leading technology to safeguard what matters most.
                 </p>
 
-                <div className="bg-valentor-red/10 backdrop-blur-sm rounded-2xl p-6 border border-valentor-red/20">
+                <div className="bg-[#C1272D]/10 backdrop-blur-sm rounded-xl p-6 border border-[#C1272D]/20">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-valentor-red/20 rounded-xl p-3">
-                      <Award className="h-8 w-8 text-valentor-red" />
+                    <div className="bg-[#C1272D]/20 rounded-xl p-3">
+                      <Award className="h-8 w-8 text-[#C1272D]" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white">
+                      <h4 className="text-xl font-[ui-serif] tracking-tight text-white">
                         Excellence in Security
                       </h4>
-                      <p className="text-gray-300">
+                      <p className="text-white/80">
                         Recognized industry leader
                       </p>
                     </div>

@@ -44,7 +44,7 @@ const AboutLeadership = () => {
   return (
     <section
       ref={teamRef}
-      className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#1A1A1A] text-white relative overflow-hidden before:block before:h-px before:w-full before:bg-white/10"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -57,15 +57,12 @@ const AboutLeadership = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            Leadership Team
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Our leadership team brings together decades of experience from
-            military, intelligence, and private security sectors to deliver
-            unmatched expertise.
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">Leadership Team</h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">
+            Our leadership brings decades from military, intelligence, and private security sectors to deliver unmatched expertise.
           </p>
         </motion.div>
 
@@ -78,29 +75,29 @@ const AboutLeadership = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group"
             >
-              <Card className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 rounded-2xl overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
+              <Card className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 hover:border-white/20 transition-colors duration-300 rounded-lg overflow-hidden">
+                <div className="h-2 bg-[#C1272D]"></div>
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-6">
                     {/* Icon */}
-                    <div className="bg-valentor-red/20 backdrop-blur-sm rounded-2xl p-4 flex-shrink-0 group-hover:bg-valentor-red/30 transition-all duration-300">
-                      <leader.icon className="h-8 w-8 text-valentor-red" />
+                    <div className="bg-[#C1272D]/20 backdrop-blur-sm rounded-xl p-4 flex-shrink-0 transition-colors duration-300">
+                      <leader.icon className="h-8 w-8 text-[#C1272D]" />
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-gray-200 transition-colors duration-300">
+                      <h3 className="text-xl font-[ui-serif] tracking-tight text-white mb-2">
                         {leader.name}
                       </h3>
-                      <p className="text-valentor-red font-semibold mb-4 text-base">
+                      <p className="text-white/80 font-[ui-sans-serif] mb-4 text-base">
                         {leader.position}
                       </p>
-                      <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                      <p className="text-white/80 mb-4 text-sm leading-relaxed font-[ui-sans-serif]">
                         {leader.background}
                       </p>
-                      <div className="bg-valentor-red/10 backdrop-blur-sm rounded-xl p-4 border border-valentor-red/20 group-hover:bg-valentor-red/15 transition-colors duration-300">
-                        <p className="text-sm text-gray-300">
-                          <span className="font-semibold text-white">
+                      <div className="bg-[#C1272D]/10 backdrop-blur-sm rounded-xl p-4 border border-[#C1272D]/20 transition-colors duration-300">
+                        <p className="text-sm text-white/80 font-[ui-sans-serif]">
+                          <span className="font-[ui-serif] text-white">
                             Expertise:
                           </span>{" "}
                           {leader.expertise}
