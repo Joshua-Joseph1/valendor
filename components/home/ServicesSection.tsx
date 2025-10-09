@@ -14,7 +14,7 @@ const ServicesSection = () => {
     {
       title: "Risk Management & Intelligence",
       description:
-        "We provide prudent assessments and strategic counsel to safeguard your interests, combining foresight with actionable insight.",
+        "Prudent assessments and strategic counsel that fuse foresight with actionable insight.",
       href: "/services/risk-management-intelligence",
       features: [
         "Threat Assessment",
@@ -25,7 +25,7 @@ const ServicesSection = () => {
     {
       title: "Executive Protection",
       description:
-        "Our discreet and professional support extends to high-profile individuals and their families, ensuring unparalleled assurance without compromising lifestyle.",
+        "Discreet assurance for high-profile principals and families—unparalleled protection without compromise to lifestyle.",
       href: "/services/executive-protection",
       features: [
         "Executive Protection",
@@ -36,14 +36,14 @@ const ServicesSection = () => {
     {
       title: "Secure Transfer & Asset Escort",
       description:
-        "From armored convoys to aviation transfers, our escorts guarantee safe passage for your most valuable assets.",
+        "Armored convoys and aviation transfers that guarantee safe passage for your most valuable assets.",
       href: "/services/secure-transfer-asset-escort",
       features: ["Armored Convoy", "Aviation Security", "Route Planning"],
     },
     {
-      title: "Anti-Poaching & Wildlife Protection",
+      title: "Wildlife Protection",
       description:
-        "We employ advanced surveillance and highly trained rangers to defend threatened species and preserve natural legacies.",
+        "Advanced surveillance and elite rangers defending threatened species and preserving natural legacies.",
       href: "/services/anti-poaching-wildlife-protection",
       features: [
         "Ranger Training",
@@ -52,16 +52,16 @@ const ServicesSection = () => {
       ],
     },
     {
-      title: "Hardware & Software Solutions",
+      title: "Hardware & Software Security",
       description:
-        "Integrating state-of-the-art technology, our systems provide seamless protection across physical and digital realms.",
+        "State-of-the-art systems uniting physical and digital protection into a seamless shield.",
       href: "/services/hardware-software-security",
       features: ["CCTV Systems", "Access Control", "Cyber Monitoring"],
     },
   ];
 
   return (
-    <section id="services" ref={servicesRef} className="py-20 bg-[#1a1a1a]">
+    <section id="services" ref={servicesRef} className="py-24 md:py-32 bg-[#1a1a1a] text-white before:block before:h-px before:w-full before:bg-white/10">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -69,15 +69,10 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Core Services
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Distinguished security solutions, meticulously crafted to address
-            the singular needs of the discerning global clientele. We offer a
-            heritage of protection that resonates with the sophistication and
-            stature of those accustomed to the finest standards across
-            generations and industries.
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">Explore Our Offerings</h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto font-[ui-sans-serif]">
+            Distinguished security solutions, meticulously crafted to address the singular needs of a discerning global clientele. A heritage of protection for those accustomed to uncompromising standards.
           </p>
         </motion.div>
 
@@ -88,21 +83,22 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-[#252525] shadow-lg rounded-lg overflow-hidden border border-gray-800"
+              className="bg-[#0f0f0f] rounded-lg overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-300"
             >
               <div className="p-8 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">
+                  <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <div className="h-px w-10 bg-[#344154] mb-4" />
+                  <p className="text-white/80 mb-6 font-[ui-sans-serif]">{service.description}</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-center text-sm text-gray-400"
+                        className="flex items-center text-sm text-white/70"
                       >
-                        <span className="mr-2">•</span>
+                        <span className="mr-2 text-[#344154]">•</span>
                         {feature}
                       </li>
                     ))}
@@ -111,7 +107,8 @@ const ServicesSection = () => {
                 <Link href={service.href}>
                   <Button
                     variant="outline"
-                    className="w-full hover:bg-[#344154] hover:text-white hover:border-[#344154] transition-all duration-300 rounded-xl border-gray-600 text-gray-300"
+                    className="w-full bg-transparent text-white/90 hover:text-white border-white/10 hover:bg-[#344154]/40 hover:border-[#344154] transition-colors duration-300 rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                    aria-label={`Learn more about ${service.title} at Valiant Risk Group`}
                   >
                     Learn More
                   </Button>

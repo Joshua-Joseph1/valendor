@@ -5,6 +5,7 @@ import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import Link from 'next/link';
 
 interface HeroSectionProps {
   onScrollToServices: () => void;
@@ -73,7 +74,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-valentor-blue/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-24 md:py-32">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -86,11 +87,11 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
+                className="text-4xl md:text-6xl font-[ui-serif] tracking-tight leading-tight"
               >
-                <span className="text-white drop-shadow-2xl">Valiant Risk</span>
-                <span className="block text-white drop-shadow-2xl">Group</span>
+                Discretion. Strength. Adaptability.
               </motion.h1>
+              <div className="h-px w-16 bg-[#344154]" />
             </div>
 
             <motion.div
@@ -99,14 +100,12 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="space-y-4"
             >
-              <p className="text-lg sm:text-xl lg:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg leading-relaxed">
-                Discretion. Strength. Adaptability. These pillars form the
-                bedrock of our ethos. At Valiant, we deliver distinguished
-                solutions crafted for the discerning few, addressing the unique
-                challenges of a global clientele across varied industries and
-                environments.
+              <p className="text-base md:text-lg text-[#AFC1CF] md:text-white/80 font-[ui-sans-serif] leading-relaxed">
+                Distinguished security solutions, crafted for the discerning
+                few. Valiant delivers intelligence-led protection across
+                industries and environments—precise, unobtrusive, and
+                unyielding.
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full"></div>
             </motion.div>
 
             <motion.div
@@ -115,13 +114,21 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
-              <Button
-                size="lg"
-                className="bg-valentor-red hover:bg-red-700 text-white px-8 py-4 text-lg rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+              <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
+                <Button
+                  size="lg"
+                  className="bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-8 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] will-change-transform"
+                >
+                  Arrange a Private Consultation
+                </Button>
+              </Link>
+              <button
                 onClick={onScrollToServices}
+                className="text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-4 transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] text-base md:text-lg"
+                aria-label="Explore Our Offerings at Valiant Risk Group"
               >
                 Explore Our Offerings
-              </Button>
+              </button>
             </motion.div>
           </motion.div>
 
@@ -131,13 +138,13 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="xl:pl-8"
           >
-            <Card className="bg-[#1a1a1a]/95 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl overflow-hidden max-w-md mx-auto mt-8">
-              <div className="bg-gradient-to-r from-valentor-red to-red-500 p-4 text-white">
+            <Card className="bg-[#1a1a1a]/90 backdrop-blur-xl border border-white/10 transition-colors duration-300 rounded-xl overflow-hidden max-w-md mx-auto mt-8">
+              <div className="bg-[#1a1a1a]/60 border-b border-white/10 p-4 text-white">
                 <div className="text-center">
-                  <h3 className="text-xl font-bold mb-1">
-                    Secure Your Consultation
+                  <h3 className="text-lg font-[ui-serif] tracking-tight mb-1">
+                    Arrange a Private Consultation
                   </h3>
-                  <p className="text-white/80">
+                  <p className="text-white/70 font-[ui-sans-serif]">
                     Speak with our experts about your security needs
                   </p>
                 </div>
@@ -147,7 +154,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">
-                      <label className="block text-xs font-semibold text-gray-300">
+                      <label className="block text-xs font-semibold text-gray-300 font-[ui-sans-serif]">
                         First Name *
                       </label>
                       <div className="relative group">
@@ -156,13 +163,13 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white placeholder-gray-500"
+                          className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white placeholder-gray-500"
                           required
                         />
                       </div>
                     </div>
                     <div className="space-y-1">
-                      <label className="block text-xs font-semibold text-gray-300">
+                      <label className="block text-xs font-semibold text-gray-300 font-[ui-sans-serif]">
                         Last Name *
                       </label>
                       <input
@@ -170,14 +177,14 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white placeholder-gray-500"
+                        className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white placeholder-gray-500"
                         required
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="block text-xs font-semibold text-gray-300">
+                    <label className="block text-xs font-semibold text-gray-300 font-[ui-sans-serif]">
                       Email Address *
                     </label>
                     <div className="relative group">
@@ -186,14 +193,14 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white placeholder-gray-500"
+                        className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white placeholder-gray-500"
                         required
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="block text-xs font-semibold text-gray-300">
+                    <label className="block text-xs font-semibold text-gray-300 font-[ui-sans-serif]">
                       Phone Number
                     </label>
                     <div className="relative group">
@@ -202,20 +209,20 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white placeholder-gray-500"
+                        className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white placeholder-gray-500"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="block text-xs font-semibold text-gray-300">
+                    <label className="block text-xs font-semibold text-gray-300 font-[ui-sans-serif]">
                       Service Interest
                     </label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-valentor-red focus:border-valentor-red transition-all duration-200 bg-[#1a1a1a] text-white"
+                      className="w-full px-3 py-3 border border-white/10 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] transition-colors duration-300 bg-[#1a1a1a] text-white"
                     >
                       <option value="">Select a service...</option>
                       <option value="risk-management">
@@ -240,9 +247,10 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
                   <Button
                     type="submit"
                     size="sm"
-                    className="w-full bg-gradient-to-r from-valentor-red to-red-500 hover:from-red-600 hover:to-red-700 text-white py-3 text-md rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group font-semibold"
+                    className="w-full bg-[#C1272D] hover:bg-[#C1272D]/90 text-white py-3 text-md rounded-md transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                    aria-label="Arrange a Private Consultation with Valiant Risk Group"
                   >
-                    Secure Your Consultation
+                    Arrange a Private Consultation
                   </Button>
                 </form>
                 {formStatus && (

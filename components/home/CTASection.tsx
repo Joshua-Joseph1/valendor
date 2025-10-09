@@ -8,7 +8,7 @@ const CTASection = () => {
   return (
     <section
       id="contact"
-      className="relative py-32 bg-[#1a1a1a] text-white overflow-hidden"
+      className="relative py-24 md:py-32 bg-[#1a1a1a] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10 bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]"
     >
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">
@@ -45,22 +45,20 @@ const CTASection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
+              className="text-3xl md:text-5xl font-[ui-serif] tracking-tight mb-4 leading-tight"
             >
-              Ready to Secure
-              <span className="block text-white">Your Future?</span>
+              Ready to Secure Your Future?
             </motion.h2>
+            <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-white/90"
+              className="text-base md:text-lg mb-12 max-w-4xl mx-auto leading-relaxed text-white/80 font-[ui-sans-serif]"
             >
-              Join the ranks of Fortune 500 companies and high-profile
-              individuals who trust Valiant Risk Group with their most critical
-              security needs.
+              Join the ranks of Fortune 500 companies and high-profile individuals who entrust us with their most critical needs. Your future deserves unparalleled stewardship.
             </motion.p>
           </div>
 
@@ -72,12 +70,21 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-            <Link href="/contact">
+            <Link href="/contact" aria-label="Enlist Our Expertise at Valiant Risk Group">
               <Button
                 size="lg"
-                className="bg-valentor-red text-white hover:bg-red-700 px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+                className="bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-10 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] will-change-transform"
               >
-                Book A Consultation
+                Enlist Our Expertise
+              </Button>
+            </Link>
+            <Link href="/contact" aria-label="Retain Valiant Risk Group">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-white/90 hover:text-white border-white/20 hover:border-white/30 px-10 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+              >
+                Retain Valiant Risk Group
               </Button>
             </Link>
           </motion.div>
@@ -112,7 +119,7 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <p className="text-white/60 text-sm">
+            <p className="text-white/60 text-sm font-[ui-sans-serif]">
               All consultations are confidential and secure • ISO 27001
               Certified • Trusted Worldwide
             </p>

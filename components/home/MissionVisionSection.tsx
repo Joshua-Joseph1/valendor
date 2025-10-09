@@ -12,7 +12,7 @@ const MissionVisionSection = () => {
   return (
     <section
       ref={missionRef}
-      className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#1a1a1a] text-white relative overflow-hidden before:block before:h-px before:w-full before:bg-white/10"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -26,19 +26,16 @@ const MissionVisionSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            Our Mission &<span className="block text-white">Vision</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            The foundational principles that guide every operation and define
-            our commitment to excellence in risk management and protection
-            services.
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">Our Mission & Vision</h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">
+            The foundational principles that guide every operation and define our commitment to excellence in risk management and protection services.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_min-content_1fr] gap-12 max-w-7xl mx-auto items-start">
           {/* Mission Card */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -46,44 +43,41 @@ const MissionVisionSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="group"
           >
-            <div className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 overflow-hidden rounded-2xl">
-              <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
+            <div className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 hover:border-white/20 transition-colors duration-300 overflow-hidden rounded-lg">
+              <div className="h-2 bg-[#C1272D]"></div>
               <div className="p-10">
                 <div className="flex items-center mb-8">
-                  <div className="bg-valentor-red/20 backdrop-blur-sm rounded-2xl p-4 mr-6">
-                    <Target className="h-10 w-10 text-valentor-red" />
+                  <div className="bg-[#C1272D]/15 backdrop-blur-sm rounded-xl p-4 mr-6">
+                    <Target className="h-10 w-10 text-[#C1272D]" />
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-white mb-2">
+                    <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                       Our Mission
                     </h3>
-                    <div className="w-16 h-1 bg-gradient-to-r from-valentor-red to-red-600 rounded-full"></div>
+                    <div className="w-16 h-px bg-[#344154]"></div>
                   </div>
                 </div>
 
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  To provide world-class risk management and protection services
-                  that enable our clients to operate confidently in challenging
-                  environments, combining cutting-edge technology with human
-                  expertise to deliver solutions that protect what matters most.
+                <p className="text-white/80 mb-8 leading-relaxed font-[ui-sans-serif]">
+                  To deliver world-class risk management and protection services that allow clients to pursue their ambitions confidently. We blend human expertise with leading technology to safeguard what matters most.
                 </p>
 
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-gradient-to-r from-valentor-red to-red-700 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-300 font-medium">
+                    <div className="w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-sm text-white/80 font-medium font-[ui-sans-serif]">
                       Global risk assessment and mitigation
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-gradient-to-r from-valentor-red to-red-700 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-300 font-medium">
+                    <div className="w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-sm text-white/80 font-medium font-[ui-sans-serif]">
                       Technology-driven security solutions
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-gradient-to-r from-valentor-red to-red-700 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-300 font-medium">
+                    <div className="w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-sm text-white/80 font-medium font-[ui-sans-serif]">
                       Uncompromising client protection
                     </span>
                   </div>
@@ -92,6 +86,9 @@ const MissionVisionSection = () => {
             </div>
           </motion.div>
 
+          {/* Vertical blue rule for desktop */}
+          <div className="hidden lg:block w-px bg-[#344154]/50 h-full mx-auto" aria-hidden="true"></div>
+
           {/* Vision Card */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -99,46 +96,42 @@ const MissionVisionSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="group"
           >
-            <div className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 overflow-hidden rounded-2xl">
-              <div className="h-2 bg-gradient-to-r from-slate-600 to-slate-800"></div>
+            <div className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 hover:border-white/20 transition-colors duration-300 overflow-hidden rounded-lg">
+              <div className="h-2 bg-[#344154]"></div>
               <div className="p-10">
                 <div className="flex items-center mb-8">
-                  <div className="bg-slate-600/20 backdrop-blur-sm rounded-2xl p-4 mr-6">
-                    <TrendingUp className="h-10 w-10 text-slate-400" />
+                  <div className="bg-[#344154]/20 backdrop-blur-sm rounded-xl p-4 mr-6">
+                    <TrendingUp className="h-10 w-10 text-[#344154]" />
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-white mb-2">
+                    <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                       Our Vision
                     </h3>
-                    <div className="w-16 h-1 bg-gradient-to-r from-slate-400 to-slate-600 rounded-full"></div>
+                    <div className="w-16 h-px bg-[#344154]"></div>
                   </div>
                 </div>
 
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  To be the global leader in risk management and protection
-                  services, setting the standard for professionalism,
-                  innovation, and results. We envision a world where businesses
-                  and individuals can pursue their goals without compromise to
-                  their security.
+                <p className="text-white/80 mb-8 leading-relaxed font-[ui-sans-serif]">
+                  To set the global standard for professionalism and innovation in our field, ensuring that individuals and enterprises can thrive without compromise.
                 </p>
 
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-gradient-to-r from-slate-600 to-slate-800 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-300 font-medium">
+                    <div className="w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-sm text-white/80 font-medium font-[ui-sans-serif]">
                       Industry-leading innovation and standards
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-gradient-to-r from-slate-600 to-slate-800 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-300 font-medium">
+                    <div className="w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-sm text-white/80 font-medium font-[ui-sans-serif]">
                       Global security excellence
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-gradient-to-r from-slate-600 to-slate-800 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-300 font-medium">
-                      Empowering secure business operations
+                    <div className="w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-sm text-white/80 font-medium font-[ui-sans-serif]">
+                      Empowering secure operations without compromise
                     </span>
                   </div>
                 </div>

@@ -17,7 +17,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#1A1A1A] text-white antialiased">
       <HeroSection onScrollToServices={scrollToServices} />
       <div ref={servicesRef}>
         <ServicesSection />

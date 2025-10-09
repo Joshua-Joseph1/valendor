@@ -49,7 +49,7 @@ const AboutSection = () => {
     <section
       id="about"
       ref={aboutRef}
-      className="py-32 bg-[#1a1a1a] relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#1a1a1a] text-white relative overflow-hidden before:block before:h-px before:w-full before:bg-white/10"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -62,15 +62,12 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isAboutInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            Why Choose
-            <span className="block text-white">Valiant Risk Group</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Our foundational principles guide every operation, ensuring
-            unparalleled service delivery in the most demanding circumstances.
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">About Valiant Risk Group</h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">
+            Forged in the principles of discretion, strength, and adaptability, Valiant Risk Group stands as the world’s pre-eminent consultancy in risk management and protection. Our legacy is defined by an uncompromising standard of excellence and an enduring commitment to those who entrust us with their security.
           </p>
         </motion.div>
 
@@ -83,18 +80,18 @@ const AboutSection = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
-              <Card className="h-full bg-[#252525] backdrop-blur-xl border border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105 overflow-hidden">
+              <Card className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 hover:border-white/20 transition-colors duration-300 overflow-hidden rounded-lg">
                 <div
                   className={`h-2 bg-gradient-to-r ${principle.gradient}`}
                 ></div>
-                <CardContent className="p-10">
+                <CardContent className="p-8">
                   {/* Icon with luxury styling */}
 
                   {/* Content */}
-                  <h3 className="text-3xl font-bold text-white mb-6 text-center">
+                  <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-4 text-center">
                     {principle.title}
                   </h3>
-                  <p className="text-gray-300 mb-8 leading-relaxed text-center">
+                  <p className="text-white/80 mb-6 leading-relaxed text-center font-[ui-sans-serif]">
                     {principle.description}
                   </p>
 
@@ -111,10 +108,8 @@ const AboutSection = () => {
                         }}
                         className="flex items-center"
                       >
-                        <div
-                          className={`w-2 h-2 bg-gradient-to-r ${principle.gradient} rounded-full mr-3 flex-shrink-0`}
-                        ></div>
-                        <span className="text-sm text-gray-300 font-medium">
+                        <div className={`w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0`}></div>
+                        <span className="text-sm text-white/80 font-medium font-[ui-sans-serif]">
                           {detail}
                         </span>
                       </motion.div>
@@ -125,6 +120,20 @@ const AboutSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Optional Our Story block */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isAboutInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16 max-w-5xl mx-auto"
+        >
+          <h3 className="text-2xl md:text-3xl font-[ui-serif] tracking-tight mb-3">Our Story</h3>
+          <div className="h-px w-12 bg-[#344154] mb-4" />
+          <p className="text-white/80 font-[ui-sans-serif] leading-relaxed">
+            For decades, our teams have quietly shielded heads of state, cultural luminaries, and corporate leaders across volatile regions. This heritage of protection informs our uncompromising approach and the discretion that defines Valiant Risk Group.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
