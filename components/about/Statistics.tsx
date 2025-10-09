@@ -69,38 +69,23 @@ const AboutStatistics = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto divide-y divide-white/10">
           {statistics.map((stat, index) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 50 }}
               animate={isStatsInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="text-center group"
+              className="py-6"
             >
-              <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-6 sm:p-8 border border-white/10 transition-colors duration-300">
-                {/* Icon */}
-                <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-white/30 transition-all duration-300">
-                  <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+              <div className="flex items-center justify-between gap-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
+                    <stat.icon className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="text-white/80 font-[ui-sans-serif]">{stat.label}</div>
                 </div>
-                
-                {/* Number */}
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-[ui-serif] tracking-tight mb-2 sm:mb-3 text-white">
-                  {stat.number}
-                </div>
-                
-                {/* Label */}
-                <div className="text-base sm:text-lg lg:text-xl font-[ui-serif] tracking-tight mb-1 sm:mb-2 text-white">
-                  {stat.label}
-                </div>
-                
-                {/* Description */}
-                <div className="text-white/80 text-xs sm:text-sm leading-relaxed font-[ui-sans-serif]">
-                  {stat.description}
-                </div>
-
-                {/* Decorative line */}
-                <div className="w-8 sm:w-12 h-px bg-[#344154] mx-auto mt-3 sm:mt-4"></div>
+                <div className="text-2xl sm:text-3xl font-[ui-serif] tracking-tight text-white">{stat.number}</div>
               </div>
             </motion.div>
           ))}

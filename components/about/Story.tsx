@@ -99,9 +99,8 @@ const AboutStory = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 transition-colors duration-300 overflow-hidden rounded-lg">
-              <div className="h-2 bg-[#C1272D]"></div>
-              <div className="p-10">
+            <div className="h-full transition-colors duration-300">
+              <div className="p-0">
                 {/* Header */}
                 <div className="flex items-center mb-8">
                   <div className="bg-[#C1272D]/15 backdrop-blur-sm rounded-xl p-4 mr-6">

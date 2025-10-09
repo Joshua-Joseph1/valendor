@@ -73,36 +73,24 @@ const AboutCTA = () => {
             </Link>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Trust indicators - inline list */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto divide-y divide-white/10"
           >
-            <div className="bg-[#252525] backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-gray-700 text-center shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">
-                24/7
+            {[
+              { label: 'Expert Support', value: '24/7' },
+              { label: 'Coverage', value: 'Global' },
+              { label: 'Confidential', value: '100%' },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center justify-between py-4">
+                <div className="text-white/80 font-[ui-sans-serif]">{item.label}</div>
+                <div className="text-white font-[ui-serif] tracking-tight text-lg">{item.value}</div>
               </div>
-              <div className="text-gray-300 text-xs sm:text-sm">
-                Expert Support
-              </div>
-            </div>
-            <div className="bg-[#252525] backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-gray-700 text-center shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">
-                Global
-              </div>
-              <div className="text-gray-300 text-xs sm:text-sm">Coverage</div>
-            </div>
-            <div className="bg-[#252525] backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-gray-700 text-center shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold mb-2 text-valentor-red">
-                100%
-              </div>
-              <div className="text-gray-300 text-xs sm:text-sm">
-                Confidential
-              </div>
-            </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

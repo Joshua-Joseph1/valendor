@@ -66,7 +66,7 @@ const AboutLeadership = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {leadership.map((leader, index) => (
             <motion.div
               key={leader.name}
@@ -75,9 +75,8 @@ const AboutLeadership = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group"
             >
-              <Card className="h-full bg-[#0f0f0f] backdrop-blur-xl border border-white/10 hover:border-white/20 transition-colors duration-300 rounded-lg overflow-hidden">
-                <div className="h-2 bg-[#C1272D]"></div>
-                <CardContent className="p-8">
+              <div className="h-full transition-colors duration-300">
+                <div className="p-0">
                   <div className="flex items-start space-x-6">
                     {/* Icon */}
                     <div className="bg-[#C1272D]/20 backdrop-blur-sm rounded-xl p-4 flex-shrink-0 transition-colors duration-300">
@@ -105,8 +104,8 @@ const AboutLeadership = () => {
                       </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
