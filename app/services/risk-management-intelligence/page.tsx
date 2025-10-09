@@ -90,13 +90,13 @@ const RiskManagementPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white">
+    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white antialiased">
       <ServiceHero
         // icon removed
         title="Risk Management"
         subtitle="& Due Diligence"
         description="Protect your business interests and ensure business continuity."
-        primaryButtonText="Book A Consultation"
+        primaryButtonText="Arrange a Private Consultation"
         secondaryButtonText="Download Capability Brief"
         accentColor="valentor-red"
       />
@@ -118,7 +118,7 @@ const RiskManagementPage = () => {
       <ServiceCTA
         title="Protect Your Organization Today"
         description="Don't wait for threats to materialize. Let our risk management experts assess your security posture and develop a comprehensive protection strategy tailored to your unique requirements."
-        primaryButtonText="Book A Consultation"
+        primaryButtonText="Enlist Our Expertise"
         secondaryButtonText="Request Assessment"
         accentColor="valentor-red"
       />
