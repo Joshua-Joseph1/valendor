@@ -61,7 +61,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
       ref={heroRef}
       className="relative min-h-screen flex items-center text-white overflow-hidden pt-24 sm:pt-12"
       style={{
-        backgroundImage: `url('/images/hero-image.jpg')`,
+        backgroundImage: `url('/images/hero-image-4.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundAttachment: "fixed",
@@ -83,6 +83,14 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
             className="text-left space-y-8"
           >
             <div className="space-y-6">
+              <motion.img
+                src="/images/v-icon.png"
+                alt="V Icon"
+                initial={{ opacity: 0, y: -20 }}
+                animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="w-36 h-36 hidden md:block"
+              />
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
