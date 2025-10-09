@@ -8,7 +8,7 @@ import WildlifeProtectionCTA from '@/components/apwp/CTA';
 
 const WildlifeProtectionPage = () => {
   return (
-    <div className="min-h-screen pt-20 bg-[#1a1a1a] text-white">
+    <div className="min-h-screen pt-20 bg-[#1A1A1A] text-white antialiased">
       <WildlifeProtectionHero />
       <WildlifeProtectionOfferings />
       <WildlifeProtectionTechnology />

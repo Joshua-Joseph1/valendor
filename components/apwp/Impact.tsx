@@ -28,7 +28,7 @@ const WildlifeProtectionImpact = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-gradient-to-br from-valentor-red via-red-600 to-red-800 text-white overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10">
       {/* Sophisticated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
@@ -55,17 +55,10 @@ const WildlifeProtectionImpact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-6 py-3 border border-white/20 mb-8">
-            <TrendingUp className="h-5 w-5 text-white mr-2" />
-            <span className="text-white font-semibold text-sm uppercase tracking-wider">Conservation Impact</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-            Conservation Impact
-          </h2>
-          <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white/90">
-            Our wildlife protection programs have helped preserve critical habitats 
-            and protect endangered species across multiple continents with measurable security results.
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">Conservation Impact</h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg max-w-4xl mx-auto leading-relaxed text-white/80 font-[ui-sans-serif]">
+            Our wildlife protection programs have helped preserve critical habitats and protect endangered species across multiple continents.
           </p>
         </motion.div>
 
@@ -80,29 +73,29 @@ const WildlifeProtectionImpact = () => {
               viewport={{ once: true }}
               className="text-center group"
             >
-              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:bg-white/15">
+              <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-8 border border-white/10 transition-colors duration-300">
                 {/* Icon */}
                 <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-white/30 transition-all duration-300">
                   <Award className="h-8 w-8 text-white" />
                 </div>
                 
                 {/* Number */}
-                <div className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+                <div className="text-4xl md:text-5xl font-[ui-serif] tracking-tight mb-3 text-white">
                   {stat.number}
                 </div>
                 
                 {/* Label */}
-                <div className="text-lg md:text-xl font-semibold mb-2 text-white">
+                <div className="text-lg md:text-xl font-[ui-serif] tracking-tight mb-2 text-white">
                   {stat.label}
                 </div>
                 
                 {/* Description */}
-                <div className="text-white/80 text-sm">
+                <div className="text-white/80 text-sm font-[ui-sans-serif]">
                   {stat.description}
                 </div>
 
                 {/* Decorative line */}
-                <div className="w-12 h-1 bg-gradient-to-r from-white/50 to-transparent rounded-full mx-auto mt-4"></div>
+                <div className="w-12 h-px bg-[#344154] mx-auto mt-4"></div>
               </div>
             </motion.div>
           ))}

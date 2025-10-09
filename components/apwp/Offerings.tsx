@@ -60,7 +60,7 @@ const WildlifeProtectionOfferings = () => {
   return (
     <section
       ref={servicesRef}
-      className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#1A1A1A] text-white relative overflow-hidden before:block before:h-px before:w-full before:bg-white/10"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -74,22 +74,12 @@ const WildlifeProtectionOfferings = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <div className="inline-flex items-center bg-valentor-red/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-            <Award className="h-5 w-5 text-valentor-red mr-2" />
-            <span className="text-valentor-red font-semibold text-sm uppercase tracking-wider">
-              Wildlife Security Services
-            </span>
-          </div>
-
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            Wildlife Protection Services
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Comprehensive anti-poaching solutions that combine traditional
-            conservation methods with cutting-edge security technology and
-            intelligence gathering for maximum wildlife protection.
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">Explore Our Offerings</h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
+          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">
+            Distinguished security solutions, meticulously crafted to address the singular needs of a discerning global clientele.
           </p>
         </motion.div>
 
@@ -105,26 +95,26 @@ const WildlifeProtectionOfferings = () => {
               >
                 <AccordionItem
                   value={`item-${index}`}
-                  className="bg-[#252525] backdrop-blur-xl border border-gray-700 rounded-2xl mb-6 shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden group"
+                  className="bg-[#0f0f0f] backdrop-blur-xl border border-white/10 rounded-lg mb-6 transition-colors duration-300 overflow-hidden group"
                 >
-                  <div className="h-2 bg-gradient-to-r from-valentor-red to-red-700"></div>
-                  <AccordionTrigger className="px-8 py-6 hover:no-underline group-hover:bg-gray-700/20 transition-all duration-300">
+                  <div className="h-2 bg-[#344154]"></div>
+                  <AccordionTrigger className="px-8 py-6 hover:no-underline group-hover:bg-white/5 transition-colors duration-300">
                     <div className="flex items-center text-left w-full">
-                      <div className="bg-valentor-red/20 backdrop-blur-sm rounded-2xl p-4 mr-6 group-hover:bg-valentor-red/30 transition-all duration-300">
-                        <offering.icon className="h-8 w-8 text-valentor-red" />
+                      <div className="bg-[#344154]/20 backdrop-blur-sm rounded-xl p-4 mr-6 transition-colors duration-300">
+                        <offering.icon className="h-8 w-8 text-[#344154]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-gray-200 transition-colors duration-300">
+                        <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                           {offering.title}
                         </h3>
-                        <p className="text-gray-300 text-lg leading-relaxed">
+                        <p className="text-white/80 text-base leading-relaxed font-[ui-sans-serif]">
                           {offering.description}
                         </p>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-8 pb-8">
-                    <div className="bg-valentor-red/10 backdrop-blur-sm rounded-2xl p-8 ml-20 border border-valentor-red/20 shadow-inner">
+                    <div className="bg-[#344154]/10 backdrop-blur-sm rounded-xl p-8 ml-20 border border-[#344154]/20">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {offering.details.map((detail, detailIndex) => (
                           <motion.div
@@ -137,10 +127,10 @@ const WildlifeProtectionOfferings = () => {
                               duration: 0.4,
                               delay: index * 0.1 + detailIndex * 0.05 + 0.3,
                             }}
-                            className="flex items-start group/item hover:bg-valentor-red/5 rounded-xl p-3 transition-all duration-200"
+                            className="flex items-start group/item hover:bg-white/5 rounded-xl p-3 transition-colors duration-200"
                           >
-                            <CheckCircle className="h-6 w-6 text-valentor-red mr-4 mt-0.5 flex-shrink-0 group-hover/item:text-red-600 transition-colors duration-200" />
-                            <span className="text-gray-300 font-medium leading-relaxed group-hover/item:text-white transition-colors duration-200">
+                            <CheckCircle className="h-6 w-6 text-[#344154] mr-4 mt-0.5 flex-shrink-0 transition-colors duration-200" />
+                            <span className="text-white/80 font-medium leading-relaxed font-[ui-sans-serif]">
                               {detail}
                             </span>
                           </motion.div>
@@ -148,16 +138,16 @@ const WildlifeProtectionOfferings = () => {
                       </div>
 
                       {/* Decorative element */}
-                      <div className="mt-6 pt-6 border-t border-gray-600">
+                      <div className="mt-6 pt-6 border-t border-white/10">
                         <div className="flex items-center justify-center space-x-1">
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className="h-4 w-4 text-amber-400 fill-current"
+                              className="h-4 w-4 text-[#344154]"
                             />
                           ))}
                         </div>
-                        <p className="text-xs text-gray-300 text-center mt-2 font-medium">
+                        <p className="text-xs text-white/70 text-center mt-2 font-[ui-sans-serif]">
                           Wildlife Security Excellence
                         </p>
                       </div>

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const WildlifeProtectionCTA = () => {
   return (
-    <section className="relative py-32 bg-[#1a1a1a] text-white overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10 bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]">
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl animate-pulse"></div>
@@ -39,10 +39,10 @@ const WildlifeProtectionCTA = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="inline-flex items-center bg-valentor-red/10 backdrop-blur-xl rounded-full px-8 py-4 border border-valentor-red/20 mb-8"
+              className="inline-flex items-center bg-[#344154]/10 backdrop-blur-xl rounded-full px-8 py-4 border border-[#344154]/20 mb-8"
             >
-              <Shield className="h-6 w-6 text-valentor-red mr-3" />
-              <span className="text-valentor-red font-semibold text-lg">
+              <Shield className="h-6 w-6 text-[#344154] mr-3" />
+              <span className="text-white/90 font-[ui-sans-serif] text-lg">
                 Wildlife Security Excellence
               </span>
               <div className="ml-4 flex space-x-1">
@@ -63,21 +63,20 @@ const WildlifeProtectionCTA = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight"
+              className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4 leading-tight"
             >
-              Join the Fight Against Poaching
+              Ready to Secure Your Future?
             </motion.h2>
+            <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-gray-300"
+              className="text-base md:text-lg mb-12 max-w-4xl mx-auto leading-relaxed text-white/80 font-[ui-sans-serif]"
             >
-              Partner with us to protect endangered wildlife and preserve
-              natural habitats for future generations. Every action makes a
-              difference in our security-focused conservation efforts.
+              Join the ranks of Fortune 500 companies and high-profile individuals who entrust us with their most critical needs. Your future deserves unparalleled stewardship.
             </motion.p>
           </div>
 
@@ -89,13 +88,14 @@ const WildlifeProtectionCTA = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-            <Button
-              size="lg"
-              className="bg-valentor-red hover:bg-red-700 text-white px-10 py-5 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+            <a
+              href="/contact"
+              aria-label="Enlist Our Expertise at Valiant Risk Group"
+              className="inline-flex items-center bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-10 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
             >
-              Get in Touch
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
+              Enlist Our Expertise
+              <ArrowRight className="ml-3 h-6 w-6" />
+            </a>
           </motion.div>
 
           {/* Trust indicators */}
@@ -106,19 +106,19 @@ const WildlifeProtectionCTA = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
           >
-            <div className="bg-[#252525] backdrop-blur-xl rounded-2xl p-6 border border-gray-700 text-center shadow-lg">
+            <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-6 border border-white/10 text-center">
               <div className="text-3xl font-bold mb-2 text-valentor-red">
                 24/7
               </div>
               <div className="text-gray-300 text-sm">Wildlife Security</div>
             </div>
-            <div className="bg-[#252525] backdrop-blur-xl rounded-2xl p-6 border border-gray-700 text-center shadow-lg">
+            <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-6 border border-white/10 text-center">
               <div className="text-3xl font-bold mb-2 text-valentor-red">
                 Global
               </div>
               <div className="text-gray-300 text-sm">Security Network</div>
             </div>
-            <div className="bg-[#252525] backdrop-blur-xl rounded-2xl p-6 border border-gray-700 text-center shadow-lg">
+            <div className="bg-[#0f0f0f] backdrop-blur-xl rounded-xl p-6 border border-white/10 text-center">
               <div className="text-3xl font-bold mb-2 text-valentor-red">
                 100%
               </div>
