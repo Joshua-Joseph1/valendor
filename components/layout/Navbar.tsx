@@ -35,7 +35,7 @@ const Navbar = () => {
       href: "/services/secure-transfer-asset-escort",
     },
     {
-      name: "Anti-Poaching & Wildlife Protection",
+      name: "Wildlife Protection",
       href: "/services/anti-poaching-wildlife-protection",
     },
     {
@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a] shadow-lg border-b border-gray-700 transition-all duration-500"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#1A1A1A] border-b border-white/10 transition-all duration-500"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -58,7 +58,7 @@ const Navbar = () => {
             <div className="p-2 transition-all duration-300">
               <Image
                 src="/images/logo.png"
-                alt="Valentor Logo"
+                alt="Valiant Risk Group Logo"
                 width={120}
                 height={120}
               />
@@ -71,7 +71,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 rounded-lg font-medium transition-all duration-300 text-white hover:text-valentor-red hover:bg-valentor-red/5"
+                className="px-4 py-2 font-[ui-sans-serif] transition-colors duration-300 text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
                 onClick={() => setServicesOpen(false)}
               >
                 {item.name}
@@ -81,9 +81,12 @@ const Navbar = () => {
             {/* Services Dropdown */}
             <div className="relative">
               <button
-                className="flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 text-white hover:text-valentor-red hover:bg-valentor-red/5"
+                className="flex items-center px-4 py-2 font-[ui-sans-serif] transition-colors duration-300 text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
                 onClick={() => setServicesOpen(!servicesOpen)}
                 onMouseEnter={() => setServicesOpen(true)}
+                aria-haspopup="menu"
+                aria-expanded={servicesOpen}
+                aria-label="Explore Services menu"
               >
                 Services
               </button>
@@ -94,7 +97,7 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 mt-2 w-80 bg-[#1a1a1a] rounded-xl shadow-xl border border-gray-700/50 overflow-hidden z-50"
+                  className="absolute top-full left-0 mt-2 w-80 bg-[#0f0f0f] rounded-xl border border-white/10 overflow-hidden z-50"
                   onMouseLeave={() => setServicesOpen(false)}
                 >
                   <div className="p-2">
@@ -102,7 +105,7 @@ const Navbar = () => {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block px-4 py-3 text-white hover:text-valentor-red hover:bg-valentor-red/5 rounded-lg transition-all duration-200 text-sm font-medium"
+                        className="block px-4 py-3 text-white/90 hover:text-white hover:bg-[#344154]/30 rounded-lg transition-colors duration-200 text-sm font-[ui-sans-serif] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
                         onClick={() => setServicesOpen(false)}
                       >
                         {service.name}
@@ -115,9 +118,9 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <div className="ml-6">
-              <Link href="/contact">
-                <Button className="px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-valentor-red hover:bg-red-700 text-white">
-                  Secure Your Consultation
+              <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
+                <Button className="px-6 py-2.5 rounded-xl font-[ui-sans-serif] transition-colors duration-300 bg-[#C1272D] hover:bg-[#C1272D]/90 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]">
+                  Arrange a Private Consultation
                 </Button>
               </Link>
             </div>
@@ -125,8 +128,9 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-xl transition-all duration-300 text-gray-300 hover:bg-gray-700 hover:text-white"
+            className="lg:hidden p-2 rounded-xl transition-colors duration-300 text-white/80 hover:text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation"
           >
             <svg
               className="w-6 h-6"
@@ -154,12 +158,12 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className="lg:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-2 bg-[#1a1a1a] rounded-xl mt-4 mb-4 border border-gray-700/50 shadow-xl">
+          <div className="py-4 space-y-2 bg-[#1a1a1a] rounded-xl mt-4 mb-4 border border-white/10">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-6 py-3 text-white hover:text-valentor-red hover:bg-valentor-red/5 transition-all duration-200 font-medium rounded-xl mx-2"
+                className="block px-6 py-3 text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-8 transition-colors duration-200 font-[ui-sans-serif] rounded-xl mx-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -168,14 +172,14 @@ const Navbar = () => {
 
             {/* Mobile Services */}
             <div className="px-2">
-              <div className="px-4 py-2 text-sm font-semibold text-gray-400 uppercase tracking-wider">
+              <div className="px-4 py-2 text-sm font-semibold text-white/60 uppercase tracking-wider">
                 Services
               </div>
               {serviceItems.map((service) => (
                 <Link
                   key={service.name}
                   href={service.href}
-                  className="block px-6 py-2 text-gray-300 hover:text-valentor-red hover:bg-valentor-red/5 transition-all duration-200 text-sm rounded-xl"
+                  className="block px-6 py-2 text-white/80 hover:text-white hover:bg-[#344154]/30 transition-colors duration-200 text-sm rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
                   onClick={() => setIsOpen(false)}
                 >
                   {service.name}
@@ -185,12 +189,12 @@ const Navbar = () => {
 
             {/* Mobile CTA */}
             <div className="px-4 pt-4">
-              <Link href="/contact">
+              <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
                 <Button
-                  className="w-full bg-valentor-red hover:bg-red-700 text-white rounded-xl py-3 font-semibold shadow-lg"
+                  className="w-full bg-[#C1272D] hover:bg-[#C1272D]/90 text-white rounded-xl py-3 font-[ui-sans-serif] transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
                   onClick={() => setIsOpen(false)}
                 >
-                  Secure Your Consultation
+                  Arrange a Private Consultation
                 </Button>
               </Link>
             </div>

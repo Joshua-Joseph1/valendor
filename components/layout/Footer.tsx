@@ -2,14 +2,11 @@ import Link from "next/link";
 
 const Footer = () => {
   const serviceLinks = [
-    { name: "Risk Management", href: "/services/risk-management-intelligence" },
+    { name: "Risk Management & Intelligence", href: "/services/risk-management-intelligence" },
     { name: "Executive Protection", href: "/services/executive-protection" },
-    { name: "Secure Transfer", href: "/services/secure-transfer-asset-escort" },
-    {
-      name: "Wildlife Protection",
-      href: "/services/anti-poaching-wildlife-protection",
-    },
-    { name: "Security Systems", href: "/services/hardware-software-security" },
+    { name: "Secure Transfer & Asset Escort", href: "/services/secure-transfer-asset-escort" },
+    { name: "Wildlife Protection", href: "/services/anti-poaching-wildlife-protection" },
+    { name: "Hardware & Software Security", href: "/services/hardware-software-security" },
   ];
 
   const quickLinks = [
@@ -20,9 +17,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#1a1a1a] text-white">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-[#1A1A1A] text-white">
+      <div className="container mx-auto px-6 py-24 md:py-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -32,24 +29,24 @@ const Footer = () => {
                 className="h-20 w-30"
               />
             </div>
-            <p className="text-gray-300 mb-4">
-              Global risk management and protection consultancy providing
-              discreet, professional security services worldwide.
+            <p className="text-white/80 mb-4 font-[ui-sans-serif]">
+              Global risk management and protection consultancy providing discreet, professional security services worldwide.
             </p>
-            <p className="text-sm text-valentor-red font-semibold">
+            <p className="text-sm text-white/80 font-[ui-serif] tracking-tight">
               Discretion. Strength. Adaptability.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+            <h3 className="text-xl font-[ui-serif] tracking-tight mb-2">Our Services</h3>
+            <div className="h-px w-12 bg-[#344154] mb-4" />
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-valentor-red transition-colors duration-200"
+                    className="text-white/80 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-4 transition-colors duration-200 font-[ui-sans-serif]"
                   >
                     {link.name}
                   </Link>
@@ -60,31 +57,33 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-xl font-[ui-serif] tracking-tight mb-2">Contact</h3>
+            <div className="h-px w-12 bg-[#344154] mb-4" />
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <span className="text-gray-300">
+                <span className="text-white/80 font-[ui-sans-serif]">
                   Phone: Available upon request
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-gray-300">info@valentorgroup.com</span>
+                <span className="text-white/80 font-[ui-sans-serif]">info@valentorgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-gray-300">Global Operations</span>
+                <span className="text-white/80 font-[ui-sans-serif]">Global Operations</span>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-[ui-serif] tracking-tight mb-2">Quick Links</h3>
+            <div className="h-px w-12 bg-[#344154] mb-4" />
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-valentor-red transition-colors duration-200"
+                    className="text-white/80 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-4 transition-colors duration-200 font-[ui-sans-serif]"
                   >
                     {link.name}
                   </Link>
@@ -94,10 +93,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-300">
-            © 2024 Valiant Risk Group. All rights reserved. Professional
-            security services worldwide.
+        <div className="border-t border-white/10 mt-12 pt-8 text-center">
+          <p className="text-white/70 font-[ui-sans-serif]">
+            © 2024 Valiant Risk Group. All rights reserved. Professional security services worldwide.
           </p>
         </div>
       </div>
