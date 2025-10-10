@@ -52,15 +52,15 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="p-2 transition-all duration-300">
+            <div className="p-3 transition-all duration-300">
               <Image
                 src="/images/logo.png"
                 alt="Valiant Risk Group Logo"
-                width={120}
-                height={120}
+                width={160}
+                height={160}
               />
             </div>
           </Link>
@@ -116,12 +116,14 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Link */}
             <div className="ml-6">
-              <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
-                <Button className="px-6 py-2.5 rounded-xl font-[ui-sans-serif] transition-colors duration-300 bg-[#C1272D] hover:bg-[#C1272D]/90 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]">
-                  Arrange a Private Consultation
-                </Button>
+              <Link
+                href="/contact"
+                className="px-4 py-2 font-[ui-sans-serif] transition-colors duration-300 text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                aria-label="Arrange a Private Consultation with Valiant Risk Group"
+              >
+                Arrange a Private Consultation
               </Link>
             </div>
           </div>
@@ -189,13 +191,13 @@ const Navbar = () => {
 
             {/* Mobile CTA */}
             <div className="px-4 pt-4">
-              <Link href="/contact" aria-label="Arrange a Private Consultation with Valiant Risk Group">
-                <Button
-                  className="w-full bg-[#C1272D] hover:bg-[#C1272D]/90 text-white rounded-xl py-3 font-[ui-sans-serif] transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Arrange a Private Consultation
-                </Button>
+              <Link
+                href="/contact"
+                className="block px-6 py-3 text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-8 transition-colors duration-200 font-[ui-sans-serif] rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                onClick={() => setIsOpen(false)}
+                aria-label="Arrange a Private Consultation with Valiant Risk Group"
+              >
+                Arrange a Private Consultation
               </Link>
             </div>
           </div>

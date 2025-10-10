@@ -12,7 +12,7 @@ const HardwareSoftwareSecurityPage = () => {
       <HardwareSoftwareHero />
       <HardwareSoftwareOfferings />
       <HardwareSoftwareSolutions />
-      <HardwareSoftwareFeatures />
+      {/* <HardwareSoftwareFeatures /> */}
       <HardwareSoftwareCTA />
     </div>
   );

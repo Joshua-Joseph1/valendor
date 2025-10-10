@@ -53,14 +53,14 @@ const AboutCTA = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4"
           >
-            <Link href="/contact" aria-label="Enlist Our Expertise at Valiant Risk Group">
+            {/* <Link href="/contact" aria-label="Enlist Our Expertise at Valiant Risk Group">
               <Button
                 size="lg"
                 className="w-full sm:w-auto bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
               >
                 Enlist Our Expertise
               </Button>
-            </Link>
+            </Link> */}
 
             <Link href="#services">
               <Button
@@ -68,13 +68,13 @@ const AboutCTA = () => {
                 variant="outline"
                 className="w-full sm:w-auto bg-transparent text-white/90 hover:text-white border-white/20 hover:border-white/30 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
               >
-                Retain Valiant Risk Group
+                Arrange A Private Consultation
               </Button>
             </Link>
           </motion.div>
 
           {/* Trust indicators - inline list */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -91,7 +91,7 @@ const AboutCTA = () => {
                 <div className="text-white font-[ui-serif] tracking-tight text-lg">{item.value}</div>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

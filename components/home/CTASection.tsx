@@ -70,27 +70,19 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-            <Link href="/contact" aria-label="Enlist Our Expertise at Valiant Risk Group">
-              <Button
-                size="lg"
-                className="bg-[#C1272D] hover:bg-[#C1272D]/90 text-white px-10 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D] will-change-transform"
-              >
-                Enlist Our Expertise
-              </Button>
-            </Link>
             <Link href="/contact" aria-label="Retain Valiant Risk Group">
               <Button
                 size="lg"
                 variant="outline"
                 className="bg-transparent text-white/90 hover:text-white border-white/20 hover:border-white/30 px-10 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
               >
-                Retain Valiant Risk Group
+                Arrange A Private Consultation
               </Button>
             </Link>
           </motion.div>
 
           {/* Trust indicators - inline list */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -107,7 +99,7 @@ const CTASection = () => {
                 <div className="text-white font-[ui-serif] tracking-tight text-lg">{item.value}</div>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
 
           {/* Bottom accent */}
           <motion.div
