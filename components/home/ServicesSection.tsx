@@ -37,7 +37,7 @@ const ServicesSection = () => {
       description:
         "Discreet assurance for high-profile principals and families—unparalleled protection without compromise to lifestyle.",
       href: "/services/executive-protection",
-      image: "/images/exec-protection.jpg",
+      image: "/images/exec-protection.png",
       features: [
         "Executive Protection",
         "Residential Security",
