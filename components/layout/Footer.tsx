@@ -62,11 +62,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <span className="text-white/80 font-[ui-sans-serif]">
-                  Phone: Available upon request
+                  Phone: +27 79 899-4102
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-white/80 font-[ui-sans-serif]">info@valentorgroup.com</span>
+                <span className="text-white/80 font-[ui-sans-serif]">info@valiantriskgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-white/80 font-[ui-sans-serif]">Global Operations</span>
