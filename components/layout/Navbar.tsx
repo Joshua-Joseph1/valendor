@@ -126,6 +126,17 @@ const Navbar = () => {
                 Arrange a Private Consultation
               </Link>
             </div>
+
+            {/* Subscribe Link - match other nav links */}
+            <div className="ml-2">
+              <Link
+                href="/subscribe"
+                className="px-4 py-2 font-[ui-sans-serif] transition-colors duration-300 text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                aria-label="Subscribe to the Valiant Risk Group newsletter"
+              >
+                Subscribe to Newsletter
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -198,6 +209,18 @@ const Navbar = () => {
                 aria-label="Arrange a Private Consultation with Valiant Risk Group"
               >
                 Arrange a Private Consultation
+              </Link>
+            </div>
+
+            {/* Mobile Subscribe */}
+            <div className="px-4 pt-2">
+              <Link
+                href="/subscribe"
+                className="block px-6 py-3 text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-8 transition-colors duration-200 font-[ui-sans-serif] rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
+                onClick={() => setIsOpen(false)}
+                aria-label="Subscribe to the Valiant Risk Group newsletter"
+              >
+                Subscribe to Newsletter
               </Link>
             </div>
           </div>

@@ -15,7 +15,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center text-white overflow-hidden pt-24 sm:pt-12 bg-[url('/images/hero-mobile.jpg')] sm:bg-[url('/images/hero-image-4.jpg')] bg-cover bg-center bg-fixed"
+      className="relative min-h-screen flex items-center text-white overflow-hidden pt-24 sm:pt-12 bg-[url('/images/hero-mobile.jpg')] sm:bg-[url('/images/hero-ipad.jpg')] md:bg-[url('/images/hero-image-4.jpg')] bg-cover bg-center bg-fixed"
     >
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[#1a1a1a]/70"></div>

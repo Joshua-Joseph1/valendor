@@ -93,9 +93,13 @@ const PrivacyPolicyPage = () => {
             </div>
             <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
             <p className="text-base md:text-lg text-white/80 mb-6 leading-relaxed max-w-3xl mx-auto font-[ui-sans-serif]">
-              Your privacy and confidentiality are fundamental to our operations. Learn how we protect and handle your information with the highest security standards.
+              Your privacy and confidentiality are fundamental to our
+              operations. Learn how we protect and handle your information with
+              the highest security standards.
             </p>
-            <div className="text-white/70 text-sm">Last updated: January 2024</div>
+            <div className="text-white/70 text-sm">
+              Last updated: January 2024
+            </div>
           </motion.div>
         </div>
       </section>
@@ -116,10 +120,17 @@ const PrivacyPolicyPage = () => {
               </h2>
               <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
               <p className="text-base md:text-lg text-white/80 mb-4 font-[ui-sans-serif]">
-                At Valiant Risk Group, we understand that privacy and confidentiality are not just legal requirements but fundamental aspects of the trust our clients place in us. As a global risk management and protection consultancy, we handle sensitive information with the utmost care and security.
+                At Valiant Risk Group, we understand that privacy and
+                confidentiality are not just legal requirements but fundamental
+                aspects of the trust our clients place in us. As a global risk
+                management and protection consultancy, we handle sensitive
+                information with the utmost care and security.
               </p>
               <p className="text-base md:text-lg text-white/80 font-[ui-sans-serif]">
-                This Privacy Policy explains how we collect, use, protect, and share information when you use our services or visit our website. We are committed to transparency and ensuring you understand your rights regarding your personal information.
+                This Privacy Policy explains how we collect, use, protect, and
+                share information when you use our services or visit our
+                website. We are committed to transparency and ensuring you
+                understand your rights regarding your personal information.
               </p>
             </div>
           </motion.div>
@@ -127,7 +138,10 @@ const PrivacyPolicyPage = () => {
       </section>
 
       {/* Main Content Sections */}
-      <section ref={contentRef} className="py-24 md:py-32 bg-[#1a1a1a] text-white">
+      <section
+        ref={contentRef}
+        className="py-24 md:py-32 bg-[#1a1a1a] text-white"
+      >
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -140,13 +154,17 @@ const PrivacyPolicyPage = () => {
                 >
                   <div className="p-0">
                     <div className="mb-4">
-                      <h3 className="text-xl font-[ui-serif] tracking-tight text-white">{section.title}</h3>
+                      <h3 className="text-xl font-[ui-serif] tracking-tight text-white">
+                        {section.title}
+                      </h3>
                     </div>
                     <ul className="space-y-2">
                       {section.content.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start">
                           <div className="w-2 h-2 bg-[#344154] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                          <span className="text-white/80 font-[ui-sans-serif]">{item}</span>
+                          <span className="text-white/80 font-[ui-sans-serif]">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -296,7 +314,9 @@ const PrivacyPolicyPage = () => {
               <div className="flex items-center justify-center">
                 <div>
                   <p className="font-[ui-serif]">Email Us</p>
-                  <p className="text-white/80 font-[ui-sans-serif]">privacy@valentorgroup.com</p>
+                  <p className="text-white/80 font-[ui-sans-serif]">
+                    privacy@valiantriskgroup.com
+                  </p>
                 </div>
               </div>
               <div className="flex items-center justify-center">

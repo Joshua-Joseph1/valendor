@@ -12,37 +12,41 @@ const ContactMethods = () => {
 
   const contactMethods = [
     {
-      title: 'Emergency Hotline',
-      description: '24/7 emergency response and immediate assistance for critical security situations',
+      title: "Emergency Hotline",
+      description:
+        "24/7 emergency response and immediate assistance for critical security situations",
       icon: Phone,
-      contact: '+1 (555) 911-SAFE',
-      available: '24/7 Emergency Response',
-      gradient: 'from-red-500 to-red-700'
+      contact: "+1 (555) 911-SAFE",
+      available: "24/7 Emergency Response",
+      gradient: "from-red-500 to-red-700",
     },
     {
-      title: 'General Inquiries',
-      description: 'Business inquiries and service consultations with expert security advisors',
+      title: "General Inquiries",
+      description:
+        "Business inquiries and service consultations with expert security advisors",
       icon: Mail,
-      contact: 'info@valentorgroup.com',
-      available: 'Response within 2 hours',
-      gradient: 'from-blue-900 to-blue-700'
+      contact: "info@valiantriskgroup.com",
+      available: "Response within 2 hours",
+      gradient: "from-blue-900 to-blue-700",
     },
     {
-      title: 'Global Operations',
-      description: 'Worldwide coverage with local expertise and cultural understanding',
+      title: "Global Operations",
+      description:
+        "Worldwide coverage with local expertise and cultural understanding",
       icon: Globe,
-      contact: 'Multiple locations worldwide',
-      available: 'Regional offices available',
-      gradient: 'from-green-500 to-green-700'
+      contact: "Multiple locations worldwide",
+      available: "Regional offices available",
+      gradient: "from-green-500 to-green-700",
     },
     {
-      title: 'Secure Communications',
-      description: 'Encrypted channels for sensitive discussions and confidential consultations',
+      title: "Secure Communications",
+      description:
+        "Encrypted channels for sensitive discussions and confidential consultations",
       icon: MessageSquare,
-      contact: 'secure@valentorgroup.com',
-      available: 'End-to-end encryption',
-      gradient: 'from-purple-500 to-purple-700'
-    }
+      contact: "secure@valiantriskgroup.com",
+      available: "End-to-end encryption",
+      gradient: "from-purple-500 to-purple-700",
+    },
   ];
 
   return (
