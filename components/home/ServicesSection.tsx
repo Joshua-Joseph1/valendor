@@ -23,7 +23,7 @@ const ServicesSection = () => {
     {
       title: "Risk Management & Intelligence",
       description:
-        "Prudent assessments and strategic counsel that fuse foresight with actionable insight.",
+        "We provide prudent assessments and strategic counsel to safeguard your interests, combining foresight with actionable insight.",
       href: "/services/risk-management-intelligence",
       image: "/images/risk-management.jpg",
       features: [
@@ -35,7 +35,7 @@ const ServicesSection = () => {
     {
       title: "Executive Protection",
       description:
-        "Discreet assurance for high-profile principals and families—unparalleled protection without compromise to lifestyle.",
+        "Our discreet and professional support extends to high‑profile individuals and their families, ensuring unparalleled assurance without compromising lifestyle.",
       href: "/services/executive-protection",
       image: "/images/exec-protection.png",
       features: [
@@ -47,7 +47,7 @@ const ServicesSection = () => {
     {
       title: "Secure Transfer & Asset Escort",
       description:
-        "Armored convoys and aviation transfers that guarantee safe passage for your most valuable assets.",
+        "From armored convoys to aviation transfers, our escorts guarantee safe passage for your most valuable assets.",
       href: "/services/secure-transfer-asset-escort",
       image: "/images/secure.jpg",
       features: ["Armored Convoy", "Aviation Security", "Route Planning"],
@@ -55,7 +55,7 @@ const ServicesSection = () => {
     {
       title: "Wildlife Protection",
       description:
-        "Advanced surveillance and elite rangers defending threatened species and preserving natural legacies.",
+        "We employ advanced surveillance and highly trained rangers to defend threatened species and preserve natural legacies.",
       href: "/services/anti-poaching-wildlife-protection",
       image: "/images/wildlife.jpg",
       features: [
@@ -67,7 +67,7 @@ const ServicesSection = () => {
     {
       title: "Hardware & Software Security",
       description:
-        "State-of-the-art systems uniting physical and digital protection into a seamless shield.",
+        "Integrating state‑of‑the‑art technology, our systems provide seamless protection across physical and digital realms.",
       href: "/services/hardware-software-security",
       image: "/images/software.jpg",
       features: ["CCTV Systems", "Access Control", "Cyber Monitoring"],
@@ -93,8 +93,9 @@ const ServicesSection = () => {
           <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
           <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto font-[ui-sans-serif]">
             Distinguished security solutions, meticulously crafted to address
-            the singular needs of a discerning global clientele. A heritage of
-            protection for those accustomed to uncompromising standards.
+            the singular needs of the discerning global clientele. We offer a 
+            heritage of protection that resonates with the sophistication and stature 
+            of those accustomed to the finest standards across generations and industries.
           </p>
         </motion.div>
 

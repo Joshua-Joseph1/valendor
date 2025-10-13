@@ -59,10 +59,7 @@ const HeroSection = ({ onScrollToServices }: HeroSectionProps) => {
               className="space-y-4"
             >
               <p className="text-base md:text-lg text-[#AFC1CF] md:text-white/80 font-[ui-sans-serif] leading-relaxed">
-                Distinguished security solutions, crafted for the discerning
-                few. Valiant delivers intelligence-led protection across
-                industries and environments—precise, unobtrusive, and
-                unyielding.
+                These pillars form the bedrock of our ethos. At Valiant, we deliver distinguished solutions crafted for the discerning few, addressing the unique challenges of a global clientele across varied industries and environments.
               </p>
             </motion.div>
 

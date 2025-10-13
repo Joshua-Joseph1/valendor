@@ -6,11 +6,10 @@ import { Button } from '@/components/ui/button';
 
 const WildlifeProtectionCTA = () => {
   return (
-    <section className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden before:block before:h-px before:w-full before:bg-white/10 bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]">
+    <section className="relative py-24 md:py-32 bg-[#1A1A1A] text-white overflow-hidden bg-[radial-gradient(ellipse_at_center,rgba(52,65,84,0.20),transparent_60%)]">
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-green-500 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-valentor-red/5 to-transparent rounded-full blur-3xl"></div>
       </div>
 
@@ -43,7 +42,7 @@ const WildlifeProtectionCTA = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4 leading-tight"
             >
-              Ready to Secure Your Future?
+              Ready to Protect Wildlife?
             </motion.h2>
             <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
 
@@ -54,7 +53,9 @@ const WildlifeProtectionCTA = () => {
               viewport={{ once: true }}
               className="text-base md:text-lg mb-12 max-w-4xl mx-auto leading-relaxed text-white/80 font-[ui-sans-serif]"
             >
-              Join the ranks of Fortune 500 companies and high-profile individuals who entrust us with their most critical needs. Your future deserves unparalleled stewardship.
+              Join the ranks of satisfied clients who trust Valiant Risk Group
+              with their most critical wildlife protection needs. Contact us today for a
+              confidential consultation.
             </motion.p>
           </div>
 
@@ -77,7 +78,7 @@ const WildlifeProtectionCTA = () => {
           </motion.div>
 
           {/* Trust indicators simplified and inline */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -85,16 +86,23 @@ const WildlifeProtectionCTA = () => {
             className="max-w-4xl mx-auto divide-y divide-white/10"
           >
             {[
-              { label: 'Wildlife Security', value: '24/7' },
-              { label: 'Security Network', value: 'Global' },
-              { label: 'Commitment', value: '100% Dedicated' },
+              { label: "Wildlife Security", value: "24/7" },
+              { label: "Security Network", value: "Global" },
+              { label: "Commitment", value: "100% Dedicated" },
             ].map((item) => (
-              <div key={item.label} className="flex items-center justify-between py-4">
-                <div className="text-white/80 font-[ui-sans-serif]">{item.label}</div>
-                <div className="text-white font-[ui-serif] tracking-tight text-lg">{item.value}</div>
+              <div
+                key={item.label}
+                className="flex items-center justify-between py-4"
+              >
+                <div className="text-white/80 font-[ui-sans-serif]">
+                  {item.label}
+                </div>
+                <div className="text-white font-[ui-serif] tracking-tight text-lg">
+                  {item.value}
+                </div>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

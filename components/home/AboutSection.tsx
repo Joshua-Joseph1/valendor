@@ -13,35 +13,23 @@ const AboutSection = () => {
     {
       title: "Discretion",
       description:
-        "Operating with the highest levels of confidentiality and professionalism, ensuring our clients' privacy and security are never compromised.",
+        "We operate with the utmost confidentiality and decorum, ensuring your privacy remains inviolable.",
       gradient: "from-slate-600 to-slate-800",
-      details: [
-        "Confidential operations and reporting",
-        "Non-disclosure protocols",
-        "Invisible security presence",
-      ],
+      details: [],
     },
     {
       title: "Strength",
       description:
-        "Robust capabilities enhanced by extensive experience, proven methodologies, and cutting-edge technology to handle any security challenge.",
+        "Our capabilities are fortified by seasoned professionals, proven methodologies, and cutting-edge technologies.",
       gradient: "from-valentor-red to-red-700",
-      details: [
-        "Elite security professionals",
-        "Advanced technology integration",
-        "Proven track record",
-      ],
+      details: [],
     },
     {
       title: "Adaptability",
       description:
-        "Flexible solutions tailored to unique challenges and changing environments, ensuring effective security in any situation.",
+        "Our tailored solutions respond elegantly to the evolving landscape of risk and opportunity, maintaining cultural sensitivity and responsiveness at every turn.",
       gradient: "from-slate-600 to-slate-800",
-      details: [
-        "Customized security solutions",
-        "Rapid response capabilities",
-        "Cultural sensitivity",
-      ],
+      details: [],
     },
   ];
 
@@ -64,10 +52,15 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">About Valiant Risk Group</h2>
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">
+            Why Choose Valiant Risk Group
+          </h2>
           <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
           <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">
-            Forged in the principles of discretion, strength, and adaptability, Valiant Risk Group stands as the world’s pre-eminent consultancy in risk management and protection. Our legacy is defined by an uncompromising standard of excellence and an enduring commitment to those who entrust us with their security.
+            Anchored in enduring principles, Valiant Risk Group stands as a
+            bastion of unwavering excellence. Every operation is executed with
+            precision and resolve, ensuring a calibre of service that endures
+            even in the most formidable of circumstances.
           </p>
         </motion.div>
 
@@ -105,7 +98,9 @@ const AboutSection = () => {
                         }}
                         className="flex items-center"
                       >
-                        <div className={`w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0`}></div>
+                        <div
+                          className={`w-2 h-2 bg-[#344154] rounded-full mr-3 flex-shrink-0`}
+                        ></div>
                         <span className="text-sm text-white/80 font-medium font-[ui-sans-serif]">
                           {detail}
                         </span>
@@ -123,12 +118,26 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isAboutInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-16 max-w-5xl mx-auto"
+          className="mt-32 max-w-5xl mx-auto text-center"
         >
-          <h3 className="text-2xl md:text-3xl font-[ui-serif] tracking-tight mb-3">Our Story</h3>
-          <div className="h-px w-12 bg-[#344154] mb-4" />
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">
+            Our Story — Valiant Risk Group
+          </h2>
+          <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
           <p className="text-white/80 font-[ui-sans-serif] leading-relaxed">
-            For decades, our teams have quietly shielded heads of state, cultural luminaries, and corporate leaders across volatile regions. This heritage of protection informs our uncompromising approach and the discretion that defines Valiant Risk Group.
+            Founded on enduring principles of integrity, discipline and trust
+            earned through service excellence. Valiant embodies decades of
+            experience at the pinnacle of international protection. Our founders
+            have shielded heads of state, luminaries and corporate leaders in
+            some of the world’s most volatile environments from Africa to Asia
+            and beyond.
+          </p>
+          <p className="text-white/80 font-[ui-sans-serif] leading-relaxed mt-4">
+            This heritage has forged a collective of professionals who possess
+            an instinctive understanding of the pressures faced by those at the
+            helm of influence. We exist to serve those who cannot afford
+            uncertainty, delivering intelligence‑led, full‑spectrum protection
+            engineered for continuity, control and absolute peace of mind.
           </p>
         </motion.div>
       </div>

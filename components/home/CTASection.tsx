@@ -58,7 +58,9 @@ const CTASection = () => {
               viewport={{ once: true }}
               className="text-base md:text-lg mb-12 max-w-4xl mx-auto leading-relaxed text-white/80 font-[ui-sans-serif]"
             >
-              Join the ranks of Fortune 500 companies and high-profile individuals who entrust us with their most critical needs. Your future deserves unparalleled stewardship.
+             Join the ranks of satisfied clients who trust Valiant Risk Group 
+            with their most critical security needs. Contact us 
+            today for a confidential consultation.
             </motion.p>
           </div>
 
@@ -70,13 +72,16 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-            <Link href="/contact" aria-label="Retain Valiant Risk Group">
+            <Link
+              href="/contact"
+              aria-label="Arrange a Private Consultation with Valiant Risk Group"
+            >
               <Button
                 size="lg"
                 variant="outline"
                 className="bg-transparent text-white/90 hover:text-white border-white/20 hover:border-white/30 px-10 py-4 text-base md:text-lg rounded-xl transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1272D]"
               >
-                Arrange A Private Consultation
+                Arrange a Private Consultation
               </Button>
             </Link>
           </motion.div>
@@ -110,7 +115,7 @@ const CTASection = () => {
             className="text-center mt-12"
           >
             <p className="text-white/60 text-sm font-[ui-sans-serif]">
-              All consultations are confidential and secure 
+              All consultations are confidential and secure
             </p>
           </motion.div>
         </motion.div>

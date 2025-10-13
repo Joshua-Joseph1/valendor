@@ -61,12 +61,12 @@ const Footer = () => {
             <div className="h-px w-12 bg-[#344154] mb-4" />
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <span className="text-white/80 font-[ui-sans-serif]">
+                <a href="tel:+27798994102" className="text-white/80 font-[ui-sans-serif]">
                   Phone: +27 79 899-4102
-                </span>
+                </a>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-white/80 font-[ui-sans-serif]">info@valiantriskgroup.com</span>
+                <a href="mailto:info@valiantriskgroup.com" className="text-white/80 font-[ui-sans-serif]">info@valiantriskgroup.com</a>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-white/80 font-[ui-sans-serif]">Global Operations</span>

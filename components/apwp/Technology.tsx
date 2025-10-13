@@ -35,7 +35,7 @@ const WildlifeProtectionTechnology = () => {
   return (
     <section
       ref={technologyRef}
-      className="py-24 md:py-32 bg-[#1A1A1A] text-white relative overflow-hidden before:block before:h-px before:w-full before:bg-white/10"
+      className="py-24 md:py-32 bg-[#1A1A1A] text-white relative overflow-hidden"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -52,10 +52,13 @@ const WildlifeProtectionTechnology = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">Advanced Technology</h2>
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">
+            Advanced Technology
+          </h2>
           <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
           <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">
-            State-of-the-art surveillance and detection technology that provides 24/7 protection for wildlife and conservation areas.
+            State-of-the-art surveillance and detection technology that provides
+            24/7 protection for wildlife and conservation areas.
           </p>
         </motion.div>
 
@@ -74,8 +77,12 @@ const WildlifeProtectionTechnology = () => {
                   <tech.icon className="h-5 w-5 text-[#344154]" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-[ui-serif] tracking-tight text-white mb-1">{tech.title}</h3>
-                  <p className="text-white/80 font-[ui-sans-serif]">{tech.description}</p>
+                  <h3 className="text-xl font-[ui-serif] tracking-tight text-white mb-1">
+                    {tech.title}
+                  </h3>
+                  <p className="text-white/80 font-[ui-sans-serif]">
+                    {tech.description}
+                  </p>
                 </div>
               </div>
             </motion.div>

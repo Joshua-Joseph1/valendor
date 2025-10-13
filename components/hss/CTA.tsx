@@ -34,20 +34,7 @@ const HardwareSoftwareCTA = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          {/* Premium badge */}
-          <div className="text-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-8 py-4 border border-white/20 mb-8"
-            >
-              <span className="text-white font-semibold text-lg">
-                Advanced Security Technology
-              </span>
-            </motion.div>
-          </div>
+
 
           {/* Main content */}
           <div className="text-center mb-16">
@@ -93,7 +80,7 @@ const HardwareSoftwareCTA = () => {
           </motion.div>
 
           {/* Trust indicators - inline list */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -110,7 +97,7 @@ const HardwareSoftwareCTA = () => {
                 <div className="text-white font-[ui-serif] tracking-tight text-lg">{item.value}</div>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

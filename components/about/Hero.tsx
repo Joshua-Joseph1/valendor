@@ -66,7 +66,12 @@ const AboutHero = () => {
               className="space-y-4"
             >
               <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-4xl mx-auto px-4 font-[ui-sans-serif]">
-                Forged in the principles of discretion, strength, and adaptability, we are the world’s pre‑eminent consultancy in risk management and protection.
+                Forged in the principles of discretion, strength and
+                adaptability, Valiant Risk Group stands as the world’s
+                pre‑eminent consultancy in risk management and protection. Our
+                legacy is defined by an uncompromising standard of excellence
+                and an enduring commitment to those who entrust us with their
+                security.
               </p>
             </motion.div>
 
@@ -85,7 +90,10 @@ const AboutHero = () => {
                   Arrange a Private Consultation
                 </Button>
               </Link> */}
-              <Link href="/#services" aria-label="Explore Our Offerings at Valiant Risk Group">
+              <Link
+                href="/#services"
+                aria-label="Explore Our Offerings at Valiant Risk Group"
+              >
                 <span className="text-white/90 hover:text-white underline decoration-[#344154]/60 hover:decoration-white underline-offset-4 transition-colors duration-300 text-base sm:text-lg">
                   Explore Our Offerings
                 </span>

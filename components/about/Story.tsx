@@ -38,35 +38,20 @@ const AboutStory = () => {
 
             <div className="space-y-6 text-base md:text-lg text-white/80 leading-relaxed font-[ui-sans-serif]">
               <p>
-                Valiant Risk Group was founded on the unwavering principles of
-                integrity, discipline, discretion, and trust earned, not
-                assumed.
+                Founded on enduring principles of integrity, discipline and
+                trust earned through service excellence, Valiant embodies
+                decades of experience at the pinnacle of international
+                protection. Our founders have shielded heads of state,
+                luminaries and corporate leaders in some of the world’s most
+                volatile environments — from Africa to Asia and beyond.
               </p>
               <p>
-                Born from a shared mission to redefine the landscape of modern
-                risk management, Valiant is the culmination of decades spent
-                operating at the sharpest edge of global security. Our founders
-                have protected heads of state, high-net-worth individuals, and
-                corporate leaders in some of the world's most volatile
-                environments, across Africa, Asia, South America, and the Middle
-                East.
-              </p>
-              <p>
-                Forged in high-threat zones and refined through years of
-                disciplined service, our team brings an unmatched depth of
-                operational precision, intelligence expertise, and an
-                instinctive comprehension of the realities faced by those in
-                positions of influence and exposure.
-              </p>
-              <p>
-                Valiant Risk Group exists to serve those who cannot afford
-                uncertainty. We deliver intelligence-led, full-spectrum
-                protection, engineered for continuity, control, and absolute
-                peace of mind.
-              </p>
-              <p>
-                This is not traditional security. This is strategic protection,
-                engineered through experience, anchored in trust.
+                This heritage has forged a collective of professionals who
+                possess an instinctive understanding of the pressures faced by
+                those at the helm of influence. We exist to serve those who
+                cannot afford uncertainty, delivering intelligence‑led,
+                full‑spectrum protection engineered for continuity, control and
+                absolute peace of mind.
               </p>
             </div>
 
@@ -115,7 +100,10 @@ const AboutStory = () => {
                 </div>
 
                 <p className="text-white/80 mb-8 leading-relaxed font-[ui-sans-serif]">
-                  To deliver world-class risk management and protection services that allow clients to pursue their ambitions confidently. We blend human expertise with leading technology to safeguard what matters most.
+                  To deliver world-class risk management and protection services
+                  that allow clients to pursue their ambitions confidently. We
+                  blend human expertise with leading technology to safeguard
+                  what matters most.
                 </p>
 
                 <div className="bg-[#C1272D]/10 backdrop-blur-sm rounded-xl p-6 border border-[#C1272D]/20">

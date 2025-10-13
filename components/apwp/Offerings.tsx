@@ -60,12 +60,11 @@ const WildlifeProtectionOfferings = () => {
   return (
     <section
       ref={servicesRef}
-      className="py-24 md:py-32 bg-[#1A1A1A] text-white relative overflow-hidden before:block before:h-px before:w-full before:bg-white/10"
+      className="py-24 md:py-32 bg-[#1A1A1A] text-white relative overflow-hidden"
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-20 w-96 h-96 bg-valentor-red rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-green-500 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -76,16 +75,23 @@ const WildlifeProtectionOfferings = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">Explore Our Offerings</h2>
+          <h2 className="text-3xl md:text-5xl font-[ui-serif] tracking-tight text-white mb-4">
+            Explore Our Offerings
+          </h2>
           <div className="mx-auto h-px w-16 bg-[#344154] mb-6" />
           <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-relaxed font-[ui-sans-serif]">
-            Distinguished security solutions, meticulously crafted to address the singular needs of a discerning global clientele.
+            Distinguished security solutions, meticulously crafted to address
+            the singular needs of a discerning global clientele.
           </p>
         </motion.div>
 
         {/* Services - Expanded Inline */}
         <div className="max-w-5xl mx-auto">
-          <Accordion type="multiple" defaultValue={offerings.map((_, i) => `item-${i}`)} className="w-full space-y-0">
+          <Accordion
+            type="multiple"
+            defaultValue={offerings.map((_, i) => `item-${i}`)}
+            className="w-full space-y-0"
+          >
             {offerings.map((offering, index) => (
               <motion.div
                 key={offering.title}
@@ -116,9 +122,7 @@ const WildlifeProtectionOfferings = () => {
                         <motion.div
                           key={detailIndex}
                           initial={{ opacity: 0, x: -20 }}
-                          animate={
-                            isServicesInView ? { opacity: 1, x: 0 } : {}
-                          }
+                          animate={isServicesInView ? { opacity: 1, x: 0 } : {}}
                           transition={{
                             duration: 0.4,
                             delay: index * 0.1 + detailIndex * 0.05 + 0.2,
