@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Zap, Camera, Satellite, Binoculars, Bone as Drone } from 'lucide-react';
+import { Zap, Camera, Satellite, Binoculars, Bone as Helicopter } from 'lucide-react';
 
 const WildlifeProtectionTechnology = () => {
   const technologyRef = useRef(null);
@@ -26,9 +26,9 @@ const WildlifeProtectionTechnology = () => {
       icon: Binoculars
     },
     {
-      title: 'Drone Patrols',
+      title: 'Helicopter Patrols',
       description: 'Autonomous surveillance flights with advanced AI detection',
-      icon: Drone
+      icon: Helicopter
     }
   ];
 

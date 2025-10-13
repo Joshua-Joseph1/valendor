@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, Award, Star, Users, Bone as Drone, Network, Trophy } from 'lucide-react';
+import { CheckCircle, Award, Star, Users, Bone as Helicopter, Network, Trophy } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const WildlifeProtectionOfferings = () => {
@@ -24,8 +24,8 @@ const WildlifeProtectionOfferings = () => {
     },
     {
       title: 'UAV Surveillance & Ground Tracking',
-      description: 'Cutting-edge drone surveillance and ground-based tracking systems with real-time monitoring capabilities.',
-      icon: Drone,
+      description: 'Cutting-edge helicopter surveillance and ground-based tracking systems with real-time monitoring capabilities.',
+      icon: Helicopter,
       details: [
         'Long-range UAV patrols with thermal imaging',
         'Real-time video monitoring and analysis',
