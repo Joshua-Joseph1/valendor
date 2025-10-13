@@ -50,7 +50,7 @@ export default function SubscribePage() {
         <div className="absolute bottom-20 right-20 w-48 sm:w-80 h-48 sm:h-80 bg-blue-900 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
         <div className="flex justify-center">
           <div className="max-w-7xl">
             {/* Subscribe Form */}
