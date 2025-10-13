@@ -32,7 +32,7 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://services.leadconnectorhq.com/hooks/alxZNaCEizQAvDhmth5a/webhook-trigger/725695a6-e696-4f4f-89e5-4e2e65b95943', {
+      const response = await fetch('https://services.leadconnectorhq.com/hooks/4MUTVCAFzb7OJyfS81GR/webhook-trigger/15a35017-dc74-4f04-8e89-9264248c4c54', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
