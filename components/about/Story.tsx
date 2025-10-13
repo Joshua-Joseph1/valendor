@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, Award, Shield, Star } from 'lucide-react';
+
 
 const AboutStory = () => {
   const storyRef = useRef(null);
@@ -88,9 +88,6 @@ const AboutStory = () => {
               <div className="p-0">
                 {/* Header */}
                 <div className="flex items-center mb-8">
-                  <div className="bg-[#C1272D]/15 backdrop-blur-sm rounded-xl p-4 mr-6">
-                    <Shield className="h-10 w-10 text-[#C1272D]" />
-                  </div>
                   <div>
                     <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                       Our Mission
@@ -108,9 +105,7 @@ const AboutStory = () => {
 
                 <div className="bg-[#C1272D]/10 backdrop-blur-sm rounded-xl p-6 border border-[#C1272D]/20">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-[#C1272D]/20 rounded-xl p-3">
-                      <Award className="h-8 w-8 text-[#C1272D]" />
-                    </div>
+
                     <div>
                       <h4 className="text-xl font-[ui-serif] tracking-tight text-white">
                         Excellence in Security

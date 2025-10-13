@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, Award, Star, Users, Bone as Helicopter, Network, Trophy } from 'lucide-react';
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const WildlifeProtectionOfferings = () => {
@@ -14,7 +14,6 @@ const WildlifeProtectionOfferings = () => {
     {
       title: 'Ranger Training & Tactical Support',
       description: 'Comprehensive training programs for wildlife rangers and conservation personnel with advanced tactical support.',
-      icon: Users,
       details: [
         'Advanced tracking and surveillance techniques',
         'Anti-poaching tactics and field operations',
@@ -25,7 +24,6 @@ const WildlifeProtectionOfferings = () => {
     {
       title: 'UAV Surveillance & Ground Tracking',
       description: 'Cutting-edge helicopter surveillance and ground-based tracking systems with real-time monitoring capabilities.',
-      icon: Helicopter,
       details: [
         'Long-range UAV patrols with thermal imaging',
         'Real-time video monitoring and analysis',
@@ -36,7 +34,6 @@ const WildlifeProtectionOfferings = () => {
     {
       title: 'Wildlife Intelligence Networks',
       description: 'Comprehensive intelligence gathering and information sharing systems for wildlife crime prevention.',
-      icon: Network,
       details: [
         'Poaching network identification and disruption',
         'Criminal intelligence analysis and reporting',
@@ -47,7 +44,6 @@ const WildlifeProtectionOfferings = () => {
     {
       title: 'Integrated Taskforces (Local & International)',
       description: 'Coordinated multi-agency response teams for wildlife protection with global cooperation.',
-      icon: Trophy,
       details: [
         'Local law enforcement coordination',
         'International wildlife crime investigations',
@@ -105,7 +101,6 @@ const WildlifeProtectionOfferings = () => {
                 >
                   <AccordionTrigger className="px-0 py-0 hover:no-underline focus:outline-none">
                     <div className="flex items-start text-left w-full gap-4">
-                      <offering.icon className="h-6 w-6 text-[#344154] mt-1" />
                       <div className="flex-1">
                         <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-1">
                           {offering.title}

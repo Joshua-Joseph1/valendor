@@ -14,7 +14,6 @@ const HardwareSoftwareOfferings = () => {
     {
       title: 'CCTV & Command Systems',
       description: 'Advanced surveillance systems with centralized monitoring and control capabilities for comprehensive security coverage.',
-      icon: Monitor,
       details: [
         'High-definition IP camera systems with night vision',
         'Centralized command and control centers',
@@ -25,7 +24,6 @@ const HardwareSoftwareOfferings = () => {
     {
       title: 'Intrusion Detection Tech',
       description: 'Sophisticated perimeter and interior intrusion detection systems with real-time alerting capabilities.',
-      icon: AlertTriangle,
       details: [
         'Motion sensors and perimeter detection systems',
         'Glass break and vibration sensors',
@@ -36,7 +34,6 @@ const HardwareSoftwareOfferings = () => {
     {
       title: 'Access Control & Biometrics',
       description: 'Multi-layered access control systems with biometric authentication for maximum security assurance.',
-      icon: Fingerprint,
       details: [
         'Fingerprint and facial recognition systems',
         'Smart card and key fob access control',
@@ -47,7 +44,6 @@ const HardwareSoftwareOfferings = () => {
     {
       title: 'Cyber-Physical Threat Monitoring',
       description: 'Integrated monitoring of both physical and digital security threats with advanced AI analytics.',
-      icon: Wifi,
       details: [
         'Network security monitoring and threat detection',
         'IoT device security and management',
@@ -97,9 +93,7 @@ const HardwareSoftwareOfferings = () => {
                 >
                   <AccordionTrigger className="px-0 py-0 hover:no-underline focus:outline-none">
                     <div className="flex items-start text-left w-full gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
-                        <offering.icon className="h-5 w-5 text-white" />
-                      </div>
+  
                       <div className="flex-1">
                         <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-1">{offering.title}</h3>
                         <p className="text-white/80 text-base leading-relaxed font-[ui-sans-serif]">{offering.description}</p>

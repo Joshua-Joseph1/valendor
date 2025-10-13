@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Target, TrendingUp } from "lucide-react";
 
 const MissionVisionSection = () => {
   const missionRef = useRef(null);
@@ -46,9 +45,7 @@ const MissionVisionSection = () => {
             <div className="h-full transition-colors duration-300">
               <div className="p-0">
                 <div className="flex items-center mb-8">
-                  <div className="bg-[#C1272D]/15 backdrop-blur-sm rounded-xl p-4 mr-6">
-                    <Target className="h-10 w-10 text-[#C1272D]" />
-                  </div>
+
                   <div>
                     <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                       Our Mission
@@ -98,9 +95,7 @@ const MissionVisionSection = () => {
             <div className="h-full transition-colors duration-300">
               <div className="p-0">
                 <div className="flex items-center mb-8">
-                  <div className="bg-[#344154]/20 backdrop-blur-sm rounded-xl p-4 mr-6">
-                    <TrendingUp className="h-10 w-10 text-[#344154]" />
-                  </div>
+
                   <div>
                     <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-2">
                       Our Vision

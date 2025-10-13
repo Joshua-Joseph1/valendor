@@ -3,8 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Eye, Shield, Target } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 
 const AboutValues = () => {
   const valuesRef = useRef(null);
@@ -14,7 +12,6 @@ const AboutValues = () => {
     {
       title: 'Discretion',
       description: 'Operating with the highest levels of confidentiality and professionalism, ensuring our clients\' privacy and security are never compromised.',
-      icon: Eye,
       gradient: 'from-slate-600 to-slate-800',
       details: [
         'Confidential operations and reporting',
@@ -26,7 +23,6 @@ const AboutValues = () => {
     {
       title: 'Strength',
       description: 'Robust capabilities backed by extensive experience, proven methodologies, and cutting-edge technology to handle any security challenge.',
-      icon: Shield,
       gradient: 'from-valentor-red to-red-700',
       details: [
         'Elite security professionals',
@@ -38,7 +34,6 @@ const AboutValues = () => {
     {
       title: 'Adaptability',
       description: 'Flexible solutions tailored to unique challenges and changing environments, ensuring effective security in any situation.',
-      icon: Target,
       gradient: 'from-blue-900 to-blue-700',
       details: [
         'Customized security solutions',
@@ -85,15 +80,6 @@ const AboutValues = () => {
             >
               <div className="transition-colors duration-300">
                 <div className="p-0">
-                  {/* Icon with luxury styling */}
-                  <div className="relative mb-8">
-                    <div
-                      className={`w-20 h-20 bg-gradient-to-br ${principle.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:rotate-6`}
-                    >
-                      <principle.icon className="h-10 w-10 text-white" />
-                    </div>
-                  </div>
-
                   {/* Content */}
                   <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-4 text-center">
                     {principle.title}

@@ -18,7 +18,7 @@ const WildlifeProtectionHero = () => {
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red/20 rounded-full blur-3xl animate-pulse"></div>
+        {/* <div className="absolute top-20 left-20 w-96 h-96 bg-valentor-red/20 rounded-full blur-3xl animate-pulse"></div> */}
 
         {/* Geometric pattern overlay */}
         <div className="absolute inset-0 opacity-5">

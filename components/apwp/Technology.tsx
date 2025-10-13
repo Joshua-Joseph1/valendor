@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Zap, Camera, Satellite, Binoculars, Bone as Helicopter } from 'lucide-react';
 
 const WildlifeProtectionTechnology = () => {
   const technologyRef = useRef(null);
@@ -13,22 +12,18 @@ const WildlifeProtectionTechnology = () => {
     {
       title: 'Thermal Imaging',
       description: 'Night vision and heat detection for 24/7 wildlife monitoring',
-      icon: Camera
     },
     {
       title: 'Satellite Monitoring',
       description: 'Real-time area surveillance with global coverage capabilities',
-      icon: Satellite
     },
     {
       title: 'Ground Sensors',
       description: 'Intrusion detection systems with intelligent alert networks',
-      icon: Binoculars
     },
     {
       title: 'Helicopter Patrols',
       description: 'Autonomous surveillance flights with advanced AI detection',
-      icon: Helicopter
     }
   ];
 
@@ -73,9 +68,6 @@ const WildlifeProtectionTechnology = () => {
               className="py-8"
             >
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-[#344154]/20 flex items-center justify-center flex-shrink-0">
-                  <tech.icon className="h-5 w-5 text-[#344154]" />
-                </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-[ui-serif] tracking-tight text-white mb-1">
                     {tech.title}

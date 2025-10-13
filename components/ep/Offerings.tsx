@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, Users, Home, Plane, Calendar } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const ExecutiveProtectionOfferings = () => {
@@ -15,7 +14,6 @@ const ExecutiveProtectionOfferings = () => {
       title: "Tiered Executive Protection Details",
       description:
         "Scalable protection services from Discreet accompaniment to full security details.",
-      icon: Users,
       details: [
         "Level 1: Discreet personal protection for low-risk environments",
         "Level 2: Enhanced protection with advance reconnaissance",
@@ -27,7 +25,6 @@ const ExecutiveProtectionOfferings = () => {
       title: "Secure Residential Coverage",
       description:
         "Comprehensive home and property security for principals and their families.",
-      icon: Home,
       details: [
         "Residential security assessments and hardening",
         "24/7 security personnel and monitoring",
@@ -39,7 +36,6 @@ const ExecutiveProtectionOfferings = () => {
       title: "Event Security Management",
       description:
         "End-to-end security solutions for events, gatherings, and high-profile functions.",
-      icon: Calendar,
       details: [
         "Crowd management and access control",
         "Venue security assessments and planning",
@@ -89,9 +85,6 @@ const ExecutiveProtectionOfferings = () => {
                 >
                   <AccordionTrigger className="px-0 py-0 hover:no-underline focus:outline-none">
                     <div className="flex items-start text-left w-full gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
-                        <offering.icon className="h-5 w-5 text-white" />
-                      </div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-1">{offering.title}</h3>
                         <p className="text-white/80 text-base leading-relaxed font-[ui-sans-serif]">{offering.description}</p>

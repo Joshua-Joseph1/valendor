@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, Award, Star, Truck, Plane, Route, Monitor } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const SecureTransferOfferings = () => {
@@ -14,7 +13,6 @@ const SecureTransferOfferings = () => {
     {
       title: 'Armored Convoy & Vehicle Escort',
       description: 'Professional convoy operations with armored vehicles and tactical escort support for maximum security.',
-      icon: Truck,
       details: [
         'Armored vehicle deployment and coordination',
         'Multi-vehicle convoy formation and tactics',
@@ -25,7 +23,6 @@ const SecureTransferOfferings = () => {
     {
       title: 'Secure Aviation & Ground Transfers',
       description: 'Complete air and ground transportation security from origin to destination with seamless coordination.',
-      icon: Plane,
       details: [
         'Airport security coordination and VIP handling',
         'Aircraft security sweeps and clearance',
@@ -36,7 +33,6 @@ const SecureTransferOfferings = () => {
     {
       title: 'Tactical Route Support',
       description: 'Advanced route planning and security support for high-risk environments with real-time intelligence.',
-      icon: Route,
       details: [
         'Real-time route intelligence and threat assessment',
         'Alternative route planning and contingencies',
@@ -47,7 +43,6 @@ const SecureTransferOfferings = () => {
     {
       title: 'Real-Time Control Room Monitoring',
       description: '24/7 monitoring and communication support throughout transfer operations with advanced technology.',
-      icon: Monitor,
       details: [
         'GPS tracking and real-time location monitoring',
         'Communication relay and coordination center',
@@ -97,9 +92,6 @@ const SecureTransferOfferings = () => {
                 >
                   <AccordionTrigger className="px-0 py-0 hover:no-underline focus:outline-none">
                     <div className="flex items-start text-left w-full gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
-                        <offering.icon className="h-5 w-5 text-white" />
-                      </div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-[ui-serif] tracking-tight text-white mb-1">{offering.title}</h3>
                         <p className="text-white/80 text-base leading-relaxed font-[ui-sans-serif]">{offering.description}</p>
